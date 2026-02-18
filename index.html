@@ -295,11 +295,11 @@
                 </h3>
                 <div class="grid grid-cols-2 gap-2">
                     <img src="https://temporealrj.com/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-10-at-10.54.26-860x573.jpeg"
-                        class="rounded hover:opacity-80 transition cursor-pointer aspect-square object-cover">
+                        class="rounded hover:opacity-80 transition cursor-pointer aspect-square object-cover gallery-img">
                     <img src="https://blog.bondinho.com.br/wp-content/uploads/2023/01/shutterstock_302496842-1024x683.jpg"
-                        class="rounded hover:opacity-80 transition cursor-pointer aspect-square object-cover">
+                        class="rounded hover:opacity-80 transition cursor-pointer aspect-square object-cover gallery-img">
                     <img src="https://mobilidade.estadao.com.br/wp-content/uploads/2024/11/Imagem-destacada-Mobilidade-2024-11-21T165703.973.jpg.webp"
-                        class="rounded hover:opacity-80 transition cursor-pointer aspect-square object-cover">
+                        class="rounded hover:opacity-80 transition cursor-pointer aspect-square object-cover gallery-img">
                     <div
                         class="bg-gray-100 rounded flex items-center justify-center text-xs font-bold text-gray-500 cursor-pointer hover:bg-gray-200 transition-colors aspect-square">
                         +15 FOTOS
@@ -351,6 +351,17 @@
     </footer>
 
     <!-- Scripts -->
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/90 z-[100] hidden flex items-center justify-center p-4">
+        <button id="close-lightbox" class="absolute top-4 right-4 text-white hover:text-g1-orange transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <img id="lightbox-img" src="" alt="Imagem ampliada" class="max-w-full max-h-full rounded shadow-2xl">
+    </div>
+
     <script src="script.js"></script>
 </body>
 
