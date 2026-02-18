@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÍDIA INFORMAL - Notícias, Fatos e Fotos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'g1-red': '#c4170c',
+                        'g1-red-dark': '#991109',
+                        'g1-orange': '#ff6b00',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <!-- Top Bar (Date & Currency/Weather Mockup) -->
+    <div class="bg-gray-100 border-b border-gray-200 text-xs py-1 text-gray-500">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <span id="current-date">Carregando data...</span>
+            <div class="flex gap-4">
+                <span>São Paulo 28°C</span>
+                <span>Dólar R$ 5,00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-g1-red text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-3xl font-black tracking-tight flex items-center gap-1 leading-none">
+                <span class="text-white">MÍDIA</span>
+                <span class="text-g1-orange">INFORMAL</span>
+            </a>
+
+            <!-- Search / Menu (Desktop) -->
+            <div class="hidden md:flex items-center gap-6 text-sm font-bold tracking-wide">
+                <a href="#destaques" class="hover:text-g1-orange transition-colors">DESTAQUES</a>
+                <a href="#noticias" class="hover:text-g1-orange transition-colors">NOTÍCIAS</a>
+                <a href="#fotos" class="hover:text-g1-orange transition-colors">FOTOS</a>
+                <button class="text-white hover:text-g1-orange">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-g1-red-dark absolute w-full left-0 border-t border-red-800 shadow-lg">
+            <div class="flex flex-col p-4 space-y-4 text-center font-bold">
+                <a href="#destaques" class="text-white hover:text-g1-orange">DESTAQUES</a>
+                <a href="#noticias" class="text-white hover:text-g1-orange">NOTÍCIAS</a>
+                <a href="#fotos" class="text-white hover:text-g1-orange">FOTOS</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+        <!-- Center Column (Main News) - 8 Cols -->
+        <div class="lg:col-span-8 space-y-8">
+
+
+            <!-- Super Manchete (Highlights) -->
+            <section id="destaques" class="space-y-4">
+                <h2 class="text-g1-orange font-bold text-sm uppercase border-b-2 border-g1-orange inline-block mb-2">
+                    Destaque do Dia</h2>
+
+                <!-- Main Article Card -->
+                <a href="materias/2026/02/carnaval-rj.html"
+                    class="group relative block overflow-hidden rounded shadow-sm hover:shadow-md transition-shadow bg-white">
+                    <div class="aspect-video w-full overflow-hidden relative">
+                        <!-- Journalism Background Texture/Image for Main Highlight -->
+                        <img src="C:\Users\leo_l\TESTE\img\police.jpg"
+                            alt="Polícia Militar no Carnaval do Rio de Janeiro"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                        <div class="absolute bottom-0 p-4 md:p-8 text-white w-full">
+                            <span
+                                class="bg-g1-orange text-white text-xs font-bold px-2 py-1 rounded mb-3 inline-block uppercase tracking-wider">Carnaval
+                                2026</span>
+                            <h1
+                                class="text-3xl md:text-5xl font-extrabold leading-tight mb-2 group-hover:text-g1-orange transition-colors">
+                                CARNAVAL NO RJ TERMINA COM MAIS DE 500 PESSOAS DETIDAS E 97 CELULARES RECUPERADOS
+                                PELA PM
+                            </h1>
+                            <p class="text-gray-200 text-base md:text-lg font-medium hidden md:block max-w-3xl">
+                                Operação da Polícia Militar durante os dias de folia na capital fluminense resulta em
+                                centenas de prisões e apreensões, com foco na segurança dos blocos e sambódromo.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Sub-grid of 2 secondary articles -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="materias/2026/02/pf-vazamento.html"
+                        class="bg-white p-5 rounded shadow-sm border-t-4 border-g1-red hover:bg-gray-50 transition-colors cursor-pointer group h-full">
+                        <div class="aspect-video w-full overflow-hidden rounded mb-3">
+                            <img src="http://noticiafm.com/wp-content/uploads/2026/02/bc0cb3a7-55c5-42c7-b765-7931071669fa.jpeg"
+                                alt="Congresso Nacional"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <span class="text-g1-red font-bold text-xs uppercase tracking-wide">Política</span>
+                        <h3
+                            class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-red transition-colors">
+                            PF faz buscas para apurar vazamento de dados da Receita de Ministros do STF e parentes
+                        </h3>
+                        <ul class="list-disc list-inside mt-3 text-sm text-gray-600 space-y-1">
+                            <li>Mudanças no ensino médio</li>
+                            <li>Investimento em tecnologia</li>
+                        </ul>
+                    </a>
+                    <a href="materias/2026/02/banco-pleno.html"
+                        class="bg-white p-5 rounded shadow-sm border-t-4 border-g1-orange hover:bg-gray-50 transition-colors cursor-pointer group h-full">
+                        <div class="aspect-video w-full overflow-hidden rounded mb-3">
+                            <img src="https://i.metroimg.com/6wVo56I8lKFzSCPAS85_fmjov-zcbvMq0bg0w5Vsrfs/w:900/q:85/f:webp/plain/https://images.metroimg.com/2026/02/banco-pleno-1.jpg"
+                                alt="Economia"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <span class="text-g1-orange font-bold text-xs uppercase tracking-wide">Economia</span>
+                        <h3
+                            class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-orange transition-colors">
+                            Banco Pleno tem 160 mil credores com R$ 4,9 bilhões a receber
+                        </h3>
+                        <p class="text-gray-600 text-sm mt-3">Setor de serviços puxa alta nos índices de confiança do
+                            consumidor.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Journalism Background Strip -->
+            <!-- Image relating to journalism materials as requested -->
+            <div class="h-32 w-full rounded overflow-hidden relative my-8 group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                    alt="Journalism Background"
+                    class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-g1-red-dark/70 flex items-center justify-center">
+                    <div class="text-center">
+                        <span
+                            class="text-g1-orange font-bold text-sm tracking-widest uppercase mb-1 block">Especial</span>
+                        <h2 class="text-white font-black text-2xl md:text-4xl uppercase italic">Cobertura Completa</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feed Section (Latest News) -->
+            <section id="noticias" class="space-y-6">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-3 h-3 bg-g1-red rounded-full"></div>
+                    <h2 class="text-gray-900 font-bold text-2xl">Últimas Notícias</h2>
+                </div>
+
+                <!-- News List Items -->
+                <div class="flex flex-col gap-6">
+                    <!-- Item 1 -->
+                    <a href="materias/2026/02/epstein-policia.html"
+                        class="flex flex-col md:group md:flex-row gap-4 group cursor-pointer border-b border-gray-200 pb-6">
+                        <div class="md:w-5/12 overflow-hidden rounded">
+                            <img src="https://odia.ig.com.br/_midias/jpg/2026/02/11/1200x750/1_afp__20260209__96rl2gu__v1__highres__uspoliticsjusticeepstein-38081775.jpg"
+                                alt="News"
+                                class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="md:w-7/12 flex flex-col justify-center">
+                            <span class="text-g1-red font-bold text-xs uppercase mb-1">Mundo</span>
+                            <h3
+                                class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-red transition-colors">
+                                Polícia britânica pede colaboração de testemunhas em caso Epstein por tráfico de
+                                mulheres
+                            </h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">Investigação busca novas evidências e
+                                depoimentos de possíveis vítimas e testemunhas no Reino Unido relacionadas à rede de
+                                Jeffrey Epstein.</p>
+                            <span class="text-gray-400 text-xs mt-3">Há 2 horas</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 2 -->
+                    <a href="materias/2026/02/viradouro-campea.html"
+                        class="flex flex-col md:flex-row gap-4 group cursor-pointer border-b border-gray-200 pb-6">
+                        <div class="md:w-5/12 overflow-hidden rounded">
+                            <img src="https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2026/02/mestre-cica-aspect-ratio-512-320.jpg"
+                                alt="Tech"
+                                class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="md:w-7/12 flex flex-col justify-center">
+                            <span class="text-g1-orange font-bold text-xs uppercase mb-1">Rio de Janeiro</span>
+                            <h3
+                                class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-orange transition-colors">
+                                Viradouro é tetracampeã do Carnaval com tributo histórico ao Mestre Ciça
+                            </h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">Escola de Niterói encantou Sapucaí com
+                                figurinos, alegorias e samba no pé.</p>
+                            <span class="text-gray-400 text-xs mt-3">Há 4 horas</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 3 -->
+                    <a href="materias/2026/02/coutinho-vasco.html"
+                        class="flex flex-col md:flex-row gap-4 group cursor-pointer pb-6">
+                        <div class="md:w-5/12 overflow-hidden rounded">
+                            <img src="https://uploads.diariodopara.com.br/2026/02/vasco-coutinho-brasileirao-ceara-1320x880.jpg"
+                                alt="Culture"
+                                class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="md:w-7/12 flex flex-col justify-center">
+                            <span class="text-g1-red font-bold text-xs uppercase mb-1">Esporte</span>
+                            <h3
+                                class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-red transition-colors">
+                                Coutinho confirma adeus ao Vasco: 'Cansado mentalmente'
+                            </h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">O meia Philippe Coutinho se despediu do Vasco,
+                                em um comunicado publicado nas redes sociais.</p>
+                            <span class="text-gray-400 text-xs mt-3">Há 5 horas</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sidebar (Opinion, Most Read) - 4 Cols -->
+        <aside class="lg:col-span-4 space-y-8">
+
+            <!-- Widget: Read More -->
+            <div class="bg-white p-6 rounded shadow-sm border-t-4 border-g1-red">
+                <h3 class="text-gray-900 font-bold text-lg mb-4 flex items-center gap-2">
+                    <span class="w-2 h-2 bg-g1-red rounded-full"></span> Mais Lidas
+                </h3>
+                <ol class="list-decimal list-inside space-y-4 text-gray-700 font-semibold text-sm">
+                    <li class="pb-2 border-b border-gray-100">
+                        <a href="materias/2026/02/coutinho-vasco.html" class="hover:text-g1-red transition-colors">
+                            Coutinho confirma adeus ao Vasco: 'Cansado mentalmente'
+                        </a>
+                    </li>
+                    <li class="pb-2 border-b border-gray-100">
+                        <a href="materias/2026/02/viradouro-campea.html" class="hover:text-g1-red transition-colors">
+                            Viradouro é tetracampeã do Carnaval com tributo histórico ao Mestre Ciça
+                        </a>
+                    </li>
+                    <li class="pb-2 border-b border-gray-100">
+                        <a href="materias/2026/02/pf-vazamento.html" class="hover:text-g1-red transition-colors">
+                            PF apura vazamento de dados da Receita de Ministros do STF e parentes
+                        </a>
+                    </li>
+                    <li class="pb-2 border-b border-gray-100">
+                        <a href="materias/2026/02/carnaval-rj.html" class="hover:text-g1-red transition-colors">
+                            Carnaval no Rio termina com mais de 500 detidos e 97 celulares recuperados
+                        </a>
+                    </li>
+                    <li class="pb-2 border-b border-gray-100">
+                        <a href="materias/2026/02/banco-pleno.html" class="hover:text-g1-red transition-colors">
+                            Banco Pleno tem 160 mil credores com R$ 4,9 bilhões a receber
+                        </a>
+                    </li>
+                    <li>
+                        <a href="materias/2026/02/epstein-policia.html" class="hover:text-g1-red transition-colors">
+                            Polícia britânica pede colaboração de testemunhas em caso Epstein
+                        </a>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Widget: Photo Gallery (Compact) -->
+            <div id="fotos" class="bg-white p-6 rounded shadow-sm border-t-4 border-g1-orange">
+                <h3 class="text-gray-900 font-bold text-lg mb-4 flex justify-between items-center">
+                    Galeria do Dia
+                </h3>
+                <div class="grid grid-cols-2 gap-2">
+                    <img src="https://temporealrj.com/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-10-at-10.54.26-860x573.jpeg"
+                        class="rounded hover:opacity-80 transition cursor-pointer aspect-square object-cover gallery-img">
+                    <img src="https://blog.bondinho.com.br/wp-content/uploads/2023/01/shutterstock_302496842-1024x683.jpg"
+                        class="rounded hover:opacity-80 transition cursor-pointer aspect-square object-cover gallery-img">
+                    <img src="https://mobilidade.estadao.com.br/wp-content/uploads/2024/11/Imagem-destacada-Mobilidade-2024-11-21T165703.973.jpg.webp"
+                        class="rounded hover:opacity-80 transition cursor-pointer aspect-square object-cover gallery-img">
+                    <div
+                        class="bg-gray-100 rounded flex items-center justify-center text-xs font-bold text-gray-500 cursor-pointer hover:bg-gray-200 transition-colors aspect-square">
+                        +15 FOTOS
+                    </div>
+                </div>
+            </div>
+
+            <!-- Widget: Contact (Compact) -->
+            <div class="bg-gray-100 p-6 rounded border border-gray-200">
+                <h3 class="font-bold text-lg mb-4 text-g1-red-dark">Fale Conosco</h3>
+                <form id="contact-form" class="space-y-3">
+                    <input type="text" id="name" placeholder="Seu Nome"
+                        class="w-full p-2 border border-gray-300 rounded text-gray-900 text-sm focus:outline-none focus:ring-1 focus:ring-g1-red-dark">
+                    <input type="email" id="email" placeholder="Seu E-mail"
+                        class="w-full p-2 border border-gray-300 rounded text-gray-900 text-sm focus:outline-none focus:ring-1 focus:ring-g1-red-dark">
+                    <textarea id="message" rows="3" placeholder="Sugestão de Pauta"
+                        class="w-full p-2 border border-gray-300 rounded text-gray-900 text-sm focus:outline-none focus:ring-1 focus:ring-g1-red-dark"></textarea>
+                    <button type="submit"
+                        class="w-full bg-g1-red hover:bg-g1-red-dark text-white font-bold py-2 rounded transition-colors text-sm shadow-sm">
+                        ENVIAR
+                    </button>
+                </form>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-g1-red text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-black tracking-tight">
+                        MÍDIA <span class="text-g1-orange">INFORMAL</span>
+                    </span>
+                    <p class="text-white/80 text-sm mt-1">Compromisso com a verdade.</p>
+                </div>
+                <div class="flex space-x-6 text-sm font-semibold">
+                    <a href="#" class="hover:text-g1-orange transition-colors">Quem Somos</a>
+                    <a href="#" class="hover:text-g1-orange transition-colors">Princípios Editoriais</a>
+                    <a href="#" class="hover:text-g1-orange transition-colors">Política de Privacidade</a>
+                </div>
+            </div>
+            <div class="border-t border-white/20 mt-8 pt-6 text-center text-xs text-white/60">
+                &copy; 2026 Mídia Informal. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/90 z-[100] hidden flex items-center justify-center p-4">
+        <button id="close-lightbox" class="absolute top-4 right-4 text-white hover:text-g1-orange transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <img id="lightbox-img" src="" alt="Imagem ampliada" class="max-w-full max-h-full rounded shadow-2xl">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
