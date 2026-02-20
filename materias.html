@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body class="bg-gray-100 text-gray-800 font-sans">
-
-    <!-- Top Bar -->
     <div class="bg-gray-100 border-b border-gray-200 text-xs py-1 text-gray-500">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <span id="current-date">Carregando data...</span>
@@ -22,31 +18,24 @@
             </div>
         </div>
     </div>
-
-    <!-- Header -->
     <header class="bg-g1-red text-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html" class="text-3xl font-black tracking-tight flex items-center gap-1 leading-none">
                 <span class="text-white">MÍDIA</span>
                 <span class="text-g1-orange">INFORMAL</span>
             </a>
-
             <div class="hidden md:flex items-center gap-6 text-sm font-bold tracking-wide">
                 <a href="index.html#destaques" class="hover:text-g1-orange transition-colors">DESTAQUES</a>
                 <a href="materias.html" class="text-g1-orange">NOTÍCIAS</a>
                 <a href="index.html#fotos" class="hover:text-g1-orange transition-colors">FOTOS</a>
             </div>
-
             <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
         </div>
-
-        <div id="mobile-menu"
-            class="hidden md:hidden bg-g1-red-dark absolute w-full left-0 border-t border-red-800 shadow-lg">
+        <div id="mobile-menu" class="hidden md:hidden bg-g1-red-dark absolute w-full left-0 border-t border-red-800 shadow-lg">
             <div class="flex flex-col p-4 space-y-4 text-center font-bold">
                 <a href="index.html#destaques" class="text-white hover:text-g1-orange">DESTAQUES</a>
                 <a href="materias.html" class="text-g1-orange">NOTÍCIAS</a>
@@ -54,109 +43,91 @@
             </div>
         </div>
     </header>
-
     <main class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-black text-gray-900 mb-8 border-b-4 border-g1-red inline-block">Arquivo de Notícias
-        </h1>
-
+        <h1 class="text-3xl font-black text-gray-900 mb-8 border-b-4 border-g1-red inline-block">Arquivo de Notícias</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Matéria 1 -->
-            <a href="materias/2026/02/viradouro-campea.html"
-                class="bg-white rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+
+            <!-- PF FAZ BUSCAS PARA APURAR VAZAMENTO DE DADOS DA RECEITA DE MINISTROS DO STF E PARENTES -->
+            <a href="materias/2026/02/pf-vazamento.html" class="bg-white rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
                 <div class="aspect-video overflow-hidden">
-                    <img src="https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2026/02/mestre-cica-aspect-ratio-512-320.jpg"
-                        alt="Viradouro"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <img src="https://ativopb.com.br/wp-content/uploads/2026/02/bhp_pensao-morte.jpg" alt="PF FAZ BUSCAS PARA APURAR VAZAMENTO DE DADOS DA RECEITA DE MINISTROS DO STF E PARENTES" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="p-4">
-                    <span class="text-g1-red font-bold text-xs uppercase">Carnaval</span>
-                    <h2 class="text-xl font-bold mt-2 group-hover:text-g1-red transition-colors">Viradouro é tetracampeã
-                        do Carnaval com tributo histórico ao Mestre Ciça</h2>
+                    <span class="text-g1-red font-bold text-xs uppercase">Geral</span>
+                    <h2 class="text-xl font-bold mt-2 group-hover:text-g1-red transition-colors">PF FAZ BUSCAS PARA APURAR VAZAMENTO DE DADOS DA RECEITA DE MINISTROS DO STF E PARENTES</h2>
+                    <p class="text-gray-400 text-xs mt-2">18/02/2026 15:15</p>
                 </div>
             </a>
 
-            <!-- Matéria 2 -->
-            <a href="materias/2026/02/carnaval-rj.html"
-                class="bg-white rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+            <!-- COUTINHO CONFIRMA ADEUS AO VASCO: "CANSADO MENTALMENTE" -->
+            <a href="materias/2026/02/coutinho-vasco.html" class="bg-white rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
                 <div class="aspect-video overflow-hidden">
-                    <img src="https://midiainformal.vercel.app/img/police.jpg" alt="Segurança"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <img src="https://uploads.diariodopara.com.br/2026/02/vasco-coutinho-brasileirao-ceara-1320x880.jpg" alt="COUTINHO CONFIRMA ADEUS AO VASCO: "CANSADO MENTALMENTE"" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="p-4">
-                    <span class="text-g1-red font-bold text-xs uppercase">Segurança</span>
-                    <h2 class="text-xl font-bold mt-2 group-hover:text-g1-red transition-colors">Carnaval no RJ termina
-                        com mais de 500 pessoas detidas</h2>
+                    <span class="text-g1-red font-bold text-xs uppercase">Geral</span>
+                    <h2 class="text-xl font-bold mt-2 group-hover:text-g1-red transition-colors">COUTINHO CONFIRMA ADEUS AO VASCO: "CANSADO MENTALMENTE"</h2>
+                    <p class="text-gray-400 text-xs mt-2">18/02/2026 17:50</p>
                 </div>
             </a>
 
-            <!-- Matéria 3 -->
-            <a href="materias/2026/02/pf-vazamento.html"
-                class="bg-white rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+            <!-- VIRADOURO É TETRACAMPEÃ DO CARNAVAL COM TRIBUTO HISTÓRICO AO MESTRE CIÇA -->
+            <a href="materias/2026/02/viradouro-campea.html" class="bg-white rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
                 <div class="aspect-video overflow-hidden">
-                    <img src="https://ativopb.com.br/wp-content/uploads/2026/02/bhp_pensao-morte.jpg" alt="Política"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <img src="https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2026/02/mestre-cica-aspect-ratio-512-320.jpg" alt="VIRADOURO É TETRACAMPEÃ DO CARNAVAL COM TRIBUTO HISTÓRICO AO MESTRE CIÇA" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="p-4">
-                    <span class="text-g1-red font-bold text-xs uppercase">Política</span>
-                    <h2 class="text-xl font-bold mt-2 group-hover:text-g1-red transition-colors">PF apura vazamento de
-                        dados da Receita de Ministros do STF</h2>
+                    <span class="text-g1-red font-bold text-xs uppercase">Rio de Janeiro</span>
+                    <h2 class="text-xl font-bold mt-2 group-hover:text-g1-red transition-colors">VIRADOURO É TETRACAMPEÃ DO CARNAVAL COM TRIBUTO HISTÓRICO AO MESTRE CIÇA</h2>
+                    <p class="text-gray-400 text-xs mt-2">18/02/2026 17:30</p>
                 </div>
             </a>
 
-            <!-- Matéria 4 -->
-            <a href="materias/2026/02/banco-pleno.html"
-                class="bg-white rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+            <!-- POLÍCIA BRITÂNICA PEDE COLABORAÇÃO DE TESTEMUNHAS EM CASO EPSTEIN POR TRÁFICO DE MULHERES -->
+            <a href="materias/2026/02/epstein-policia.html" class="bg-white rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
                 <div class="aspect-video overflow-hidden">
-                    <img src="https://i.metroimg.com/6wVo56I8lKFzSCPAS85_fmjov-zcbvMq0bg0w5Vsrfs/w:900/q:85/f:webp/plain/https://images.metroimg.com/2026/02/banco-pleno-1.jpg"
-                        alt="Economia"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <img src="https://odia.ig.com.br/_midias/jpg/2026/02/11/1200x750/1_afp__20260209__96rl2gu__v1__highres__uspoliticsjusticeepstein-38081775.jpg" alt="POLÍCIA BRITÂNICA PEDE COLABORAÇÃO DE TESTEMUNHAS EM CASO EPSTEIN POR TRÁFICO DE MULHERES" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="p-4">
+                    <span class="text-g1-red font-bold text-xs uppercase">Geral</span>
+                    <h2 class="text-xl font-bold mt-2 group-hover:text-g1-red transition-colors">POLÍCIA BRITÂNICA PEDE COLABORAÇÃO DE TESTEMUNHAS EM CASO EPSTEIN POR TRÁFICO DE MULHERES</h2>
+                    <p class="text-gray-400 text-xs mt-2">18/02/2026 15:35</p>
+                </div>
+            </a>
+
+            <!-- CARNAVAL NO RIO DE JANEIRO TERMINA COM MAIS DE 500 DETIDOS E 97 CELULARES RECUPERADOS PELA POLÍCIA
+                MILITAR. -->
+            <a href="materias/2026/02/carnaval-rj.html" class="bg-white rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+                <div class="aspect-video overflow-hidden">
+                    <img src="../../../img/police.jpg" alt="CARNAVAL NO RIO DE JANEIRO TERMINA COM MAIS DE 500 DETIDOS E 97 CELULARES RECUPERADOS PELA POLÍCIA
+                MILITAR." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="p-4">
+                    <span class="text-g1-red font-bold text-xs uppercase">Geral</span>
+                    <h2 class="text-xl font-bold mt-2 group-hover:text-g1-red transition-colors">CARNAVAL NO RIO DE JANEIRO TERMINA COM MAIS DE 500 DETIDOS E 97 CELULARES RECUPERADOS PELA POLÍCIA
+                MILITAR.</h2>
+                    <p class="text-gray-400 text-xs mt-2">18/02/2026 11:45</p>
+                </div>
+            </a>
+
+            <!-- BANCO PLENO TEM 160 MIL CREDORES COM R$ 4,9 BILHÕES A RECEBER -->
+            <a href="materias/2026/02/banco-pleno.html" class="bg-white rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+                <div class="aspect-video overflow-hidden">
+                    <img src="https://i.metroimg.com/6wVo56I8lKFzSCPAS85_fmjov-zcbvMq0bg0w5Vsrfs/w:900/q:85/f:webp/plain/https://images.metroimg.com/2026/02/banco-pleno-1.jpg" alt="BANCO PLENO TEM 160 MIL CREDORES COM R$ 4,9 BILHÕES A RECEBER" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="p-4">
                     <span class="text-g1-red font-bold text-xs uppercase">Economia</span>
-                    <h2 class="text-xl font-bold mt-2 group-hover:text-g1-red transition-colors">Banco Pleno tem 160 mil
-                        credores a receber</h2>
-                </div>
-            </a>
-
-            <!-- Matéria 5 -->
-            <a href="materias/2026/02/coutinho-vasco.html"
-                class="bg-white rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
-                <div class="aspect-video overflow-hidden">
-                    <img src="https://uploads.diariodopara.com.br/2026/02/vasco-coutinho-brasileirao-ceara-1320x880.jpg"
-                        alt="Esporte"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="p-4">
-                    <span class="text-g1-red font-bold text-xs uppercase">Esporte</span>
-                    <h2 class="text-xl font-bold mt-2 group-hover:text-g1-red transition-colors">Coutinho confirma adeus
-                        ao Vasco</h2>
-                </div>
-            </a>
-
-            <!-- Matéria 6 -->
-            <a href="materias/2026/02/epstein-policia.html"
-                class="bg-white rounded overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
-                <div class="aspect-video overflow-hidden">
-                    <img src="https://odia.ig.com.br/_midias/jpg/2026/02/11/1200x750/1_afp__20260209__96rl2gu__v1__highres__uspoliticsjusticeepstein-38081775.jpg"
-                        alt="Mundo"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="p-4">
-                    <span class="text-g1-red font-bold text-xs uppercase">Mundo</span>
-                    <h2 class="text-xl font-bold mt-2 group-hover:text-g1-red transition-colors">Polícia britânica pede
-                        colaboração em caso Epstein</h2>
+                    <h2 class="text-xl font-bold mt-2 group-hover:text-g1-red transition-colors">BANCO PLENO TEM 160 MIL CREDORES COM R$ 4,9 BILHÕES A RECEBER</h2>
+                    <p class="text-gray-400 text-xs mt-2">18/02/2026 14:40</p>
                 </div>
             </a>
         </div>
     </main>
-
     <footer class="bg-g1-red text-white mt-12">
         <div class="container mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
                 <div class="mb-6 md:mb-0">
-                    <span class="text-2xl font-black tracking-tight">
-                        MÍDIA <span class="text-g1-orange">INFORMAL</span>
-                    </span>
+                    <span class="text-2xl font-black tracking-tight">MÍDIA <span class="text-g1-orange">INFORMAL</span></span>
                     <p class="text-white/80 text-sm mt-1">Compromisso com a verdade.</p>
                 </div>
                 <div class="flex space-x-6 text-sm font-semibold">
@@ -167,8 +138,6 @@
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
-
 </html>

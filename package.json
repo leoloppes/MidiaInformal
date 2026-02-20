@@ -4,8 +4,9 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "archive": "node scripts/generate-archive.js",
+    "dev": "npm run archive && tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "npm run archive && tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,6 +15,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.0",
+    "jsdom": "^28.1.0",
     "tailwindcss": "^4.2.0"
   }
 }
