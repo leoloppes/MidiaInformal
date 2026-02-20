@@ -1,6 +1,65 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. Current Date Logic (G1 Style) ---
+    // --- 1. Real-time Weather and Dollar Logic ---
+    const weatherElement = document.getElementById('weather-info');
+    const dollarElement = document.getElementById('dollar-info');
+
+    async function fetchWeather() {
+        if (!weatherElement) return;
+        console.log('Iniciando busca de clima...');
+        try {
+            // Rio de Janeiro coordinates: -22.9068, -43.1729
+            const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=-22.9068&longitude=-43.1729&current_weather=true');
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+            const data = await response.json();
+            console.log('Dados de clima recebidos:', data);
+
+            if (data && data.current_weather) {
+                const temp = Math.round(data.current_weather.temperature);
+                weatherElement.textContent = `Rio de Janeiro ${temp}°C`;
+            } else {
+                throw new Error('Estrutura de dados do clima inválida');
+            }
+        } catch (error) {
+            console.error('Erro ao buscar clima:', error);
+            weatherElement.textContent = 'Clima indisponível';
+        }
+    }
+
+    async function fetchDollarValue() {
+        if (!dollarElement) return;
+        console.log('Iniciando busca do dólar...');
+        try {
+            const response = await fetch('https://economia.awesomeapi.com.br/json/last/USD-BRL');
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+            const data = await response.json();
+            console.log('Dados do dólar recebidos:', data);
+
+            if (data && data.USDBRL) {
+                const value = parseFloat(data.USDBRL.bid).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                dollarElement.textContent = `Dólar R$ ${value}`;
+            } else {
+                throw new Error('Estrutura de dados do dólar inválida');
+            }
+        } catch (error) {
+            console.error('Erro ao buscar dólar:', error);
+            dollarElement.textContent = 'Dólar indisponível';
+        }
+    }
+
+    // Initial fetch
+    fetchWeather();
+    fetchDollarValue();
+
+    // Update every 30 minutes
+    setInterval(() => {
+        fetchWeather();
+        fetchDollarValue();
+    }, 30 * 60 * 1000);
+
+    // --- 2. Current Date Logic (G1 Style) ---
     const dateElement = document.getElementById('current-date');
     if (dateElement) {
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
