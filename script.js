@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(contactForm);
 
             try {
-                const response = await fetch('https://formspree.io/f/midiainformal@gmail.com', {
+                const response = await fetch('https://formspree.io/midiainformal@gmail.com', {
                     method: 'POST',
                     body: formData,
                     headers: {
