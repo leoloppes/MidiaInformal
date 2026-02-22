@@ -4,6 +4,7 @@ const { JSDOM } = require('jsdom');
 
 const materiasDir = path.join(__dirname, '..', 'materias');
 const outputFile = path.join(__dirname, '..', 'materias.html');
+const indexFile = path.join(__dirname, '..', 'index.html');
 
 async function getArticles(dir) {
     let results = [];
@@ -28,17 +29,70 @@ async function getArticles(dir) {
             const dateStr = document.querySelector('.flex.items-center.gap-4.text-sm.text-gray-500 span:last-child')?.textContent || '';
             const relativePath = path.relative(path.join(__dirname, '..'), filePath).replace(/\\/g, '/');
 
+            // Extract summary (first paragraph in the article content)
+            const summary = document.querySelector('.text-lg.text-gray-800 p')?.textContent?.trim() ||
+                document.querySelector('article > p')?.textContent?.trim() || '';
+
             results.push({
                 title,
                 category,
                 image,
                 link: relativePath,
                 date: dateStr,
+                summary: summary.length > 160 ? summary.substring(0, 157) + '...' : summary,
                 timestamp: stat.mtimeMs
             });
         }
     }
     return results;
+}
+
+async function updateIndex(articles) {
+    if (!fs.existsSync(indexFile)) return;
+
+    let indexContent = fs.readFileSync(indexFile, 'utf8');
+    const indexDom = new JSDOM(indexContent);
+    const indexDoc = indexDom.window.document;
+
+    // Identify featured links (inside #destaques)
+    const featuredLinks = Array.from(indexDoc.querySelectorAll('#destaques a')).map(a => a.getAttribute('href'));
+    console.log('Links em destaque detectados:', featuredLinks);
+
+    // Filter out articles that are already featured
+    const feedArticles = articles.filter(art => !featuredLinks.includes(art.link)).slice(0, 3);
+
+    const latestNewsHtml = feedArticles.map((art, index) => {
+        const borderClass = index === feedArticles.length - 1 ? '' : 'border-b border-gray-200 pb-6';
+        const categoryColor = art.category.toLowerCase().includes('rio') ? 'text-g1-orange' : 'text-g1-red';
+
+        return `                    <!-- Item ${index + 1} -->
+                    <a href="${art.link}"
+                        class="flex flex-col md:group md:flex-row gap-4 group cursor-pointer ${borderClass}">
+                        <div class="md:w-5/12 overflow-hidden rounded">
+                            <img src="${art.image}"
+                                alt="${art.title}"
+                                class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="md:w-7/12 flex flex-col justify-center">
+                            <span class="${categoryColor} font-bold text-xs uppercase mb-1">${art.category}</span>
+                            <h3
+                                class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:${categoryColor} transition-colors">
+                                ${art.title}
+                            </h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">${art.summary}</p>
+                            <span class="text-gray-400 text-xs mt-3">${art.date || 'Recente'}</span>
+                        </div>
+                    </a>`;
+    }).join('\n\n');
+
+    const startMarker = '<!-- LATEST-NEWS-START -->';
+    const endMarker = '<!-- LATEST-NEWS-END -->';
+
+    const regex = new RegExp(`${startMarker}[\\s\\S]*?${endMarker}`);
+    const newContent = indexContent.replace(regex, `${startMarker}\n${latestNewsHtml}\n                    ${endMarker}`);
+
+    fs.writeFileSync(indexFile, newContent);
+    console.log('index.html atualizado com as últimas notícias!');
 }
 
 async function generateArchive() {
@@ -47,6 +101,9 @@ async function generateArchive() {
 
     // Sort by timestamp (newest first)
     articles.sort((a, b) => b.timestamp - a.timestamp);
+
+    // Update Homepage
+    await updateIndex(articles);
 
     const articleCards = articles.map(art => `
             <!-- ${art.title} -->
