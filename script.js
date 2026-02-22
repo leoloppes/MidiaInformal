@@ -88,22 +88,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 3. Contact Form Submission (Mock) ---
+    // --- 3. Contact Form Submission (Formspree Integration) ---
     const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+    const submitBtn = document.getElementById('submit-btn');
+
+    if (contactForm && submitBtn) {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            // Simple validation
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            // Loading state
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'ENVIANDO...';
 
-            if (name && email && message) {
-                alert(`Obrigado, ${name}! Sua pauta/mensagem foi enviada para nossa redação.`);
-                contactForm.reset();
-            } else {
-                alert('Por favor, preencha todos os campos.');
+            const formData = new FormData(contactForm);
+
+            try {
+                const response = await fetch('https://formspree.io/f/midiainformal@gmail.com', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    alert('Obrigado! Sua pauta/mensagem foi enviada para nossa redação.');
+                    contactForm.reset();
+                } else {
+                    const data = await response.json();
+                    if (Object.hasOwn(data, 'errors')) {
+                        alert(data["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        alert('Ops! Ocorreu um problema ao enviar seu formulário.');
+                    }
+                }
+            } catch (error) {
+                alert('Ops! Ocorreu um erro de conexão.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
             }
         });
     }
