@@ -22,7 +22,7 @@ async function getArticles(dir) {
             const document = dom.window.document;
 
             const title = document.querySelector('h1')?.textContent?.trim() || 'Sem título';
-            const category = document.querySelector('nav .text-g1-orange')?.textContent?.trim() || 'Geral';
+            const category = (document.querySelector('nav .text-g1-orange') || document.querySelector('nav .text-g1-red'))?.textContent?.trim() || 'Geral';
             const image = document.querySelector('article figure img')?.src || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80';
 
             // Extract date from content or use file stats
