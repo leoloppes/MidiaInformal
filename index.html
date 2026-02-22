@@ -224,7 +224,7 @@
                                 class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="md:w-7/12 flex flex-col justify-center">
-                            <span class="text-g1-red font-bold text-xs uppercase mb-1">Geral</span>
+                            <span class="text-g1-red font-bold text-xs uppercase mb-1">Política</span>
                             <h3
                                 class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-red transition-colors">
                                 PF FAZ BUSCAS PARA APURAR VAZAMENTO DE DADOS DA RECEITA DE MINISTROS DO STF E PARENTES
@@ -243,7 +243,7 @@
                                 class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="md:w-7/12 flex flex-col justify-center">
-                            <span class="text-g1-red font-bold text-xs uppercase mb-1">Geral</span>
+                            <span class="text-g1-red font-bold text-xs uppercase mb-1">Esporte</span>
                             <h3
                                 class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-red transition-colors">
                                 COUTINHO CONFIRMA ADEUS AO VASCO: "CANSADO MENTALMENTE"
@@ -341,13 +341,13 @@
             <div class="bg-gray-100 p-6 rounded border border-gray-200">
                 <h3 class="font-bold text-lg mb-4 text-g1-red-dark">Fale Conosco</h3>
                 <form id="contact-form" class="space-y-3">
-                    <input type="text" id="name" placeholder="Seu Nome"
+                    <input type="text" id="name" name="name" required placeholder="Seu Nome"
                         class="w-full p-2 border border-gray-300 rounded text-gray-900 text-sm focus:outline-none focus:ring-1 focus:ring-g1-red-dark">
-                    <input type="email" id="email" placeholder="Seu E-mail"
+                    <input type="email" id="email" name="email" required placeholder="Seu E-mail"
                         class="w-full p-2 border border-gray-300 rounded text-gray-900 text-sm focus:outline-none focus:ring-1 focus:ring-g1-red-dark">
-                    <textarea id="message" rows="3" placeholder="Sugestão de Pauta"
+                    <textarea id="message" name="message" required rows="3" placeholder="Sugestão de Pauta"
                         class="w-full p-2 border border-gray-300 rounded text-gray-900 text-sm focus:outline-none focus:ring-1 focus:ring-g1-red-dark"></textarea>
-                    <button type="submit"
+                    <button type="submit" id="submit-btn"
                         class="w-full bg-g1-red hover:bg-g1-red-dark text-white font-bold py-2 rounded transition-colors text-sm shadow-sm">
                         ENVIAR
                     </button>
