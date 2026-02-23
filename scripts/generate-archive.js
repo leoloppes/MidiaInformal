@@ -25,8 +25,19 @@ async function getArticles(dir) {
             const category = (document.querySelector('nav .text-g1-orange') || document.querySelector('nav .text-g1-red'))?.textContent?.trim() || 'Geral';
             const image = document.querySelector('article figure img')?.src || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80';
 
-            // Extract date from content or use file stats
-            const dateStr = document.querySelector('.flex.items-center.gap-4.text-sm.text-gray-500 span:last-child')?.textContent || '';
+            // Extract date from content
+            const dateStr = document.querySelector('.flex.items-center.gap-4.text-sm.text-gray-500 span:last-child')?.textContent ||
+                document.querySelector('#article-date')?.textContent || '';
+
+            // Helper to parse "DD/MM/YYYY HHhMM" or "DD/MM/YYYY"
+            function parseDate(s) {
+                const match = s.match(/(\d{2})\/(\d{2})\/(\d{4})(?:\s+(\d{2})[h:](\d{2}))?/);
+                if (!match) return 0;
+                const [_, d, m, y, hr, min] = match;
+                return new Date(y, m - 1, d, hr || 0, min || 0).getTime();
+            }
+
+            const timestamp = parseDate(dateStr) || stat.mtimeMs;
             const relativePath = path.relative(path.join(__dirname, '..'), filePath).replace(/\\/g, '/');
 
             // Extract summary (first paragraph in the article content)
@@ -40,7 +51,7 @@ async function getArticles(dir) {
                 link: relativePath,
                 date: dateStr,
                 summary: summary.length > 160 ? summary.substring(0, 157) + '...' : summary,
-                timestamp: stat.mtimeMs
+                timestamp: timestamp
             });
         }
     }
@@ -59,13 +70,13 @@ async function updateIndex(articles) {
     console.log('Links em destaque detectados:', featuredLinks);
 
     // Filter out articles that are already featured
-    const feedArticles = articles.filter(art => !featuredLinks.includes(art.link)).slice(0, 3);
+    const feedArticles = articles.filter(art => !featuredLinks.includes(art.link)).slice(0, 4);
 
     const latestNewsHtml = feedArticles.map((art, index) => {
         const borderClass = index === feedArticles.length - 1 ? '' : 'border-b border-gray-200 pb-6';
-        const categoryColor = art.category.toLowerCase().includes('rio') ? 'text-g1-orange' : 'text-g1-red';
+        const categoryColor = art.category.toLowerCase().includes('rio') || art.category.toLowerCase().includes('carnaval') ? 'text-g1-orange' : 'text-g1-red';
 
-        return `                    <!-- Item ${index + 1} -->
+        return `                    <!-- Item ${index + 1} - ${art.title.substring(0, 20)}... -->
                     <a href="${art.link}"
                         class="flex flex-col md:group md:flex-row gap-4 group cursor-pointer ${borderClass}">
                         <div class="md:w-5/12 overflow-hidden rounded">
