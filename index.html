@@ -5,9 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MÍDIA INFORMAL - Notícias, Fatos e Fotos</title>
-    <link href="dist/output.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'g1-red': '#c4170c',
+                        'g1-orange': '#ff6b00',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body class="bg-gray-100 text-gray-800 font-sans">
@@ -60,7 +72,7 @@
                     <div class="aspect-video w-full overflow-hidden relative">
                         <img src="https://s2-marieclaire.glbimg.com/hFnFkhv3PUVcy-8axxZ6u9enwro=/0x0:5064x3376/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2026/K/I/FonczHT9mVpB75hsMFNQ/0d7a7203.jpg"
                             alt="Irmãos Brazão"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 text-white">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
                         <div class="absolute bottom-0 p-4 md:p-8 text-white w-full">
                             <span
@@ -86,11 +98,10 @@
                         </div>
                         <span class="text-g1-red font-bold text-xs uppercase">Rio de Janeiro</span>
                         <h3
-                            class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-red transition-colors">
-                            EDUARDO PAES CRIA SECRETARIA ESPECIAL DE SEGURANÇA URBANA</h3>
+                            class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-red transition-colors uppercase">
+                            Eduardo Paes cria Secretaria Especial de Segurança Urbana</h3>
                     </a>
 
-                    <!-- Cláudio Castro here (replaced Mundo Pixar) -->
                     <a href="materias/2026/02/castro-tse.html"
                         class="bg-white p-5 rounded shadow-sm border-t-4 border-g1-red hover:bg-gray-50 transition-colors group">
                         <div class="aspect-video w-full overflow-hidden rounded mb-3">
@@ -100,8 +111,8 @@
                         </div>
                         <span class="text-g1-red font-bold text-xs uppercase">Política</span>
                         <h3
-                            class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-red transition-colors">
-                            O MOVIMENTO DE CLÁUDIO CASTRO PARA ESCAPAR DE CASSAÇÃO NO TSE</h3>
+                            class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-red transition-colors uppercase">
+                            O movimento de Cláudio Castro para escapar de cassação no TSE</h3>
                     </a>
 
                     <a href="materias/2026/02/tarifa-metro-rio-8-20.html"
@@ -113,11 +124,10 @@
                         </div>
                         <span class="text-g1-red font-bold text-xs uppercase">Rio de Janeiro</span>
                         <h3
-                            class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-red transition-colors">
-                            TARIFA DO METRÔ RIO SOBRE PARA R$ 8,20 E MANTÉM POSTO DE MAIS CARA DO PAÍS</h3>
+                            class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-red transition-colors uppercase">
+                            Tarifa do Metrô Rio sobe para R$ 8,20</h3>
                     </a>
 
-                    <!-- New Box (as requested) - Ex-Embaixador Peter Mandelson moved here -->
                     <a href="materias/2026/02/mandelson-epstein.html"
                         class="bg-white p-5 rounded shadow-sm border-t-4 border-g1-red hover:bg-gray-50 transition-colors group">
                         <div class="aspect-video w-full overflow-hidden rounded mb-3">
@@ -127,8 +137,8 @@
                         </div>
                         <span class="text-g1-red font-bold text-xs uppercase">Internacional</span>
                         <h3
-                            class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-red transition-colors">
-                            EX-EMBAIXADOR PETER MANDELSON É DETIDO EM LONDRES</h3>
+                            class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-red transition-colors uppercase">
+                            Ex-embaixador Peter Mandelson é detido em Londres</h3>
                     </a>
                 </div>
             </section>
@@ -154,72 +164,162 @@
                 </div>
             </section>
 
+            <!-- Gallery Section (RESTORED) -->
+            <section id="fotos" class="space-y-6">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-3 h-3 bg-g1-orange rounded-full"></div>
+                    <h2 class="text-gray-900 font-bold text-2xl uppercase">Galeria do Dia</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="aspect-square overflow-hidden rounded bg-gray-200 cursor-zoom-in group">
+                        <img src="https://s2-g1.glbimg.com/eaLFAVWFtDuHxLXQbHdLzcSkO2s=/0x0:1920x1080/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/J/c/fBjxSeSlePyY2oIQgLNg/gnews-monobloco2.jpeg"
+                            alt="Foto Galeria 1"
+                            class="gallery-img w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded bg-gray-200 cursor-zoom-in group">
+                        <img src="https://uploads.diariodopara.com.br/2026/02/vasco-coutinho-brasileirao-ceara-1320x880.jpg"
+                            alt="Foto Galeria 2"
+                            class="gallery-img w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded bg-gray-200 cursor-zoom-in group">
+                        <img src="https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2026/02/mestre-cica-aspect-ratio-512-320.jpg"
+                            alt="Foto Galeria 3"
+                            class="gallery-img w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded bg-gray-200 cursor-zoom-in group">
+                        <img src="https://odia.ig.com.br/_midias/jpg/2026/02/11/1200x750/1_afp__20260209__96rl2gu__v1__highres__uspoliticsjusticeepstein-38081775.jpg"
+                            alt="Foto Galeria 4"
+                            class="gallery-img w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+            </section>
+
             <!-- Feed Section -->
             <section id="noticias" class="space-y-6">
                 <div class="flex items-center gap-2 mb-4">
                     <div class="w-3 h-3 bg-g1-red rounded-full"></div>
-                    <h2 class="text-gray-900 font-bold text-2xl">Últimas Notícias</h2>
+                    <h2 class="text-gray-900 font-bold text-2xl uppercase">Últimas Notícias</h2>
                 </div>
                 <div class="flex flex-col gap-6">
                     <!-- LATEST-NEWS-START -->
-                    <!-- Mundo Pixar moved here -->
+                    <!-- Item 1 - MUNDO PIXAR RETORNA ... -->
                     <a href="materias/2026/02/mundo-pixar-rio.html"
-                        class="flex flex-col md:flex-row gap-4 group border-b border-gray-200 pb-6">
-                        <div class="md:w-5/12 overflow-hidden rounded"><img
-                                src="https://saopauloparacriancas.com.br/wp-content/uploads/2023/04/sp_criancas_passeio_mundo_pixar_rj_200-800x533.jpg"
+                        class="flex flex-col md:group md:flex-row gap-4 group cursor-pointer border-b border-gray-200 pb-6">
+                        <div class="md:w-5/12 overflow-hidden rounded">
+                            <img src="https://saopauloparacriancas.com.br/wp-content/uploads/2023/04/sp_criancas_passeio_mundo_pixar_rj_200-800x533.jpg"
+                                alt="MUNDO PIXAR RETORNA AO RIO DE JANEIRO COM CENÁRIOS INÉDITOS E PRÉ-VENDA EXCLUSIVA"
                                 class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="md:w-7/12 flex flex-col justify-center">
-                            <span class="text-g1-red font-bold text-xs uppercase mb-1">Diversão</span>
+                            <span class="text-g1-red font-bold text-xs uppercase mb-1">Geral</span>
                             <h3
                                 class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-red transition-colors">
-                                MUNDO PIXAR RETORNA AO RIO DE JANEIRO COM CENÁRIOS INÉDITOS</h3>
-                            <span class="text-gray-400 text-xs mt-3">25/02/2026</span>
+                                MUNDO PIXAR RETORNA AO RIO DE JANEIRO COM CENÁRIOS INÉDITOS E PRÉ-VENDA EXCLUSIVA
+                            </h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">O Rio de Janeiro volta a ser o destino oficial dos fãs da animação. A partir do dia 10 de abril, o
+                    BarraShopping recebe a nova edição do ...</p>
+                            <span class="text-gray-400 text-xs mt-3">24/02/2026 15:05</span>
                         </div>
                     </a>
 
-                    <a href="materias/2026/02/witzel-filiacao.html"
-                        class="flex flex-col md:flex-row gap-4 group border-b border-gray-200 pb-6">
-                        <div class="md:w-5/12 overflow-hidden rounded"><img src="img/ww.jpg"
-                                class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        </div>
-                        <div class="md:w-7/12 flex flex-col justify-center">
-                            <span class="text-g1-red font-bold text-xs uppercase mb-1">Política</span>
-                            <h3
-                                class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-red transition-colors">
-                                WITZEL ACERTA FILIAÇÃO AO DEMOCRACIA CRISTÃ E ANUNCIA PRÉ-CANDIDATURA</h3>
-                            <span class="text-gray-400 text-xs mt-3">25/02/2026</span>
-                        </div>
-                    </a>
+                    <!-- Item 2 - EDUARDO PAES OFICIAL... -->
                     <a href="materias/2026/02/paes-jane-reis.html"
-                        class="flex flex-col md:flex-row gap-4 group border-b border-gray-200 pb-6">
-                        <div class="md:w-5/12 overflow-hidden rounded"><img
-                                src="https://www.infomoney.com.br/wp-content/uploads/2026/02/mdb-jane-reis-paes.jpeg?w=1024&quality=70&strip=all"
+                        class="flex flex-col md:group md:flex-row gap-4 group cursor-pointer border-b border-gray-200 pb-6">
+                        <div class="md:w-5/12 overflow-hidden rounded">
+                            <img src="https://www.infomoney.com.br/wp-content/uploads/2026/02/mdb-jane-reis-paes.jpeg?w=1024&quality=70&strip=all"
+                                alt="EDUARDO PAES OFICIALIZA JANE
+                    REIS COMO VICE E SELA ALIANÇA ENTRE PT E BASE BOLSONARISTA NO RJ"
                                 class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="md:w-7/12 flex flex-col justify-center">
                             <span class="text-g1-red font-bold text-xs uppercase mb-1">Política</span>
                             <h3
                                 class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-red transition-colors">
-                                EDUARDO PAES OFICIALIZA JANE REIS COMO VICE</h3>
-                            <span class="text-gray-400 text-xs mt-3">23/02/2026</span>
+                                EDUARDO PAES OFICIALIZA JANE
+                    REIS COMO VICE E SELA ALIANÇA ENTRE PT E BASE BOLSONARISTA NO RJ
+                            </h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">RIO DE JANEIRO  – O prefeito Eduardo Paes (PSD) deu um passo
+                    decisivo em sua estratégia para conquistar o Palácio Guanabara ao anunciar, ...</p>
+                            <span class="text-gray-400 text-xs mt-3">23/02/2026 15:45</span>
                         </div>
                     </a>
 
+                    <!-- Item 3 - DESFILE DO MONOBLOCO... -->
                     <a href="materias/2026/02/monobloco-desfile.html"
-                        class="flex flex-col md:flex-row gap-4 group border-b border-gray-200 pb-6">
-                        <div class="md:w-5/12 overflow-hidden rounded"><img
-                                src="https://catracalivre.com.br/wp-content/uploads/2024/02/monobloco-carnaval-rio-de-janeiro.jpg"
+                        class="flex flex-col md:group md:flex-row gap-4 group cursor-pointer border-b border-gray-200 pb-6">
+                        <div class="md:w-5/12 overflow-hidden rounded">
+                            <img src="https://s2-g1.glbimg.com/eaLFAVWFtDuHxLXQbHdLzcSkO2s=/0x0:1920x1080/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/J/c/fBjxSeSlePyY2oIQgLNg/gnews-monobloco2.jpeg"
+                                alt="DESFILE DO MONOBLOCO ENCERRA CIRCUITO DE MEGABLOCOS E HOMENAGEIA PRETA GIL E ARLINDO CRUZ"
                                 class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="md:w-7/12 flex flex-col justify-center">
-                            <span class="text-g1-red font-bold text-xs uppercase mb-1">Carnaval</span>
+                            <span class="text-g1-orange font-bold text-xs uppercase mb-1">Rio de Janeiro</span>
                             <h3
-                                class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-red transition-colors">
-                                MONOBLOCO ENCERRA CARNAVAL DO RIO COM DESFILE NO CENTRO</h3>
-                            <span class="text-gray-400 text-xs mt-3">22/02/2026</span>
+                                class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-orange transition-colors">
+                                DESFILE DO MONOBLOCO ENCERRA CIRCUITO DE MEGABLOCOS E HOMENAGEIA PRETA GIL E ARLINDO CRUZ
+                            </h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">O Monobloco, um dos mais tradicionais blocos do carnaval de rua do Rio de Janeiro, encerra na manhã deste domingo (22) o circuito de megablocos da cidade. O ...</p>
+                            <span class="text-gray-400 text-xs mt-3">22/02/2026 13:30</span>
                         </div>
                     </a>
+
+                    <!-- Item 4 - WITZEL ACERTA FILIAÇ... -->
+                    <a href="materias/2026/02/witzel-filiacao.html"
+                        class="flex flex-col md:group md:flex-row gap-4 group cursor-pointer ">
+                        <div class="md:w-5/12 overflow-hidden rounded">
+                            <img src="../../../img/ww.jpg"
+                                alt="WITZEL ACERTA FILIAÇÃO AO DEMOCRACIA CRISTÃ E ANUNCIA PRÉ-CANDIDATURA AO GOVERNO DO RIO DE JANEIRO"
+                                class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="md:w-7/12 flex flex-col justify-center">
+                            <span class="text-g1-orange font-bold text-xs uppercase mb-1">Rio de Janeiro</span>
+                            <h3
+                                class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-orange transition-colors">
+                                WITZEL ACERTA FILIAÇÃO AO DEMOCRACIA CRISTÃ E ANUNCIA PRÉ-CANDIDATURA AO GOVERNO DO RIO DE JANEIRO
+                            </h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">O ex-governador do Rio de Janeiro Wilson Witzel acertou sua filiação ao Democracia Cristã (DC) e confirmou a intenção de disputar novamente o Palácio Guanaba...</p>
+                            <span class="text-gray-400 text-xs mt-3">20/02/2026 17:30</span>
+                        </div>
+                    </a>
+                    <!-- LATEST-NEWS-END -->
+                </div>
+            </section>
+
+            <!-- Contact Section (RESTORED) -->
+            <section id="contato" class="my-12">
+                <div class="bg-white rounded-xl shadow-lg border-t-8 border-g1-red p-8">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-black text-gray-900 uppercase">Fale Conosco</h2>
+                        <p class="text-gray-600 font-medium">Envie sua denúncia, sugestão de pauta ou crítica.</p>
+                    </div>
+                    <form id="contact-form" class="space-y-6 max-w-2xl mx-auto">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Nome</label>
+                                <input type="text" name="name" required
+                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-g1-red focus:outline-none transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-gray-500">E-mail</label>
+                                <input type="email" name="email" required
+                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-g1-red focus:outline-none transition-all">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Assunto</label>
+                            <input type="text" name="subject" required
+                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-g1-red focus:outline-none transition-all">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Mensagem</label>
+                            <textarea name="message" rows="5" required
+                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-g1-red focus:outline-none transition-all"></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn"
+                            class="w-full bg-g1-red hover:bg-red-800 text-white font-black py-4 rounded shadow-lg transition-all transform hover:-translate-y-1">
+                            ENVIAR PARA REDAÇÃO
+                        </button>
+                    </form>
                 </div>
             </section>
         </div>
@@ -227,20 +327,20 @@
         <!-- Sidebar -->
         <aside class="lg:col-span-4 space-y-8">
             <div class="bg-white p-6 rounded shadow-sm border-t-4 border-g1-red">
-                <h3 class="text-gray-900 font-bold text-lg mb-4">Mais Lidas</h3>
+                <h3 class="text-gray-900 font-bold text-lg mb-4 uppercase">Mais Lidas</h3>
                 <ol class="list-decimal list-inside space-y-4 text-sm font-semibold">
                     <li><a href="materias/2026/02/condenacao-brazao-marielle.html" class="hover:text-g1-red">STF condena
-                            irmãos Brazão no caso Marielle Franco</a></li>
+                            irmãos Brazão</a></li>
                     <li><a href="materias/2026/02/castro-tse.html" class="hover:text-g1-red">O movimento de Cláudio
-                            Castro para escapar de cassação</a></li>
-                    <li><a href="materias/2026/02/tarifa-metro-rio-8-20.html" class="hover:text-g1-red">Tarifa do metrô
-                            Rio sobe para R$ 8,20</a></li>
-                    <li><a href="materias/2026/02/secretaria-seguranca-paes.html" class="hover:text-g1-red">Eduardo Paes
-                            cria Secretaria de Segurança</a></li>
+                            Castro</a></li>
+                    <li><a href="materias/2026/02/tarifa-metro-rio-8-20.html" class="hover:text-g1-red">Tarifa do Metrô
+                            Rio sobe</a></li>
+                    <li><a href="materias/2026/02/paes-jane-reis.html" class="hover:text-g1-red">Eduardo Paes oficializa
+                            vice</a></li>
                     <li><a href="materias/2026/02/mundo-pixar-rio.html" class="hover:text-g1-red">Mundo Pixar retorna ao
-                            Rio de Janeiro</a></li>
-                    <li><a href="materias/2026/02/mandelson-epstein.html" class="hover:text-g1-red">Ex-embaixador Peter
-                            Mandelson é detido</a></li>
+                            Rio</a></li>
+                    <li><a href="materias/2026/02/mandelson-epstein.html" class="hover:text-g1-red">Peter Mandelson é
+                            detido</a></li>
                 </ol>
             </div>
         </aside>
@@ -251,6 +351,17 @@
         <span class="text-2xl font-black">MÍDIA <span class="text-g1-orange">INFORMAL</span></span>
         <p class="text-xs mt-4">© 2026 Mídia Informal. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Lightbox Modal (RESTORED) -->
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-[999] hidden flex items-center justify-center p-4">
+        <button id="close-lightbox" class="absolute top-6 right-6 text-white hover:text-g1-orange transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <img id="lightbox-img" src="" alt="Zoom" class="max-w-full max-h-[90vh] rounded shadow-2xl">
+    </div>
 
     <script src="script.js"></script>
 </body>
