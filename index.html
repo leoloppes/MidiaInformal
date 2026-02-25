@@ -12,7 +12,7 @@
 
 <body class="bg-gray-100 text-gray-800 font-sans">
 
-    <!-- Top Bar (Date & Currency/Weather Mockup) -->
+    <!-- Top Bar -->
     <div class="bg-gray-100 border-b border-gray-200 text-xs py-1 text-gray-500">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <span id="current-date">Carregando data...</span>
@@ -26,27 +26,15 @@
     <!-- Header -->
     <header class="bg-g1-red text-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo -->
             <a href="#" class="text-3xl font-black tracking-tight flex items-center gap-1 leading-none">
                 <span class="text-white">MÍDIA</span>
                 <span class="text-g1-orange">INFORMAL</span>
             </a>
-
-            <!-- Search / Menu (Desktop) -->
             <div class="hidden md:flex items-center gap-6 text-sm font-bold tracking-wide">
                 <a href="#destaques" class="hover:text-g1-orange transition-colors">DESTAQUES</a>
                 <a href="materias.html" class="hover:text-g1-orange transition-colors">NOTÍCIAS</a>
                 <a href="#fotos" class="hover:text-g1-orange transition-colors">FOTOS</a>
-                <button class="text-white hover:text-g1-orange">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                </button>
             </div>
-
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -54,404 +42,192 @@
                 </svg>
             </button>
         </div>
-
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu"
-            class="hidden md:hidden bg-g1-red-dark absolute w-full left-0 border-t border-red-800 shadow-lg">
-            <div class="flex flex-col p-4 space-y-4 text-center font-bold">
-                <a href="#destaques" class="text-white hover:text-g1-orange">DESTAQUES</a>
-                <a href="materias.html" class="text-white hover:text-g1-orange">NOTÍCIAS</a>
-                <a href="#fotos" class="text-white hover:text-g1-orange">FOTOS</a>
-            </div>
-        </div>
     </header>
 
-    <!-- Main Content Area -->
     <main class="container mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
 
-        <!-- Center Column (Main News) - 8 Cols -->
+        <!-- Center Column -->
         <div class="lg:col-span-8 space-y-8">
 
-
-            <!-- Super Manchete (Highlights) -->
+            <!-- Super Manchete -->
             <section id="destaques" class="space-y-4">
                 <h2 class="text-g1-orange font-bold text-sm uppercase border-b-2 border-g1-orange inline-block mb-2">
                     Destaque do Dia</h2>
 
-                <!-- Main Article Card - Cláudio Castro -->
-                <a href="materias/2026/02/castro-tse.html"
+                <!-- Main Highlight: STF Condenação -->
+                <a href="materias/2026/02/condenacao-brazao-marielle.html"
                     class="group relative block overflow-hidden rounded shadow-sm hover:shadow-md transition-shadow bg-white">
                     <div class="aspect-video w-full overflow-hidden relative">
-                        <!-- Cláudio Castro Highlight -->
-                        <img src="https://scontent.fsdu40-1.fna.fbcdn.net/v/t39.30808-6/641577694_1594329489208883_7543006824148063677_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_ohc=pIpmP7hCP9UQ7kNvwF1iG3j&_nc_oc=AdmsigXcqOAnr30oWUP5JPmKtdLm290SAHcmnI94YR_QgSbr4TGm_gGTxBQ4BwJwWc7ekSox2OwUJ6q5jUjQaP5g&_nc_zt=23&_nc_ht=scontent.fsdu40-1.fna&_nc_gid=ByR96cYV0BzMso_RHjLx6A&oh=00_AfvYsBzYxywwPVTBINQHRHsudhnzifXAG_m5duKAHqWRSA&oe=69A28045"
-                            alt="Cláudio Castro"
+                        <img src="https://s2-marieclaire.glbimg.com/hFnFkhv3PUVcy-8axxZ6u9enwro=/0x0:5064x3376/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2026/K/I/FonczHT9mVpB75hsMFNQ/0d7a7203.jpg"
+                            alt="Irmãos Brazão"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
                         <div class="absolute bottom-0 p-4 md:p-8 text-white w-full">
                             <span
-                                class="bg-g1-orange text-white text-xs font-bold px-2 py-1 rounded mb-3 inline-block uppercase tracking-wider">Política</span>
+                                class="bg-g1-orange text-white text-xs font-bold px-2 py-1 rounded mb-3 inline-block uppercase">Justiça</span>
                             <h1
                                 class="text-3xl md:text-5xl font-extrabold leading-tight mb-2 group-hover:text-g1-orange transition-colors uppercase">
-                                O MOVIMENTO DE CLÁUDIO CASTRO PARA ESCAPAR DE CASSAÇÃO NO TSE
+                                STF CONDENA IRMÃOS BRAZÃO, MAS JULGAMENTO REASCENDE DEBATE SOBRE FALHAS NO CASO MARIELLE
                             </h1>
-                            <p class="text-gray-200 text-base md:text-lg font-medium hidden md:block max-w-3xl">
-                                Governador do Rio intensifica articulações em Brasília enquanto Tribunal Superior
-                                Eleitoral retoma processo que pode levar a novas eleições no Rio.
-                            </p>
+                            <p class="text-gray-200 text-sm hidden md:block max-w-3xl">Primeira Turma do Supremo
+                                sentencia mandantes a mais de 70 anos de prisão.</p>
                         </div>
                     </div>
                 </a>
 
-                <!-- Sub-grid of 2 secondary articles SECOND ROW (New ones) -->
+                <!-- Grid Section -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <a href="materias/2026/02/secretaria-seguranca-paes.html"
-                        class="bg-white p-5 rounded shadow-sm border-t-4 border-g1-red hover:bg-gray-50 transition-colors cursor-pointer group h-full">
+                        class="bg-white p-5 rounded shadow-sm border-t-4 border-g1-red hover:bg-gray-50 transition-colors group">
                         <div class="aspect-video w-full overflow-hidden rounded mb-3">
                             <img src="https://prefeitura.rio/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-18-at-11.56.04.jpeg"
                                 alt="Eduardo Paes"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <span class="text-g1-red font-bold text-xs uppercase tracking-wide">Rio de Janeiro</span>
+                        <span class="text-g1-red font-bold text-xs uppercase">Rio de Janeiro</span>
                         <h3
                             class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-red transition-colors">
-                            EDUARDO PAES CRIA SECRETARIA ESPECIAL DE SEGURANÇA URBANA PARA COORDENAR FORÇA MUNICIPAL
-                        </h3>
-                        <p class="text-gray-600 text-sm mt-3">Prefeito nomeia delegado para comandar nova pasta que
-                            centralizará monitoramento da Guarda Municipal.</p>
+                            EDUARDO PAES CRIA SECRETARIA ESPECIAL DE SEGURANÇA URBANA</h3>
                     </a>
-                    <a href="materias/2026/02/mundo-pixar-rio.html"
-                        class="bg-white p-5 rounded shadow-sm border-t-4 border-g1-red hover:bg-gray-50 transition-colors cursor-pointer group h-full">
+
+                    <!-- Cláudio Castro here (replaced Mundo Pixar) -->
+                    <a href="materias/2026/02/castro-tse.html"
+                        class="bg-white p-5 rounded shadow-sm border-t-4 border-g1-red hover:bg-gray-50 transition-colors group">
                         <div class="aspect-video w-full overflow-hidden rounded mb-3">
-                            <img src="https://saopauloparacriancas.com.br/wp-content/uploads/2023/04/sp_criancas_passeio_mundo_pixar_rj_200-800x533.jpg"
-                                alt="Mundo Pixar"
+                            <img src="https://scontent.fsdu40-1.fna.fbcdn.net/v/t39.30808-6/641577694_1594329489208883_7543006824148063677_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_ohc=pIpmP7hCP9UQ7kNvwF1iG3j&_nc_oc=AdmsigXcqOAnr30oWUP5JPmKtdLm290SAHcmnI94YR_QgSbr4TGm_gGTxBQ4BwJwWc7ekSox2OwUJ6q5jUjQaP5g&_nc_zt=23&_nc_ht=scontent.fsdu40-1.fna&_nc_gid=ByR96cYV0BzMso_RHjLx6A&oh=00_AfvYsBzYxywwPVTBINQHRHsudhnzifXAG_m5duKAHqWRSA&oe=69A28045"
+                                alt="Cláudio Castro"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <span class="text-g1-red font-bold text-xs uppercase tracking-wide">Diversão</span>
+                        <span class="text-g1-red font-bold text-xs uppercase">Política</span>
                         <h3
                             class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-red transition-colors">
-                            MUNDO PIXAR RETORNA AO RIO DE JANEIRO COM CENÁRIOS INÉDITOS
-                        </h3>
-                        <p class="text-gray-600 text-sm mt-3">Exposição interativa traz salas de 'Red', 'Viva' e
-                            'Divertida
-                            Mente' para o BarraShopping.</p>
+                            O MOVIMENTO DE CLÁUDIO CASTRO PARA ESCAPAR DE CASSAÇÃO NO TSE</h3>
                     </a>
-                </div>
 
-                <!-- Sub-grid of 2 secondary articles -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="materias/2026/02/tarifa-metro-rio-8-20.html"
+                        class="bg-white p-5 rounded shadow-sm border-t-4 border-g1-red hover:bg-gray-50 transition-colors group">
+                        <div class="aspect-video w-full overflow-hidden rounded mb-3">
+                            <img src="https://viatrolebus.com.br/wp-content/uploads/2018/11/metrorio-780x520.jpeg"
+                                alt="Metrô Rio"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <span class="text-g1-red font-bold text-xs uppercase">Rio de Janeiro</span>
+                        <h3
+                            class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-red transition-colors">
+                            TARIFA DO METRÔ RIO SOBRE PARA R$ 8,20 E MANTÉM POSTO DE MAIS CARA DO PAÍS</h3>
+                    </a>
+
+                    <!-- New Box (as requested) - Ex-Embaixador Peter Mandelson moved here -->
                     <a href="materias/2026/02/mandelson-epstein.html"
-                        class="bg-white p-5 rounded shadow-sm border-t-4 border-g1-red hover:bg-gray-50 transition-colors cursor-pointer group h-full">
+                        class="bg-white p-5 rounded shadow-sm border-t-4 border-g1-red hover:bg-gray-50 transition-colors group">
                         <div class="aspect-video w-full overflow-hidden rounded mb-3">
                             <img src="https://cdn-images.rtp.pt/icm/noticias/images/a7/a78a0c271a5cd072f8059ce4ecf99689?w=860&q=90&rect=0,0,1499,822&auto=format"
                                 alt="Peter Mandelson"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
-                        <span class="text-g1-red font-bold text-xs uppercase tracking-wide">Internacional</span>
+                        <span class="text-g1-red font-bold text-xs uppercase">Internacional</span>
                         <h3
                             class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-red transition-colors">
-                            EX-EMBAIXADOR PETER MANDELSON É DETIDO EM LONDRES POR LIGAÇÃO COM JEFFREY EPSTEIN
-                        </h3>
-                        <p class="text-gray-600 text-sm mt-3">Prisão do influente político britânico ocorre após
-                            revelações de e-mails e repasses financeiros vinculados ao financista.</p>
-                    </a>
-                    <a href="materias/2026/02/witzel-filiacao.html"
-                        class="bg-white p-5 rounded shadow-sm border-t-4 border-g1-red hover:bg-gray-50 transition-colors cursor-pointer group h-full">
-                        <div class="aspect-video w-full overflow-hidden rounded mb-3">
-                            <img src="img/ww.jpg" alt="Wilson Witzel"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        </div>
-                        <span class="text-g1-red font-bold text-xs uppercase tracking-wide">Política</span>
-                        <h3
-                            class="text-xl font-bold text-gray-900 leading-tight mt-2 group-hover:text-g1-red transition-colors">
-                            WITZEL ACERTA FILIAÇÃO AO DEMOCRACIA CRISTÃ E ANUNCIA PRÉ-CANDIDATURA AO GOVERNO DO RIO DE
-                            JANEIRO
-                        </h3>
-                        <p class="text-gray-600 text-sm mt-3">Ex-governador confirma retorno à política eleitoral e
-                            articula pré-candidatura para 2026.</p>
+                            EX-EMBAIXADOR PETER MANDELSON É DETIDO EM LONDRES</h3>
                     </a>
                 </div>
             </section>
 
-            <!-- Special Video Coverage Section -->
+            <!-- Video Section -->
             <section id="especial-video" class="my-10">
-                <div class="bg-gray-900 rounded-xl overflow-hidden shadow-2xl border border-gray-800">
-                    <div class="p-6 md:p-8">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-                            <div>
-                                <span
-                                    class="text-g1-orange font-bold text-xs tracking-widest uppercase mb-1 block">Especial</span>
-                                <h2 class="text-white font-black text-2xl md:text-3xl uppercase italic leading-none">
-                                    Cobertura em Vídeo</h2>
-                            </div>
-                            <div class="flex items-center gap-2 text-gray-400 text-sm">
-                                <span class="w-2 h-2 bg-g1-red rounded-full animate-pulse"></span>
-                                MANIFESTAÇÃO / RIO DE JANEIRO - 2013/2017
-                            </div>
+                <div class="bg-gray-900 rounded-xl overflow-hidden p-6 md:p-8">
+                    <h2 class="text-white font-black text-2xl uppercase italic mb-6">Cobertura em Vídeo</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="aspect-video rounded overflow-hidden bg-black">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/UD1BNruC8CY"
+                                frameborder="0" allowfullscreen></iframe>
                         </div>
-
-                        <!-- Video Grid -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div class="space-y-3">
-                                <div
-                                    class="aspect-video rounded-lg overflow-hidden bg-black shadow-inner relative group">
-                                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/UD1BNruC8CY"
-                                        title="Manifestação Garis 2014" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen></iframe>
-                                </div>
-                                <h4
-                                    class="text-white font-bold text-base line-clamp-2 hover:text-g1-orange transition-colors cursor-pointer">
-                                    Manifestação do Garis da Comlurb do Rio de Janeiro (07/03/2014)
-                                </h4>
-                            </div>
-
-                            <div class="space-y-3">
-                                <div
-                                    class="aspect-video rounded-lg overflow-hidden bg-black shadow-inner relative group">
-                                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/SAUwIei6B7A"
-                                        title="Greve Geral 2017" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen></iframe>
-                                </div>
-                                <h4
-                                    class="text-white font-bold text-base line-clamp-2 hover:text-g1-orange transition-colors cursor-pointer">
-                                    Greve Geral: Manifestação contra a Reforma Trabalhista (28/04/2017)
-                                </h4>
-                            </div>
-
-                            <div class="space-y-3">
-                                <div
-                                    class="aspect-video rounded-lg overflow-hidden bg-black shadow-inner relative group">
-                                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/dPaa5pMhHCQ"
-                                        title="OS ''SEMSEM'' - OS SEM VIDAS" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen></iframe>
-                                </div>
-                                <h4
-                                    class="text-white font-bold text-base line-clamp-2 hover:text-g1-orange transition-colors cursor-pointer">
-                                    OS ''SEMSEM'' - OS SEM VIDAS, OS SEM NADA! (Documentário Exclusivo)
-                                </h4>
-                            </div>
+                        <div class="aspect-video rounded overflow-hidden bg-black">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/SAUwIei6B7A"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="aspect-video rounded overflow-hidden bg-black">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dPaa5pMhHCQ"
+                                frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Feed Section (Latest News) -->
+            <!-- Feed Section -->
             <section id="noticias" class="space-y-6">
                 <div class="flex items-center gap-2 mb-4">
                     <div class="w-3 h-3 bg-g1-red rounded-full"></div>
                     <h2 class="text-gray-900 font-bold text-2xl">Últimas Notícias</h2>
                 </div>
-
-                <!-- News List Items -->
                 <div class="flex flex-col gap-6">
                     <!-- LATEST-NEWS-START -->
-                    <!-- Item 1 - EDUARDO PAES OFICIAL... -->
-                    <a href="materias/2026/02/paes-jane-reis.html"
-                        class="flex flex-col md:group md:flex-row gap-4 group cursor-pointer border-b border-gray-200 pb-6">
-                        <div class="md:w-5/12 overflow-hidden rounded">
-                            <img src="https://www.infomoney.com.br/wp-content/uploads/2026/02/mdb-jane-reis-paes.jpeg?w=1024&quality=70&strip=all"
-                                alt="EDUARDO PAES OFICIALIZA JANE
-                    REIS COMO VICE E SELA ALIANÇA ENTRE PT E BASE BOLSONARISTA NO RJ"
+                    <!-- Mundo Pixar moved here -->
+                    <a href="materias/2026/02/mundo-pixar-rio.html"
+                        class="flex flex-col md:flex-row gap-4 group border-b border-gray-200 pb-6">
+                        <div class="md:w-5/12 overflow-hidden rounded"><img
+                                src="https://saopauloparacriancas.com.br/wp-content/uploads/2023/04/sp_criancas_passeio_mundo_pixar_rj_200-800x533.jpg"
+                                class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="md:w-7/12 flex flex-col justify-center">
+                            <span class="text-g1-red font-bold text-xs uppercase mb-1">Diversão</span>
+                            <h3
+                                class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-red transition-colors">
+                                MUNDO PIXAR RETORNA AO RIO DE JANEIRO COM CENÁRIOS INÉDITOS</h3>
+                            <span class="text-gray-400 text-xs mt-3">25/02/2026</span>
+                        </div>
+                    </a>
+
+                    <a href="materias/2026/02/witzel-filiacao.html"
+                        class="flex flex-col md:flex-row gap-4 group border-b border-gray-200 pb-6">
+                        <div class="md:w-5/12 overflow-hidden rounded"><img src="img/ww.jpg"
                                 class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="md:w-7/12 flex flex-col justify-center">
                             <span class="text-g1-red font-bold text-xs uppercase mb-1">Política</span>
                             <h3
                                 class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-red transition-colors">
-                                EDUARDO PAES OFICIALIZA JANE
-                                REIS COMO VICE E SELA ALIANÇA ENTRE PT E BASE BOLSONARISTA NO RJ
-                            </h3>
-                            <p class="text-gray-600 text-sm line-clamp-2">RIO DE JANEIRO – O prefeito Eduardo Paes (PSD)
-                                deu um passo
-                                decisivo em sua estratégia para conquistar o Palácio Guanabara ao anunciar, ...</p>
-                            <span class="text-gray-400 text-xs mt-3">23/02/2026 15:45</span>
+                                WITZEL ACERTA FILIAÇÃO AO DEMOCRACIA CRISTÃ E ANUNCIA PRÉ-CANDIDATURA</h3>
+                            <span class="text-gray-400 text-xs mt-3">25/02/2026</span>
                         </div>
                     </a>
-
-                    <!-- Item 2 - DESFILE DO MONOBLOCO... -->
-                    <a href="materias/2026/02/monobloco-desfile.html"
-                        class="flex flex-col md:group md:flex-row gap-4 group cursor-pointer border-b border-gray-200 pb-6">
-                        <div class="md:w-5/12 overflow-hidden rounded">
-                            <img src="https://s2-g1.glbimg.com/eaLFAVWFtDuHxLXQbHdLzcSkO2s=/0x0:1920x1080/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/J/c/fBjxSeSlePyY2oIQgLNg/gnews-monobloco2.jpeg"
-                                alt="DESFILE DO MONOBLOCO ENCERRA CIRCUITO DE MEGABLOCOS E HOMENAGEIA PRETA GIL E ARLINDO CRUZ"
+                    <a href="materias/2026/02/paes-jane-reis.html"
+                        class="flex flex-col md:flex-row gap-4 group border-b border-gray-200 pb-6">
+                        <div class="md:w-5/12 overflow-hidden rounded"><img
+                                src="https://www.infomoney.com.br/wp-content/uploads/2026/02/mdb-jane-reis-paes.jpeg?w=1024&quality=70&strip=all"
                                 class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <div class="md:w-7/12 flex flex-col justify-center">
-                            <span class="text-g1-orange font-bold text-xs uppercase mb-1">Rio de Janeiro</span>
-                            <h3
-                                class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-orange transition-colors">
-                                DESFILE DO MONOBLOCO ENCERRA CIRCUITO DE MEGABLOCOS E HOMENAGEIA PRETA GIL E ARLINDO
-                                CRUZ
-                            </h3>
-                            <p class="text-gray-600 text-sm line-clamp-2">O Monobloco, um dos mais tradicionais blocos
-                                do carnaval de rua do Rio de Janeiro, encerra na manhã deste domingo (22) o circuito de
-                                megablocos da cidade. O ...</p>
-                            <span class="text-gray-400 text-xs mt-3">22/02/2026 13:30</span>
-                        </div>
-                    </a>
-
-                    <!-- Item 3 - COUTINHO CONFIRMA AD... -->
-                    <a href="materias/2026/02/coutinho-vasco.html"
-                        class="flex flex-col md:group md:flex-row gap-4 group cursor-pointer border-b border-gray-200 pb-6">
-                        <div class="md:w-5/12 overflow-hidden rounded">
-                            <img src="https://uploads.diariodopara.com.br/2026/02/vasco-coutinho-brasileirao-ceara-1320x880.jpg"
-                                alt="COUTINHO CONFIRMA ADEUS AO VASCO: " CANSADO MENTALMENTE""
-                                class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        </div>
-                        <div class="md:w-7/12 flex flex-col justify-center">
-                            <span class="text-g1-red font-bold text-xs uppercase mb-1">Esporte</span>
+                            <span class="text-g1-red font-bold text-xs uppercase mb-1">Política</span>
                             <h3
                                 class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-red transition-colors">
-                                COUTINHO CONFIRMA ADEUS AO VASCO: "CANSADO MENTALMENTE"
-                            </h3>
-                            <p class="text-gray-600 text-sm line-clamp-2">O meia Philippe Coutinho se despediu do Vasco,
-                                em um comunicado publicado nas redes sociais. O jogador disse que está "muito cansado
-                                mentalmente". Por isso, ...</p>
-                            <span class="text-gray-400 text-xs mt-3">18/02/2026 17:50</span>
+                                EDUARDO PAES OFICIALIZA JANE REIS COMO VICE</h3>
+                            <span class="text-gray-400 text-xs mt-3">23/02/2026</span>
                         </div>
                     </a>
-
-                    <!-- Item 4 - VIRADOURO É TETRACAM... -->
-                    <a href="materias/2026/02/viradouro-campea.html"
-                        class="flex flex-col md:group md:flex-row gap-4 group cursor-pointer ">
-                        <div class="md:w-5/12 overflow-hidden rounded">
-                            <img src="https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2026/02/mestre-cica-aspect-ratio-512-320.jpg"
-                                alt="VIRADOURO É TETRACAMPEÃ DO CARNAVAL COM TRIBUTO HISTÓRICO AO MESTRE CIÇA"
-                                class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        </div>
-                        <div class="md:w-7/12 flex flex-col justify-center">
-                            <span class="text-g1-orange font-bold text-xs uppercase mb-1">Rio de Janeiro</span>
-                            <h3
-                                class="text-2xl font-bold text-gray-800 leading-tight mb-2 group-hover:text-g1-orange transition-colors">
-                                VIRADOURO É TETRACAMPEÃ DO CARNAVAL COM TRIBUTO HISTÓRICO AO MESTRE CIÇA
-                            </h3>
-                            <p class="text-gray-600 text-sm line-clamp-2">Em uma apuração emocionante nesta quarta-feira
-                                (18), a Unidos do Viradouro conquistou o título do Carnaval 2026.</p>
-                            <span class="text-gray-400 text-xs mt-3">18/02/2026 17:30</span>
-                        </div>
-                    </a>
-                    <!-- LATEST-NEWS-END -->
                 </div>
             </section>
         </div>
 
-        <!-- Sidebar (Opinion, Most Read) - 4 Cols -->
+        <!-- Sidebar -->
         <aside class="lg:col-span-4 space-y-8">
-
-            <!-- Widget: Read More -->
             <div class="bg-white p-6 rounded shadow-sm border-t-4 border-g1-red">
-                <h3 class="text-gray-900 font-bold text-lg mb-4 flex items-center gap-2">
-                    <span class="w-2 h-2 bg-g1-red rounded-full"></span> Mais Lidas
-                </h3>
-                <ol class="list-decimal list-inside space-y-4 text-gray-700 font-semibold text-sm">
-                    <li class="pb-2 border-b border-gray-100">
-                        <a href="materias/2026/02/castro-tse.html" class="hover:text-g1-red transition-colors">
-                            O movimento de Cláudio Castro para escapar de cassação no TSE
-                        </a>
-                    </li>
-                    <li class="pb-2 border-b border-gray-100">
-                        <a href="materias/2026/02/mandelson-epstein.html" class="hover:text-g1-red transition-colors">
-                            Ex-embaixador Peter Mandelson é detido em Londres por ligação com Epstein
-                        </a>
-                    </li>
-                    <li class="pb-2 border-b border-gray-100">
-                        <a href="materias/2026/02/paes-jane-reis.html" class="hover:text-g1-red transition-colors">
-                            Eduardo Paes oficializa Jane Reis como vice e sela aliança
-                        </a>
-                    </li>
-                    <li class="pb-2 border-b border-gray-100">
-                        <a href="materias/2026/02/carnaval-rj.html" class="hover:text-g1-red transition-colors">
-                            Carnaval no Rio termina com mais de 500 detidos e 97 celulares recuperados
-                        </a>
-                    </li>
-                    <li class="pb-2 border-b border-gray-100">
-                        <a href="materias/2026/02/banco-pleno.html" class="hover:text-g1-red transition-colors">
-                            Banco Pleno tem 160 mil credores com R$ 4,9 bilhões a receber
-                        </a>
-                    </li>
-                    <li>
-                        <a href="materias/2026/02/epstein-policia.html" class="hover:text-g1-red transition-colors">
-                            Polícia britânica pede colaboração de testemunhas em caso Epstein
-                        </a>
-                    </li>
+                <h3 class="text-gray-900 font-bold text-lg mb-4">Mais Lidas</h3>
+                <ol class="list-decimal list-inside space-y-4 text-sm font-semibold">
+                    <li><a href="materias/2026/02/condenacao-brazao-marielle.html" class="hover:text-g1-red">STF condena
+                            irmãos Brazão...</a></li>
+                    <li><a href="materias/2026/02/castro-tse.html" class="hover:text-g1-red">O movimento de Cláudio
+                            Castro...</a></li>
                 </ol>
             </div>
-
-            <!-- Widget: Photo Gallery (Compact) -->
-            <div id="fotos" class="bg-white p-6 rounded shadow-sm border-t-4 border-g1-orange">
-                <h3 class="text-gray-900 font-bold text-lg mb-4 flex justify-between items-center">
-                    Galeria do Dia
-                </h3>
-                <div class="grid grid-cols-2 gap-2">
-                    <img src="https://temporealrj.com/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-10-at-10.54.26-860x573.jpeg"
-                        class="rounded hover:opacity-80 transition cursor-pointer aspect-square object-cover gallery-img">
-                    <img src="https://blog.bondinho.com.br/wp-content/uploads/2023/01/shutterstock_302496842-1024x683.jpg"
-                        class="rounded hover:opacity-80 transition cursor-pointer aspect-square object-cover gallery-img">
-                    <img src="https://mobilidade.estadao.com.br/wp-content/uploads/2024/11/Imagem-destacada-Mobilidade-2024-11-21T165703.973.jpg.webp"
-                        class="rounded hover:opacity-80 transition cursor-pointer aspect-square object-cover gallery-img">
-                    <div
-                        class="bg-gray-100 rounded flex items-center justify-center text-xs font-bold text-gray-500 cursor-pointer hover:bg-gray-200 transition-colors aspect-square">
-                        +15 FOTOS
-                    </div>
-                </div>
-            </div>
-
-            <!-- Widget: Contact (Compact) -->
-            <div class="bg-gray-100 p-6 rounded border border-gray-200">
-                <h3 class="font-bold text-lg mb-4 text-g1-red-dark">Fale Conosco</h3>
-                <form id="contact-form" action="https://formspree.io/f/xbdazeon" method="POST" class="space-y-3">
-                    <input type="text" id="name" name="name" required placeholder="Seu Nome"
-                        class="w-full p-2 border border-gray-300 rounded text-gray-900 text-sm focus:outline-none focus:ring-1 focus:ring-g1-red-dark">
-                    <input type="email" id="email" name="email" required placeholder="Seu E-mail"
-                        class="w-full p-2 border border-gray-300 rounded text-gray-900 text-sm focus:outline-none focus:ring-1 focus:ring-g1-red-dark">
-                    <textarea id="message" name="message" required rows="3" placeholder="Sugestão de Pauta"
-                        class="w-full p-2 border border-gray-300 rounded text-gray-900 text-sm focus:outline-none focus:ring-1 focus:ring-g1-red-dark"></textarea>
-                    <button type="submit" id="submit-btn"
-                        class="w-full bg-g1-red hover:bg-g1-red-dark text-white font-bold py-2 rounded transition-colors text-sm shadow-sm">
-                        ENVIAR
-                    </button>
-                </form>
-            </div>
-
         </aside>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-g1-red text-white">
-        <div class="container mx-auto px-6 py-8">
-            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-                <div class="mb-6 md:mb-0">
-                    <span class="text-2xl font-black tracking-tight">
-                        MÍDIA <span class="text-g1-orange">INFORMAL</span>
-                    </span>
-                    <p class="text-white/80 text-sm mt-1">Compromisso com a verdade.</p>
-                </div>
-                <div class="flex space-x-6 text-sm font-semibold">
-                    <a href="#" class="hover:text-g1-orange transition-colors">Quem Somos</a>
-                    <a href="#" class="hover:text-g1-orange transition-colors">Princípios Editoriais</a>
-                    <a href="#" class="hover:text-g1-orange transition-colors">Política de Privacidade</a>
-                </div>
-            </div>
-            <div class="border-t border-white/20 mt-8 pt-6 text-center text-xs text-white/60">
-                &copy; 2026 Mídia Informal. Todos os direitos reservados.
-            </div>
-        </div>
+    <footer class="bg-g1-red text-white py-8 text-center">
+        <span class="text-2xl font-black">MÍDIA <span class="text-g1-orange">INFORMAL</span></span>
+        <p class="text-xs mt-4">© 2026 Mídia Informal. Todos os direitos reservados.</p>
     </footer>
-
-    <!-- Scripts -->
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="fixed inset-0 bg-black/90 z-[100] hidden flex items-center justify-center p-4">
-        <button id="close-lightbox" class="absolute top-4 right-4 text-white hover:text-g1-orange transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-        <img id="lightbox-img" src="" alt="Imagem ampliada" class="max-w-full max-h-full rounded shadow-2xl">
-    </div>
 
     <script src="script.js"></script>
 </body>
