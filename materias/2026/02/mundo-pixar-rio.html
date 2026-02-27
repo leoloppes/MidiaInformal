@@ -4,96 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUNDO PIXAR RETORNA AO RIO DE JANEIRO COM CENÁRIOS INÉDITOS - MÍDIA INFORMAL</title>
+    <title>MUNDO PIXAR RETORNA AO RIO DE JANEIRO COM CENÁRIOS INÉDITOS E PRÉ-VENDA EXCLUSIVA - MÍDIA INFORMAL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            scroll-behavior: smooth;
-        }
-
-        .g1-red {
-            color: #c4170c;
-        }
-
-        .bg-g1-red {
-            background-color: #c4170c;
-        }
-
-        .text-g1-orange {
-            color: #ff6b00;
-        }
-
-        .bg-g1-orange {
-            background-color: #ff6b00;
-        }
-
-        article a {
-            color: #0000FF;
-            text-decoration: underline;
-        }
-
-        article a:hover {
-            color: #0000AA;
-        }
-    </style>
+    <script>tailwind.config = { theme: { extend: { colors: { 'brand-blue': '#137fec', 'brand-red': '#c4170c', 'brand-orange': '#137fec' } } } }</script>
 </head>
 
-<body class="bg-gray-100 text-gray-800 font-sans">
-
-    <!-- Header -->
-    <header class="bg-g1-red text-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="../../../index.html"
-                class="text-3xl font-black tracking-tight flex items-center gap-1 leading-none">
-                <span>MÍDIA</span>
-                <span class="text-g1-orange">INFORMAL</span>
+<body class="bg-[#f8fafc] text-[#0f172a] font-sans antialiased">
+    <header class="glass-header sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../../../index.html" class="flex items-center gap-2 group">
+                <div
+                    class="bg-slate-900 text-white px-3 py-1.5 rounded-lg font-black text-xl transition-transform group-hover:scale-105">
+                    MÍDIA</div>
+                <div class="text-[#0f172a] font-black text-xl tracking-tighter">INFORMAL</div>
+                <div class="w-2 h-2 rounded-full bg-brand-blue"></div>
             </a>
-            <a href="../../../index.html" class="text-sm font-bold hover:text-g1-orange transition-colors">VOLTAR AO
-                INÍCIO</a>
+            <a href="../../../index.html"
+                class="bg-slate-100 hover:bg-slate-200 text-slate-600 px-4 py-2 rounded-lg text-[10px] font-black tracking-widest transition-colors uppercase">Voltar</a>
         </div>
     </header>
-
-    <main class="container mx-auto px-4 py-8 max-w-4xl bg-white shadow-sm mt-6 rounded">
-        <!-- Breadcrumbs -->
-        <nav class="text-xs text-gray-500 mb-4 uppercase font-bold tracking-wider">
-            <a href="../../../index.html" class="hover:text-g1-red">Início</a> /
-            <span class="text-gray-400">Matérias</span> /
-            <span id="article-category">Diversão</span>
+    <main class="container mx-auto px-4 py-12 max-w-4xl animate-fade-in">
+        <nav class="text-[10px] text-slate-400 mb-8 uppercase font-black tracking-[0.2em] flex items-center gap-2">
+            <a href="../../../index.html" class="hover:text-brand-blue transition-colors">Início</a><span>/</span><span
+                class="text-brand-blue">Diversão</span>
         </nav>
-
-        <article class="space-y-6">
-            <h1 id="article-headline" class="text-3xl md:text-5xl font-black text-gray-900 leading-tight">
-                MUNDO PIXAR RETORNA AO RIO DE JANEIRO COM CENÁRIOS INÉDITOS E PRÉ-VENDA EXCLUSIVA
-            </h1>
-
-            <p id="article-subhead"
-                class="text-xl text-gray-600 font-medium leading-relaxed border-l-4 border-g1-orange pl-4">
-                A partir do dia 10 de abril, o BarraShopping recebe a nova edição do Mundo Pixar, a maior exposição
-                interativa da Disney já realizada.
-            </p>
-
-            <div class="flex items-center gap-4 text-sm text-gray-500 py-4 border-y border-gray-100">
-                <span id="article-author">Por Redação</span>
-                <span>•</span>
-                <span id="article-date">24/02/2026 15:05</span>
+        <article class="space-y-10">
+            <div class="space-y-6">
+                <h1 class="text-3xl md:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight uppercase">MUNDO
+                    PIXAR RETORNA AO RIO DE JANEIRO COM CENÁRIOS INÉDITOS E PRÉ-VENDA EXCLUSIVA</h1>
+                <p class="text-xl text-slate-500 font-medium leading-relaxed border-l-4 border-brand-blue pl-6">A partir
+                    do dia 10 de abril, o BarraShopping recebe a nova edição do Mundo Pixar, a maior exposição
+                    interativa da Disney já realizada.</p>
+                <div
+                    class="flex items-center gap-6 text-[11px] text-slate-400 font-bold uppercase tracking-widest pt-8 border-t border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-slate-200"></div><span>Por Redação</span>
+                    </div>
+                    <span class="w-1 h-1 bg-slate-300 rounded-full"></span><span>24/02/2026 15:05</span>
+                </div>
             </div>
-
-            <figure class="space-y-2">
-                <img id="article-image"
-                    src="https://saopauloparacriancas.com.br/wp-content/uploads/2023/04/sp_criancas_passeio_mundo_pixar_rj_200-800x533.jpg"
-                    alt="Mundo Pixar Rio" class="w-full rounded shadow-sm">
-                <figcaption id="article-caption" class="text-xs text-gray-500 italic">Exposição Mundo Pixar retorna com
-                    novidades</figcaption>
+            <figure class="space-y-3">
+                <div class="rounded-2xl overflow-hidden shadow-2xl"><img
+                        src="https://saopauloparacriancas.com.br/wp-content/uploads/2023/04/sp_criancas_passeio_mundo_pixar_rj_200-800x533.jpg"
+                        alt="Mundo Pixar Rio" class="w-full object-cover"></div>
+                <figcaption class="text-[11px] text-slate-400 italic text-center px-4">Exposição Mundo Pixar retorna com
+                    novidades.</figcaption>
             </figure>
-
-            <div id="article-content" class="text-lg text-gray-800 leading-relaxed space-y-4">
+            <div class="article-content">
                 <p>O Rio de Janeiro volta a ser o destino oficial dos fãs da animação. A partir do dia 10 de abril, o
                     BarraShopping recebe a nova edição do Mundo Pixar, a maior exposição interativa da Disney já
                     realizada. O público interessado em garantir as entradas antecipadamente pode se inscrever para a
                     pré-venda a partir desta terça-feira (24), com cadastro disponível até o dia 1º de março.</p>
-
-                <h2 class="text-2xl font-bold text-gray-900 mt-8">O que esperar da nova temporada</h2>
+                <h2>O que esperar da nova temporada</h2>
                 <p>Nesta edição, a mostra traz 14 salas temáticas que combinam tecnologia e cenografia imersiva. Entre
                     as novidades que desembarcam pela primeira vez na cidade, destacam-se:</p>
                 <ul class="list-disc pl-6 space-y-2">
@@ -105,21 +70,16 @@
                         elementos do segundo filme da franquia.</li>
                 </ul>
                 <p>O roteiro ainda contempla clássicos como o interior de um formigueiro gigante de Vida de Insetos, a
-                    fábrica de processamento de gritos de Monstros S.A. e a vila italiana de Portorosso, de Luca. Para
-                    os fãs de Toy Story, a experiência foi expandida e agora inclui, além do quarto do Andy, a creche
-                    SunnySide.</p>
-
-                <h2 class="text-2xl font-bold text-gray-900 mt-8">Cronograma de Vendas</h2>
-                <p>A organização definiu um calendário escalonado para a bilheteria digital:</p>
+                    fábrica de processamento de gritos de Monstros S.A. e a vila italiana de Portorosso, de Luca.</p>
+                <h2>Cronograma de Vendas</h2>
                 <ul class="list-disc pl-6 space-y-2">
                     <li><strong>Inscrições para pré-venda:</strong> De 24 de fevereiro a 1º de março.</li>
                     <li><strong>Venda exclusiva para inscritos:</strong> Dia 2 de março, das 10h às 23h59, via
                         plataforma Fever.</li>
-                    <li><strong>Benefício Disney+:</strong> Assinantes do serviço de streaming possuem 20% de desconto
-                        na compra de ingressos para o público geral.</li>
+                    <li><strong>Benefício Disney+:</strong> Assinantes do serviço de streaming possuem 20% de desconto.
+                    </li>
                 </ul>
-
-                <h2 class="text-2xl font-bold text-gray-900 mt-8">Serviço</h2>
+                <h2>Serviço</h2>
                 <p><strong>Local:</strong> Estacionamento do BarraShopping (Av. das Américas, 4.666 – Barra da
                     Tijuca).<br>
                     <strong>Data:</strong> A partir de 10 de abril.<br>
@@ -129,24 +89,21 @@
                 </p>
             </div>
         </article>
-
-        <div class="mt-12 pt-8 border-t border-gray-100 flex justify-center">
-            <a href="../../../index.html"
-                class="bg-g1-red hover:bg-red-800 text-white font-bold py-3 px-8 rounded transition-colors shadow-md">
-                Ver mais notícias
-            </a>
+        <div class="mt-20 pt-12 border-t border-slate-100 flex flex-col items-center gap-6">
+            <a href="../../../materias.html" class="stitch-button">Ver mais notícias</a>
         </div>
     </main>
-
-    <footer class="bg-g1-red text-white mt-12">
-        <div class="container mx-auto px-6 py-8 text-center">
-            <span class="text-2xl font-black tracking-tight">
-                MÍDIA <span class="text-g1-orange">INFORMAL</span>
-            </span>
-            <p class="text-white/60 text-xs mt-4">© 2026 Mídia Informal. Todos os direitos reservados.</p>
+    <footer class="bg-white border-t border-slate-200 pt-20 pb-12 mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <div class="bg-slate-900 text-white px-3 py-1.5 rounded-lg font-black text-xl">MÍDIA</div>
+                <div class="text-slate-900 font-black text-xl tracking-tighter">INFORMAL</div>
+            </div>
+            <p class="text-slate-400 text-[10px] font-medium uppercase tracking-[0.25em]">© 2026 Mídia Informal •
+                Transparência e Verdade</p>
         </div>
     </footer>
-
+    <script src="../../../script.js"></script>
 </body>
 
 </html>
