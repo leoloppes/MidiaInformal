@@ -6,89 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OPERAÇÃO CONJUNTA DAS POLÍCIAS FEDERAL E CIVIL CAPTURAM CONTRAVENTOR LIGADO A HOMICÍDIOS - MÍDIA INFORMAL
     </title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            scroll-behavior: smooth;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#137fec',
+                        'brand-red': '#c4170c',
+                        'brand-orange': '#137fec',
+                    }
+                }
+            }
         }
-
-        .g1-red {
-            color: #c4170c;
-        }
-
-        .bg-g1-red {
-            background-color: #c4170c;
-        }
-
-        .text-g1-orange {
-            color: #ff6b00;
-        }
-
-        .bg-g1-orange {
-            background-color: #ff6b00;
-        }
-
-        article a {
-            color: #0000FF;
-            text-decoration: underline;
-        }
-
-        article a:hover {
-            color: #0000AA;
-        }
-    </style>
+    </script>
 </head>
 
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-[#f8fafc] text-[#0f172a] font-sans antialiased">
 
-    <!-- Header -->
-    <header class="bg-g1-red text-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="../../../index.html"
-                class="text-3xl font-black tracking-tight flex items-center gap-1 leading-none">
-                <span>MÍDIA</span>
-                <span class="text-g1-orange">INFORMAL</span>
+    <!-- Top Bar -->
+    <div class="bg-gray-100 border-b border-gray-200 text-xs py-1 text-gray-500">
+        <div class="container mx-auto px-4 flex justify-between items-center uppercase tracking-wider font-bold">
+            <span id="current-date">Sexta-feira, 27 de fevereiro de 2026</span>
+            <div class="flex gap-6">
+                <span>Rio de Janeiro 26°C</span>
+                <span>Dólar R$ 5,12</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header (Glassmorphism) -->
+    <header class="glass-header sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../../../index.html" class="flex items-center gap-2 group">
+                <div
+                    class="bg-slate-900 text-white px-3 py-1.5 rounded-lg font-black text-xl transition-transform group-hover:scale-105">
+                    MÍDIA</div>
+                <div class="text-[#0f172a] font-black text-xl tracking-tighter">INFORMAL</div>
+                <div class="w-2 h-2 rounded-full bg-brand-blue"></div>
             </a>
-            <a href="../../../index.html" class="text-sm font-bold hover:text-g1-orange transition-colors">VOLTAR AO
-                INÍCIO</a>
+            <nav
+                class="hidden md:flex items-center gap-8 text-[11px] font-black tracking-[0.1em] text-slate-600 uppercase">
+                <a href="../../../index.html"
+                    class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent hover:border-brand-blue">Home</a>
+                <a href="../../../materias.html" class="text-brand-blue border-b-2 border-brand-blue pb-1">Notícias</a>
+                <a href="../../../index.html#fotos"
+                    class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent hover:border-brand-blue">Fotos</a>
+            </nav>
+            <a href="../../../index.html"
+                class="bg-slate-100 hover:bg-slate-200 text-slate-600 px-4 py-2 rounded-lg text-[10px] font-black tracking-widest transition-colors uppercase">
+                Voltar
+            </a>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8 max-w-4xl bg-white shadow-sm mt-6 rounded">
+    <main class="container mx-auto px-4 py-12 max-w-4xl animate-fade-in">
         <!-- Breadcrumbs -->
-        <nav class="text-xs text-gray-500 mb-4 uppercase font-bold tracking-wider">
-            <a href="../../../index.html" class="hover:text-g1-red">Início</a> /
-            <span class="text-gray-400">Matérias</span> /
-            <span id="article-category">Polícia</span>
+        <nav class="text-[10px] text-slate-400 mb-8 uppercase font-black tracking-[0.2em] flex items-center gap-2">
+            <a href="../../../index.html" class="hover:text-brand-blue transition-colors">Início</a>
+            <span>/</span>
+            <span class="text-brand-blue" id="article-category">Polícia</span>
         </nav>
 
-        <article class="space-y-6">
-            <h1 id="article-headline" class="text-3xl md:text-5xl font-black text-gray-900 leading-tight uppercase">
-                OPERAÇÃO CONJUNTA DAS POLÍCIAS FEDERAL E CIVIL CAPTURAM CONTRAVENTOR LIGADO A HOMICÍDIOS, JOGOS ILEGAIS
-                E CONTRABANDO DE CIGARROS FALSIFICADOS
-            </h1>
+        <article class="space-y-10">
+            <div class="space-y-6">
+                <h1 id="article-headline"
+                    class="text-3xl md:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight uppercase">
+                    OPERAÇÃO CONJUNTA DAS POLÍCIAS FEDERAL E CIVIL CAPTURAM CONTRAVENTOR LIGADO A HOMICÍDIOS
+                </h1>
 
-            <p id="article-subhead"
-                class="text-xl text-gray-600 font-medium leading-relaxed border-l-4 border-g1-orange pl-4">
-                Adilsinho, um dos criminosos mais procurados do país, foi preso em Cabo Frio em ação integrada da
-                FICCO/RJ.
-            </p>
+                <p id="article-subhead"
+                    class="text-xl text-slate-500 font-medium leading-relaxed border-l-4 border-brand-blue pl-6">
+                    Adilsinho, um dos criminosos mais procurados do país, foi preso em Cabo Frio em ação integrada da
+                    FICCO/RJ.
+                </p>
 
-            <div class="flex items-center gap-4 text-sm text-gray-500 py-4 border-y border-gray-100">
-                <span id="article-author">Por Redação</span>
-                <span>•</span>
-                <span id="article-date">26/02/2026 17:40</span>
+                <div
+                    class="flex items-center gap-6 text-[11px] text-slate-400 font-bold uppercase tracking-widest pt-8 border-t border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-slate-200"></div>
+                        <span id="article-author">Por Redação</span>
+                    </div>
+                    <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                    <span id="article-date">26/02/2026 17:40</span>
+                </div>
             </div>
 
-            <figure class="space-y-2">
-                <img id="article-image" src="https://odia.ig.com.br/_midias/jpg/2026/02/26/_mg_5559-38192886.jpg"
-                    alt="Prisão do contraventor Adilsinho" class="w-full rounded shadow-sm">
-                <figcaption id="article-caption" class="text-xs text-gray-500 italic">O contraventor foi levado de
-                    helicóptero para a Superintendência da PF no Rio. (Foto: Érika Martin/O Dia)</figcaption>
+            <figure class="space-y-3">
+                <div class="rounded-2xl overflow-hidden shadow-2xl">
+                    <img id="article-image" src="https://odia.ig.com.br/_midias/jpg/2026/02/26/_mg_5559-38192886.jpg"
+                        alt="Prisão do contraventor Adilsinho" class="w-full object-cover">
+                </div>
+                <figcaption id="article-caption" class="text-[11px] text-slate-400 italic text-center px-4">
+                    O contraventor foi levado de helicóptero para a Superintendência da PF no Rio. (Foto: Érika Martin/O
+                    Dia)
+                </figcaption>
             </figure>
 
-            <div id="article-content" class="text-lg text-gray-800 leading-relaxed space-y-4 text-justify">
+            <div id="article-content" class="article-content">
                 <p>O contraventor Adilson Oliveira Coutinho Filho, conhecido como Adilsinho, foi preso na manhã desta
                     quinta‑feira (26/02) em uma residência em Cabo Frio, na Região dos Lagos do Rio de Janeiro, em uma
                     ação integrada da Polícia Federal e da Polícia Civil do Estado do Rio de Janeiro.</p>
@@ -115,16 +133,17 @@
                     centro do Rio, onde serão realizados os procedimentos legais antes de sua transferência ao sistema
                     prisional estadual.</p>
 
-                <blockquote class="bg-gray-50 p-6 rounded-lg border-l-4 border-g1-red my-8 italic">
-                    <p class="mb-4 text-gray-700">"Essa prisão mostra que inteligência e integração dão resultado. A
-                        Polícia Civil, dentro da FICCO, atua de forma cirúrgica para atingir o topo das organizações
-                        criminosas, enfraquecer o poder econômico do crime e proteger a população. O Rio de Janeiro não
-                        será território seguro para o crime organizado", disse o secretário de Polícia Civil, Felipe
-                        Curi.</p>
-                    <p class="text-gray-700">"É uma prisão de grande relevância no enfrentamento ao crime organizado. A
-                        atuação integrada da Polícia Civil e da Polícia Federal, com uso intensivo de inteligência e
-                        tecnologia, demonstra a eficiência da cooperação entre as forças de segurança", afirmou o
-                        governador Cláudio Castro.</p>
+                <blockquote class="italic">
+                    <p>"Essa prisão mostra que inteligência e integração dão resultado. A Polícia Civil, dentro da
+                        FICCO, atua de forma cirúrgica para atingir o topo das organizações criminosas, enfraquecer o
+                        poder econômico do crime e proteger a população. O Rio de Janeiro não será território seguro
+                        para o crime organizado", disse o secretário de Polícia Civil, Felipe Curi.</p>
+                </blockquote>
+
+                <blockquote class="italic">
+                    <p>"É uma prisão de grande relevância no enfrentamento ao crime organizado. A atuação integrada da
+                        Polícia Civil e da Polícia Federal, com uso intensivo de inteligência e tecnologia, demonstra a
+                        eficiência da cooperação entre as forças de segurança", afirmou o governador Cláudio Castro.</p>
                 </blockquote>
 
                 <p>Autoridades reforçam que a operação representa um golpe significativo à estrutura financeira e
@@ -133,23 +152,27 @@
             </div>
         </article>
 
-        <div class="mt-12 pt-8 border-t border-gray-100 flex justify-center">
-            <a href="../../../index.html"
-                class="bg-g1-red hover:bg-red-800 text-white font-bold py-3 px-8 rounded transition-colors shadow-md">
+        <div class="mt-20 pt-12 border-t border-slate-100 flex flex-col items-center gap-6">
+            <h3 class="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400">Gostou da leitura?</h3>
+            <a href="../../../materias.html" class="stitch-button">
                 Ver mais notícias
             </a>
         </div>
     </main>
 
-    <footer class="bg-g1-red text-white mt-12">
-        <div class="container mx-auto px-6 py-8 text-center">
-            <span class="text-2xl font-black tracking-tight">
-                MÍDIA <span class="text-g1-orange">INFORMAL</span>
-            </span>
-            <p class="text-white/60 text-xs mt-4">© 2026 Mídia Informal. Todos os direitos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-20 pb-12 mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <div class="bg-slate-900 text-white px-3 py-1.5 rounded-lg font-black text-xl">MÍDIA</div>
+                <div class="text-slate-900 font-black text-xl tracking-tighter">INFORMAL</div>
+            </div>
+            <p class="text-slate-400 text-[10px] font-medium uppercase tracking-[0.25em]">© 2026 Mídia Informal •
+                Transparência e Verdade</p>
         </div>
     </footer>
 
+    <script src="../../../script.js"></script>
 </body>
 
 </html>

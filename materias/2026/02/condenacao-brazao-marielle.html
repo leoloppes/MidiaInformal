@@ -6,146 +6,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STF CONDENA IRMÃOS BRAZÃO, MAS JULGAMENTO REASCENDE DEBATE SOBRE FALHAS NO CASO MARIELLE - MÍDIA INFORMAL
     </title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            scroll-behavior: smooth;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#137fec',
+                        'brand-red': '#c4170c',
+                        'brand-orange': '#137fec',
+                    }
+                }
+            }
         }
-
-        .g1-red {
-            color: #c4170c;
-        }
-
-        .bg-g1-red {
-            background-color: #c4170c;
-        }
-
-        .text-g1-orange {
-            color: #ff6b00;
-        }
-
-        .bg-g1-orange {
-            background-color: #ff6b00;
-        }
-
-        article a {
-            color: #0000FF;
-            text-decoration: underline;
-        }
-
-        article a:hover {
-            color: #0000AA;
-        }
-    </style>
+    </script>
 </head>
 
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-[#f8fafc] text-[#0f172a] font-sans antialiased">
 
-    <!-- Header -->
-<header class="bg-g1-red text-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="../../../index.html"
-                class="text-3xl font-black tracking-tight flex items-center gap-1 leading-none">
-                <span>MÍDIA</span>
-                <span class="text-g1-orange">INFORMAL</span>
+    <!-- Top Bar -->
+    <div class="bg-gray-100 border-b border-gray-200 text-xs py-1 text-gray-500">
+        <div class="container mx-auto px-4 flex justify-between items-center uppercase tracking-wider font-bold">
+            <span id="current-date">Sexta-feira, 27 de fevereiro de 2026</span>
+            <div class="flex gap-6">
+                <span>Rio de Janeiro 26°C</span>
+                <span>Dólar R$ 5,12</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header (Glassmorphism) -->
+    <header class="glass-header sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../../../index.html" class="flex items-center gap-2 group">
+                <div
+                    class="bg-slate-900 text-white px-3 py-1.5 rounded-lg font-black text-xl transition-transform group-hover:scale-105">
+                    MÍDIA</div>
+                <div class="text-[#0f172a] font-black text-xl tracking-tighter">INFORMAL</div>
+                <div class="w-2 h-2 rounded-full bg-brand-blue"></div>
             </a>
-            <a href="../../../index.html" class="text-sm font-bold hover:text-g1-orange transition-colors">VOLTAR AO
-                INÍCIO</a>
+            <nav
+                class="hidden md:flex items-center gap-8 text-[11px] font-black tracking-[0.1em] text-slate-600 uppercase">
+                <a href="../../../index.html"
+                    class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent hover:border-brand-blue">Home</a>
+                <a href="../../../materias.html" class="text-brand-blue border-b-2 border-brand-blue pb-1">Notícias</a>
+                <a href="../../../index.html#fotos"
+                    class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent hover:border-brand-blue">Fotos</a>
+            </nav>
+            <a href="../../../index.html"
+                class="bg-slate-100 hover:bg-slate-200 text-slate-600 px-4 py-2 rounded-lg text-[10px] font-black tracking-widest transition-colors uppercase">
+                Voltar
+            </a>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8 max-w-4xl bg-white shadow-sm mt-6 rounded">
+    <main class="container mx-auto px-4 py-12 max-w-4xl animate-fade-in">
         <!-- Breadcrumbs -->
-        <nav class="text-xs text-gray-500 mb-4 uppercase font-bold tracking-wider">
-            <a href="../../../index.html" class="hover:text-g1-red">Início</a> /
-            <span class="text-gray-400">Matérias</span> /
-            <span id="article-category">Justiça</span>
+        <nav class="text-[10px] text-slate-400 mb-8 uppercase font-black tracking-[0.2em] flex items-center gap-2">
+            <a href="../../../index.html" class="hover:text-brand-blue transition-colors">Início</a>
+            <span>/</span>
+            <span class="text-brand-blue" id="article-category">Justiça</span>
         </nav>
 
-        <article class="space-y-6">
-            <h1 id="article-headline" class="text-3xl md:text-5xl font-black text-gray-900 leading-tight">
-                STF CONDENA IRMÃOS BRAZÃO, MAS JULGAMENTO REASCENDE DEBATE SOBRE FALHAS NO CASO MARIELLE
-            </h1>
+        <article class="space-y-10">
+            <div class="space-y-6">
+                <h1 id="article-headline"
+                    class="text-3xl md:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight uppercase">
+                    STF CONDENA IRMÃOS BRAZÃO, MAS JULGAMENTO REASCENDE DEBATE SOBRE FALHAS NO CASO MARIELLE
+                </h1>
 
-            <p id="article-subhead"
-                class="text-xl text-gray-600 font-medium leading-relaxed border-l-4 border-g1-orange pl-4">
-                Oito anos após o assassinato, Primeira Turma do STF sentencia mandantes a mais de 70 anos de prisão;
-                decisão aponta 'proteção institucional' e falhas deliberadas na investigação inicial.
-            </p>
+                <p id="article-subhead"
+                    class="text-xl text-slate-500 font-medium leading-relaxed border-l-4 border-brand-blue pl-6">
+                    Oito anos após o assassinato, Primeira Turma do STF sentencia mandantes a mais de 70 anos de prisão;
+                    decisão aponta 'proteção institucional' e falhas deliberadas na investigação inicial.
+                </p>
 
-            <div class="flex items-center gap-4 text-sm text-gray-500 py-4 border-y border-gray-100">
-                <span id="article-author">Por Redação</span>
-                <span>•</span>
-                <span id="article-date">25/02/2026 16:55</span>
+                <div
+                    class="flex items-center gap-6 text-[11px] text-slate-400 font-bold uppercase tracking-widest pt-8 border-t border-slate-100">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-slate-200"></div>
+                        <span id="article-author">Por Redação</span>
+                    </div>
+                    <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                    <span id="article-date">25/02/2026 16:55</span>
+                </div>
             </div>
 
-            <figure class="space-y-2">
-                <img id="article-image"
-                    src="https://s2-marieclaire.glbimg.com/hFnFkhv3PUVcy-8axxZ6u9enwro=/0x0:5064x3376/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2026/K/I/FonczHT9mVpB75hsMFNQ/0d7a7203.jpg"
-                    alt="Irmãos Brazão" class="w-full rounded shadow-sm">
-                <figcaption id="article-caption" class="text-xs text-gray-500 italic">Julgamento do caso Marielle Franco
-                    no STF. (Foto: 
-
-
- Valter Campanato/Agência Brasil)</figcaption>
+            <figure class="space-y-3">
+                <div class="rounded-2xl overflow-hidden shadow-2xl">
+                    <img id="article-image"
+                        src="https://s2-marieclaire.glbimg.com/hFnFkhv3PUVcy-8axxZ6u9enwro=/0x0:5064x3376/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2026/K/I/FonczHT9mVpB75hsMFNQ/0d7a7203.jpg"
+                        alt="Irmãos Brazão" class="w-full object-cover">
+                </div>
+                <figcaption id="article-caption" class="text-[11px] text-slate-400 italic text-center px-4">
+                    Julgamento do caso Marielle Franco no STF. (Foto: Valter Campanato/Agência Brasil)
+                </figcaption>
             </figure>
 
-            <div id="article-content" class="text-lg text-gray-800 leading-relaxed space-y-4">
-                <p align="justify">Oito anos após o assassinato da vereadora Marielle Franco e do motorista Anderson Gomes, a Primeira
-                    Turma do Supremo Tribunal Federal (STF) condenou os irmãos <strong>Domingos Brazão e João Francisco Brazão,
-                    o Chiquinho Brazão, a</strong> <strong>76 anos e 3 meses de prisão</strong> como mandantes do crime. A decisão, unânime entre
-                    os ministros Alexandre de Moraes, Cristiano Zanin, Cármen Lúcia e Flávio Dino, representa um marco
-                    judicial — mas também evidencia as fragilidades institucionais que marcaram o caso desde o início.
-                </p>
-                <p align="justify">Segundo a Procuradoria-Geral da Republica (PGR), o assassinato teve motivação política e estaria
+            <div id="article-content" class="article-content">
+                <p>Oito anos após o assassinato da vereadora Marielle Franco e do motorista Anderson Gomes, a Primeira
+                    Turma do Supremo Tribunal Federal (STF) condenou os irmãos <strong>Domingos Brazão e João Francisco
+                        Brazão, o Chiquinho Brazão, a 76 anos e 3 meses de prisão</strong> como mandantes do crime. A
+                    decisão, unânime entre os ministros Alexandre de Moraes, Cristiano Zanin, Cármen Lúcia e Flávio
+                    Dino, representa um marco judicial — mas também evidencia as fragilidades institucionais que
+                    marcaram o caso desde o início.</p>
+
+                <p>Segundo a Procuradoria-Geral da Republica (PGR), o assassinato teve motivação política e estaria
                     ligado à atuação de Marielle contra interesses de milícias no Rio de Janeiro, especialmente em temas
                     como regularização fundiária em áreas dominadas por esses grupos. Para o STF, as provas reunidas
                     confirmam que os irmãos Brazão integravam uma organização criminosa armada e foram responsáveis por
                     ordenar o duplo homicídio e a tentativa de homicídio contra a assessora Fernanda Chaves, que
                     sobreviveu ao atentado.</p>
-                <p align="justify">Apesar da condenação histórica, o julgamento também escancarou as falhas nas investigações iniciais.
-                    <strong>O ex-chefe da Polícia Civil do Rio, Rivaldo Barbosa, foi absolvido da acusação de homicídio por
-                    “dúvida razoável”, mas condenado a 18 anos por corrupção passiva e obstrução de Justiça, acusado de
-                    receber propina para atrapalhar o andamento do caso. </strong>A decisão reforça a percepção de que o crime
-                    contou com proteção institucional e enfrentou obstáculos deliberados para seu esclarecimento.</p>
-                <p align="justify">Outros envolvidos também foram condenados: o major da PM Ronald Paulo Alves Pereira recebeu pena de
+
+                <p>Apesar da condenação histórica, o julgamento também escancarou as falhas nas investigações iniciais.
+                    <strong>O ex-chefe da Polícia Civil do Rio, Rivaldo Barbosa, foi absolvido da acusação de homicídio
+                        por “dúvida razoável”, mas condenado a 18 anos por corrupção passiva e obstrução de Justiça,
+                        acusado de receber propina para atrapalhar o andamento do caso.</strong> A decisão reforça a
+                    percepção de que o crime contou com proteção institucional e enfrentou obstáculos deliberados para
+                    seu esclarecimento.</p>
+
+                <p>Outros envolvidos também foram condenados: o major da PM Ronald Paulo Alves Pereira recebeu pena de
                     56 anos por duplo homicídio e tentativa de homicídio; o policial militar Robson Calixto Fonseca foi
                     sentenciado a 9 anos por organização criminosa. O Supremo determinou ainda a perda dos cargos
                     públicos dos condenados e fixou R$ 7 milhões em indenizações às famílias das vítimas.</p>
-                <p align="justify">Durante os votos, os ministros destacaram não apenas a gravidade do crime, mas seu simbolismo.
-                    Alexandre de Moraes mencionou a convergência de motivação política, misoginia e racismo no
-                    assassinato de uma mulher negra, periférica e eleita democraticamente.<strong> Cármen Lúcia afirmou que o
-                    caso “feriu o Brasil inteiro” e questionou quantas outras lideranças precisarão morrer até que o
-                    país consolide um compromisso efetivo com a justiça.</strong> Flávio Dino, por sua vez, foi enfático ao
-                    classificar as investigações iniciais como falhas e negligentes, sugerindo a presença de interesses
-                    poderosos atuando nos bastidores.</p>
-                <p align="justify">A condenação representa uma resposta institucional tardia, mas relevante. Ainda assim, o caso deixa
+
+                <blockquote class="italic">
+                    <p>"Essa condenação feriu o Brasil inteiro. Quantas outras lideranças precisarão morrer até que o
+                        país consolide um compromisso efetivo com a justiça?" — afirmou a ministra Cármen Lúcia durante
+                        o voto.</p>
+                </blockquote>
+
+                <p>A condenação representa uma resposta institucional tardia, mas relevante. Ainda assim, o caso deixa
                     um alerta incômodo: a execução de uma parlamentar eleita expôs a força de estruturas criminosas
                     infiltradas no poder público e revelou como a impunidade pode prosperar quando há conivência ou
                     omissão do Estado.</p>
-                <p align="justify">Mais do que encerrar um processo, o julgamento impõe ao país a responsabilidade de enfrentar as
-                    raízes políticas e estruturais que tornaram possível o assassinato de Marielle Franco.</p>
             </div>
         </article>
 
-        <div class="mt-12 pt-8 border-t border-gray-100 flex justify-center">
-            <a href="../../../index.html"
-                class="bg-g1-red hover:bg-red-800 text-white font-bold py-3 px-8 rounded transition-colors shadow-md">
+        <div class="mt-20 pt-12 border-t border-slate-100 flex flex-col items-center gap-6">
+            <h3 class="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400">Gostou da leitura?</h3>
+            <a href="../../../materias.html" class="stitch-button">
                 Ver mais notícias
             </a>
         </div>
     </main>
 
-    <footer class="bg-g1-red text-white mt-12">
-        <div class="container mx-auto px-6 py-8 text-center">
-            <span class="text-2xl font-black tracking-tight">
-                MÍDIA <span class="text-g1-orange">INFORMAL</span>
-            </span>
-            <p class="text-white/60 text-xs mt-4">© 2026 Mídia Informal. Todos os direitos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-20 pb-12 mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <div class="bg-slate-900 text-white px-3 py-1.5 rounded-lg font-black text-xl">MÍDIA</div>
+                <div class="text-slate-900 font-black text-xl tracking-tighter">INFORMAL</div>
+            </div>
+            <p class="text-slate-400 text-[10px] font-medium uppercase tracking-[0.25em]">© 2026 Mídia Informal •
+                Transparência e Verdade</p>
         </div>
-</footer>
+    </footer>
 
+    <script src="../../../script.js"></script>
 </body>
 
 </html>
