@@ -26,7 +26,14 @@ async function getArticles(dir) {
             const image = document.querySelector('article figure img, #article-image')?.src || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80';
 
             const dateStr = document.querySelector('#article-date')?.textContent ||
-                document.querySelector('.flex.items-center.gap-4 span:last-child')?.textContent || '';
+                document.querySelector('.flex.items-center.gap-4 span:last-child')?.textContent ||
+                (() => {
+                    // Fallback: scan all spans for a date pattern (DD/MM/YYYY HH:MM)
+                    const spans = Array.from(document.querySelectorAll('span'));
+                    const dateSpan = spans.find(s => /\d{2}\/\d{2}\/\d{4}/.test(s.textContent));
+                    return dateSpan?.textContent?.trim() || '';
+                })();
+
 
             function parseDate(s) {
                 const match = s.match(/(\d{2})\/(\d{2})\/(\d{4})(?:\s+(\d{2})[h:](\d{2}))?/);
