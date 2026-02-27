@@ -1,0 +1,21 @@
+{
+  "name": "teste",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "archive": "node scripts/generate-archive.js",
+    "dev": "npm run archive && tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "npm run archive && tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.0",
+    "jsdom": "^28.1.0",
+    "tailwindcss": "^4.2.0"
+  }
+}

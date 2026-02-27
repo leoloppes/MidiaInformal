@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    /* Color Tokens - Premium Palette */
+    --brand-primary: #137fec;
+    /* Trust Blue */
+    --brand-primary-light: #419eff;
+    --brand-primary-dark: #0d60b5;
+
+    --brand-accent-red: #c4170c;
+    /* News Danger */
+    --brand-accent-orange: #ff6b00;
+    /* News Warning */
+
+    --surface-bg: #f8fafc;
+    /* slate-50 */
+    --surface-card: #ffffff;
+    --surface-muted: #f1f5f9;
+    /* slate-100 */
+
+    --text-main: #0f172a;
+    /* slate-900 */
+    --text-muted: #64748b;
+    /* slate-500 */
+    --text-on-brand: #ffffff;
+
+    --radius-sm: 0.375rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1.25rem;
+
+    --shadow-subtle: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-elevated: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Global Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--surface-bg);
+    color: var(--text-main);
+    font-family: 'Lexend', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+a {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Components */
+
+/* Glassmorphism Header */
+.glass-header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Premium News Card */
+.stitch-card {
+    background: var(--surface-card);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: var(--shadow-subtle);
+}
+
+.stitch-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-elevated);
+    border-color: var(--brand-primary-light);
+}
+
+.stitch-card .image-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.stitch-card img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stitch-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Custom UI Elements */
+.badge-category {
+    font-size: 0.65rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.title-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.title-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 40%;
+    height: 4px;
+    background: var(--brand-accent-red);
+    border-radius: 2px;
+}
+
+/* Specific Sidebar styles */
+.sidebar-section {
+    background: var(--surface-card);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Article Layout Utilities */
+.article-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article-content {
+    font-size: 1.15rem;
+    color: #334155;
+    /* slate-700 */
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+}
+
+.article-content blockquote {
+    font-style: italic;
+    border-left: 4px solid var(--brand-primary);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--surface-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}

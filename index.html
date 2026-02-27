@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÍDIA INFORMAL - Notícias, Fatos e Fotos</title>
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#137fec',
+                        'brand-red': '#c4170c',
+                        'brand-orange': '#ff6b00',
+                    },
+                    borderRadius: {
+                        'xl': '0.75rem',
+                        '2xl': '1.25rem',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-[#f8fafc] text-[#0f172a] font-sans antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-slate-50 border-b border-slate-200 text-[10px] py-1.5 text-slate-500 font-medium">
+        <div class="container mx-auto px-6 flex justify-between items-center uppercase tracking-wider">
+            <span id="current-date">Carregando data...</span>
+            <div class="flex gap-6">
+                <span id="weather-info">Carregando clima...</span>
+                <span id="dollar-info">Carregando dólar...</span>
+            </div>
+            class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent
+            hover:border-brand-blue">Destaques</a>
+            <a href="materias.html"
+                class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent hover:border-brand-blue">Notícias</a>
+            <a href="#fotos"
+                class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent hover:border-brand-blue">Fotos</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <button id="mobile-menu-btn" class="md:hidden text-slate-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        </header>
+
+        <main class="container mx-auto px-6 py-12 max-w-7xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+                <!-- Primary Content Area -->
+                <div class="lg:col-span-8 space-y-16">
+
+                    <!-- Hero Highlight Section -->
+                    <section id="destaques" class="animate-fade-in">
+                        <div class="flex items-center gap-3 mb-8">
+                            <span class="w-10 h-1 bg-brand-red rounded-full"></span>
+                            <h2 class="text-xs font-black uppercase tracking-[0.2em] text-brand-red">Manchete em Foco
+                            </h2>
+                        </div>
+
+                        <a href="materias/2026/02/prisao-adilsinho.html" class="stitch-card block group h-full">
+                            <div class="relative aspect-video">
+                                <img src="https://odia.ig.com.br/_midias/jpg/2026/02/26/_mg_5559-38192886.jpg"
+                                    class="w-full h-full object-cover" alt="Main Highlight">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent">
+                                </div>
+                                <div class="absolute bottom-0 left-0 p-8 md:p-12 w-full">
+                                    <span class="badge-category bg-brand-red text-white mb-4">Urgente</span>
+                                    <h1
+                                        class="text-3xl md:text-5xl font-black text-white uppercase leading-[1.1] mb-4 group-hover:text-white/90">
+                                        OPERAÇÃO INTEGRADA CAPTURA CONTRAVENTOR ADILSINHO EM CABO FRIO
+                                    </h1>
+                                    <p class="text-slate-300 text-sm md:text-base max-w-2xl line-clamp-2 font-light">
+                                        Um dos maiores alvos da polícia fluminense foi detido em operação conjunta nesta
+                                        manhã com apoio aéreo e inteligência.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+
+                    <!-- Sub-Highlights Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <a href="materias/2026/02/condenacao-brazao-marielle.html" class="stitch-card group">
+                            <div class="aspect-video">
+                                <img src="https://s2-marieclaire.glbimg.com/hFnFkhv3PUVcy-8axxZ6u9enwro=/0x0:5064x3376/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2026/K/I/FonczHT9mVpB75hsMFNQ/0d7a7203.jpg"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <span class="badge-category bg-brand-blue text-white mb-3">Justiça</span>
+                                <h3
+                                    class="text-xl font-extrabold text-[#0f172a] leading-tight group-hover:text-brand-blue uppercase transition-colors">
+                                    Caso Marielle: STF condena irmãos Brazão após julgamento histórico
+                                </h3>
+                            </div>
+                        </a>
+
+                        <a href="materias/2026/02/castro-tse.html" class="stitch-card group">
+                            <div class="aspect-video">
+                                <img src="https://scontent.fsdu40-1.fna.fbcdn.net/v/t39.30808-6/641577694_1594329489208883_7543006824148063677_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_ohc=pIpmP7hCP9UQ7kNvwF1iG3j&_nc_oc=AdmsigXcqOAnr30oWUP5JPmKtdLm290SAHcmnI94YR_QgSbr4TGm_gGTxBQ4BwJwWc7ekSox2OwUJ6q5jUjQaP5g&_nc_zt=23&_nc_ht=scontent.fsdu40-1.fna&_nc_gid=ByR96cYV0BzMso_RHjLx6A&oh=00_AfvYsBzYxywwPVTBINQHRHsudhnzifXAG_m5duKAHqWRSA&oe=69A28045"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <span class="badge-category bg-slate-900 text-white mb-3">Política</span>
+                                <h3
+                                    class="text-xl font-extrabold text-[#0f172a] leading-tight group-hover:text-brand-blue uppercase transition-colors">
+                                    Cláudio Castro articula defesa estratégica no TSE contra cassação
+                                </h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Latest News Feed -->
+                    <section class="space-y-10">
+                        <h2 class="text-2xl font-black uppercase tracking-tight title-underline">Mais Recentes</h2>
+                        <div id="noticias" class="space-y-8">
+                            <!-- LATEST-NEWS-START -->
+                    <!-- Item 1 - STF CONDENA IRMÃOS B... -->
+                    <a href="materias/2026/02/condenacao-brazao-marielle.html"
+                        class="flex flex-col md:group md:flex-row gap-6 group cursor-pointer border-b border-slate-100 pb-8">
+                        <div class="md:w-5/12 overflow-hidden rounded-xl">
+                            <img src="https://s2-marieclaire.glbimg.com/hFnFkhv3PUVcy-8axxZ6u9enwro=/0x0:5064x3376/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2026/K/I/FonczHT9mVpB75hsMFNQ/0d7a7203.jpg"
+                                alt="STF CONDENA IRMÃOS BRAZÃO, MAS JULGAMENTO REASCENDE DEBATE SOBRE FALHAS NO CASO MARIELLE"
+                                class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="md:w-7/12 flex flex-col justify-center">
+                            <span class="badge-category bg-brand-blue text-white mb-2">Justiça</span>
+                            <h3
+                                class="text-xl font-extrabold text-[#0f172a] leading-tight mb-2 group-hover:text-brand-blue transition-colors uppercase">
+                                STF CONDENA IRMÃOS BRAZÃO, MAS JULGAMENTO REASCENDE DEBATE SOBRE FALHAS NO CASO MARIELLE
+                            </h3>
+                            <p class="text-slate-500 text-sm line-clamp-2 font-medium">Oito anos após o assassinato da vereadora Marielle Franco e do motorista Anderson Gomes, a Primeira
+                    Turma do Supremo Tribunal Federal (ST...</p>
+                            <span class="text-slate-400 text-[10px] font-bold mt-4 uppercase tracking-widest">25/02/2026 16:55</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 2 - TARIFA DO METRÔ RIO ... -->
+                    <a href="materias/2026/02/tarifa-metro-rio-8-20.html"
+                        class="flex flex-col md:group md:flex-row gap-6 group cursor-pointer border-b border-slate-100 pb-8">
+                        <div class="md:w-5/12 overflow-hidden rounded-xl">
+                            <img src="https://viatrolebus.com.br/wp-content/uploads/2018/11/metrorio-780x520.jpeg"
+                                alt="TARIFA DO METRÔ RIO SOBRE PARA R$ 8,20 E MANTÉM POSTO DE MAIS CARA DO PAÍS"
+                                class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="md:w-7/12 flex flex-col justify-center">
+                            <span class="badge-category bg-brand-orange text-white mb-2">Rio de Janeiro</span>
+                            <h3
+                                class="text-xl font-extrabold text-[#0f172a] leading-tight mb-2 group-hover:text-brand-blue transition-colors uppercase">
+                                TARIFA DO METRÔ RIO SOBRE PARA R$ 8,20 E MANTÉM POSTO DE MAIS CARA DO PAÍS
+                            </h3>
+                            <p class="text-slate-500 text-sm line-clamp-2 font-medium">A passagem do metrô do Rio de Janeiro passará de R$ 7,90 para R$ 8,20 a partir de 12 de abril, após
+                    homologação da Agência Reguladora de ...</p>
+                            <span class="text-slate-400 text-[10px] font-bold mt-4 uppercase tracking-widest">25/02/2026 16:40</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 3 - MUNDO PIXAR RETORNA ... -->
+                    <a href="materias/2026/02/mundo-pixar-rio.html"
+                        class="flex flex-col md:group md:flex-row gap-6 group cursor-pointer border-b border-slate-100 pb-8">
+                        <div class="md:w-5/12 overflow-hidden rounded-xl">
+                            <img src="https://saopauloparacriancas.com.br/wp-content/uploads/2023/04/sp_criancas_passeio_mundo_pixar_rj_200-800x533.jpg"
+                                alt="MUNDO PIXAR RETORNA AO RIO DE JANEIRO COM CENÁRIOS INÉDITOS E PRÉ-VENDA EXCLUSIVA"
+                                class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="md:w-7/12 flex flex-col justify-center">
+                            <span class="badge-category bg-brand-blue text-white mb-2">Diversão</span>
+                            <h3
+                                class="text-xl font-extrabold text-[#0f172a] leading-tight mb-2 group-hover:text-brand-blue transition-colors uppercase">
+                                MUNDO PIXAR RETORNA AO RIO DE JANEIRO COM CENÁRIOS INÉDITOS E PRÉ-VENDA EXCLUSIVA
+                            </h3>
+                            <p class="text-slate-500 text-sm line-clamp-2 font-medium">O Rio de Janeiro volta a ser o destino oficial dos fãs da animação. A partir do dia 10 de abril, o
+                    BarraShopping recebe a nova edição do ...</p>
+                            <span class="text-slate-400 text-[10px] font-bold mt-4 uppercase tracking-widest">24/02/2026 15:05</span>
+                        </div>
+                    </a>
+
+                    <!-- Item 4 - EDUARDO PAES CRIA SE... -->
+                    <a href="materias/2026/02/secretaria-seguranca-paes.html"
+                        class="flex flex-col md:group md:flex-row gap-6 group cursor-pointer ">
+                        <div class="md:w-5/12 overflow-hidden rounded-xl">
+                            <img src="https://prefeitura.rio/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-18-at-11.56.04.jpeg"
+                                alt="EDUARDO PAES CRIA SECRETARIA ESPECIAL DE SEGURANÇA URBANA PARA COORDENAR FORÇA MUNICIPAL DO RIO DE
+                JANEIRO"
+                                class="w-full h-48 md:h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="md:w-7/12 flex flex-col justify-center">
+                            <span class="badge-category bg-brand-blue text-white mb-2">Política</span>
+                            <h3
+                                class="text-xl font-extrabold text-[#0f172a] leading-tight mb-2 group-hover:text-brand-blue transition-colors uppercase">
+                                EDUARDO PAES CRIA SECRETARIA ESPECIAL DE SEGURANÇA URBANA PARA COORDENAR FORÇA MUNICIPAL DO RIO DE
+                JANEIRO
+                            </h3>
+                            <p class="text-slate-500 text-sm line-clamp-2 font-medium">O prefeito do Rio, Eduardo Paes, criou a Secretaria Especial de Segurança Urbana, responsável por
+                    coordenar a Força Municipal. O decreto ...</p>
+                            <span class="text-slate-400 text-[10px] font-bold mt-4 uppercase tracking-widest">24/02/2026 14:55</span>
+                        </div>
+                    </a>
+                    <!-- LATEST-NEWS-END -->
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="lg:col-span-4 space-y-10">
+
+                    <!-- Mais Lidas Section -->
+                    <div class="sidebar-section">
+                        <h2
+                            class="text-lg font-black uppercase mb-8 pb-4 border-b border-slate-100 flex items-center justify-between">
+                            <span>Populares</span>
+                            <span class="w-8 h-1 bg-brand-orange rounded-full"></span>
+                        </h2>
+                        <ul class="space-y-6">
+                            <li class="flex gap-5 group items-start">
+                                <span
+                                    class="text-3xl font-black text-slate-200 group-hover:text-brand-blue transition-colors leading-none">01</span>
+                                <a href="materias/2026/02/condenacao-brazao-marielle.html"
+                                    class="text-sm font-bold text-slate-800 hover:text-brand-blue">STF condena irmãos
+                                    Brazão
+                                    por mandar matar Marielle</a>
+                            </li>
+                            <li class="flex gap-5 group items-start">
+                                <span
+                                    class="text-3xl font-black text-slate-200 group-hover:text-brand-orange transition-colors leading-none">02</span>
+                                <a href="materias/2026/02/castro-tse.html"
+                                    class="text-sm font-bold text-slate-800 hover:text-brand-blue">Bastidores: A pressão
+                                    sobre Cláudio Castro no TSE</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Gallery Section -->
+                    <section id="fotos" class="sidebar-section">
+                        <h2 class="text-lg font-black uppercase mb-6 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Galeria do Dia
+                        </h2>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl bg-slate-100 cursor-pointer hover-scale">
+                                <img src="https://odia.ig.com.br/_midias/jpg/2026/02/26/_mg_5559-38192886.jpg"
+                                    class="gallery-img w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="aspect-square overflow-hidden rounded-xl bg-slate-100 cursor-pointer hover-scale">
+                                <img src="https://viatrolebus.com.br/wp-content/uploads/2018/11/metrorio-780x520.jpeg"
+                                    class="gallery-img w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Contact Form -->
+                    <section id="fale-conosco" class="sidebar-section bg-slate-900 text-white">
+                        <h2 class="text-lg font-black uppercase mb-6 text-brand-orange">Fale Conosco</h2>
+                        <form id="contact-form" class="space-y-4">
+                            <input type="text" placeholder="Seu Nome"
+                                class="w-full px-4 py-3 bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-brand-blue outline-none transition-all">
+                            <input type="email" placeholder="Seu E-mail"
+                                class="w-full px-4 py-3 bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-brand-blue outline-none transition-all">
+                            <textarea rows="3" placeholder="Sua Mensagem"
+                                class="w-full px-4 py-3 bg-slate-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-brand-blue outline-none transition-all"></textarea>
+                            <button
+                                class="w-full bg-brand-blue hover:bg-brand-primary-dark font-black py-4 rounded-lg tracking-widest text-xs transition-transform active:scale-95">ENVIAR
+                                AGORA</button>
+                        </form>
+                    </section>
+
+                </aside>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-slate-200 pt-20 pb-12">
+            <div class="container mx-auto px-6 text-center">
+                <div class="flex items-center justify-center gap-2 mb-8">
+                    <div class="bg-slate-900 text-white px-3 py-1.5 rounded-lg font-black text-xl">MÍDIA</div>
+                    <div class="text-slate-900 font-black text-xl tracking-tighter">INFORMAL</div>
+                </div>
+                <div
+                    class="flex flex-wrap justify-center gap-8 mb-10 text-[11px] font-black uppercase tracking-widest text-slate-500">
+                    <a href="index.html" class="hover:text-brand-blue transition-colors">Home</a>
+                    <a href="materias.html" class="hover:text-brand-blue transition-colors">Arquivo</a>
+                    <a href="#" class="hover:text-brand-blue transition-colors">Anuncie</a>
+                    <a href="#" class="hover:text-brand-blue transition-colors">Contato</a>
+                </div>
+                <p class="text-slate-400 text-[10px] font-medium uppercase tracking-[0.25em]">© 2026 Mídia Informal •
+                    Transparência e Verdade</p>
+            </div>
+        </footer>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox"
+            class="fixed inset-0 bg-slate-950/98 z-[999] hidden flex items-center justify-center p-6 backdrop-blur-sm">
+            <button id="close-lightbox" class="absolute top-8 right-8 text-white/50 hover:text-white transition-colors">
+                <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <img id="lightbox-img" class="max-w-full max-h-[85vh] rounded-2xl shadow-2xl ring-1 ring-white/10">
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
