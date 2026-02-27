@@ -10,7 +10,8 @@
     --brand-blue: #137fec;
     --brand-blue-dark: #0e63bb;
     --brand-red: #c4170c;
-    --brand-orange: #ff6b00;
+    --brand-orange: #137fec;
+    /* Changed from orange to brand blue */
     --surface-bg: #f8fafc;
     --surface-card: #ffffff;
     --surface-border: #e2e8f0;
@@ -158,9 +159,9 @@ body {
 }
 
 .article-content blockquote {
-    border-left: 4px solid var(--brand-orange);
+    border-left: 4px solid var(--brand-blue);
     padding: 16px 24px;
-    background: rgba(255, 107, 0, 0.04);
+    background: rgba(19, 127, 236, 0.04);
     border-radius: 0 12px 12px 0;
     font-style: italic;
     color: var(--text-secondary);

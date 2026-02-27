@@ -129,7 +129,7 @@ async function generateArchive() {
                     colors: {
                         'brand-blue': '#137fec',
                         'brand-red': '#c4170c',
-                        'brand-orange': '#ff6b00',
+                        'brand-orange': '#137fec',
                     }
                 }
             }
