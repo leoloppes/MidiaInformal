@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MÍDIA INFORMAL - Notícias, Fatos e Fotos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -13,6 +14,9 @@
             theme: {
                 extend: {
                     colors: {
+                        'brand-blue': '#137fec',
+                        'brand-red': '#c4170c',
+                        'brand-orange': '#ff6b00',
                         'g1-red': '#c4170c',
                         'g1-orange': '#ff6b00',
                     }
@@ -22,7 +26,7 @@
     </script>
 </head>
 
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-[#f8fafc] text-[#0f172a] font-sans antialiased">
 
     <!-- Top Bar -->
     <div class="bg-gray-100 border-b border-gray-200 text-xs py-1 text-gray-500">
@@ -35,21 +39,27 @@
         </div>
     </div>
 
-    <!-- Header -->
-    <header class="bg-g1-red text-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-3xl font-black tracking-tight flex items-center gap-1 leading-none">
-                <span class="text-white">MÍDIA</span>
-                <span class="text-g1-orange">INFORMAL</span>
+    <!-- Header (Glassmorphism) -->
+    <header class="glass-header sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div
+                    class="bg-slate-900 text-white px-3 py-1.5 rounded-lg font-black text-xl transition-transform group-hover:scale-105">
+                    MÍDIA</div>
+                <div class="text-[#0f172a] font-black text-xl tracking-tighter">INFORMAL</div>
             </a>
-            <div class="hidden md:flex items-center gap-6 text-sm font-bold tracking-wide">
-                <a href="index.html" class="hover:text-g1-orange transition-colors">HOME</a>
-                <a href="#destaques" class="hover:text-g1-orange transition-colors">DESTAQUES</a>
-                <a href="materias.html" class="hover:text-g1-orange transition-colors">NOTÍCIAS</a>
-                <a href="#fotos" class="hover:text-g1-orange transition-colors">FOTOS</a>
-            </div>
-            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+            <nav
+                class="hidden md:flex items-center gap-8 text-[11px] font-black tracking-[0.1em] text-slate-600 uppercase">
+                <a href="index.html" class="text-brand-blue border-b-2 border-brand-blue pb-1">Home</a>
+                <a href="#destaques"
+                    class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent hover:border-brand-blue">Destaques</a>
+                <a href="materias.html"
+                    class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent hover:border-brand-blue">Notícias</a>
+                <a href="#fotos"
+                    class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent hover:border-brand-blue">Fotos</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-slate-600 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -390,15 +400,19 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-g1-red text-white py-12 mt-12">
-        <div class="container mx-auto px-4 text-center">
-            <span class="text-3xl font-black tracking-tighter">MÍDIA <span class="text-g1-orange">INFORMAL</span></span>
-            <div class="flex justify-center gap-6 my-6 text-xs font-bold opacity-80">
-                <a href="index.html" class="hover:text-g1-orange transition-colors">HOME</a>
-                <a href="materias.html" class="hover:text-g1-orange transition-colors">ARQUIVO</a>
+    <footer class="bg-white border-t border-slate-200 pt-20 pb-12 mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <div class="bg-slate-900 text-white px-3 py-1.5 rounded-lg font-black text-xl">MÍDIA</div>
+                <div class="text-slate-900 font-black text-xl tracking-tighter">INFORMAL</div>
             </div>
-            <p class="text-white/40 text-[9px] font-medium uppercase tracking-widest">© 2026 Mídia Informal • Fatos e
-                Transparência</p>
+            <div
+                class="flex justify-center gap-8 mb-8 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                <a href="index.html" class="hover:text-brand-blue transition-colors">Home</a>
+                <a href="materias.html" class="hover:text-brand-blue transition-colors">Arquivo</a>
+            </div>
+            <p class="text-slate-400 text-[10px] font-medium uppercase tracking-[0.25em]">© 2026 Mídia Informal •
+                Transparência e Verdade</p>
         </div>
     </footer>
 
