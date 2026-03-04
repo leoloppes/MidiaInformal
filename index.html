@@ -427,49 +427,25 @@
                         <div
                             class="aspect-square overflow-hidden rounded-lg bg-gray-200 cursor-zoom-in group shadow-sm">
                             <img src="https://s2-oglobo.glbimg.com/2hxSBJmm1Wrao251RbsapJQuSS8=/0x0:1600x1066/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2025/y/F/VZ92mmTA2oRQjcMlvNlQ/whatsapp-image-2025-06-22-at-09.15.43.jpeg"
-                                alt="Trump"
+                                alt="Trump" data-author="CARLOS BARRIA / POOL / AFP"
                                 class="gallery-img w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div
                             class="aspect-square overflow-hidden rounded-lg bg-gray-200 cursor-zoom-in group shadow-sm">
                             <img src="https://static-storage.dnoticias.pt/www-assets.dnoticias.pt/images/configuration/LG/DOC.20260304.46685588.12794457.JPEG"
-                                alt="Notícia EPA"
+                                alt="Notícia EPA" data-author="EPA"
                                 class="gallery-img w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div
                             class="aspect-square overflow-hidden rounded-lg bg-gray-200 cursor-zoom-in group shadow-sm">
                             <img src="https://s2-oglobo.glbimg.com/xadeblqucJQ53vQEMtUoJeJbGvU=/0x0:5184x3456/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2025/m/l/wyaSBJTja9V2soY9OrAw/113255637-ri-rio-de-janeiro-rj-08-12-2025-votacao-na-comissao-de-constituicao-e-justica-da-alerj-p.jpg"
-                                alt="Votação Alerj"
+                                alt="Votação Alerj" data-author="Domingos Peixoto / Agência O Globo"
                                 class="gallery-img w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div
                             class="aspect-square overflow-hidden rounded-lg bg-gray-200 cursor-zoom-in group shadow-sm">
                             <img src="https://static.ndmais.com.br/2026/03/suspeitos-de-estupro-coletivo-em-copacabana.jpg"
-                                alt="Suspeitos Copacabana"
-                                class="gallery-img w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div
-                            class="aspect-square overflow-hidden rounded-lg bg-gray-200 cursor-zoom-in group shadow-sm">
-                            <img src="https://s2-oglobo.glbimg.com/zaoc2Jskf6zjWo0uZFjnWbieWc8=/0x0:4645x3093/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2025/a/N/WXDxrFTe2481sITvWAIw/113208424-ri-rio-de-janeiro-rj-04-12-2025-alerj-se-reune-mas-nao-discute-a-prisao-do-president.jpg"
-                                alt="Alerj Sede"
-                                class="gallery-img w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div
-                            class="aspect-square overflow-hidden rounded-lg bg-gray-200 cursor-zoom-in group shadow-sm">
-                            <img src="https://viatrolebus.com.br/wp-content/uploads/2018/11/metrorio-780x520.jpeg"
-                                alt="Metrô Rio"
-                                class="gallery-img w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div
-                            class="aspect-square overflow-hidden rounded-lg bg-gray-200 cursor-zoom-in group shadow-sm">
-                            <img src="https://s2-oglobo.glbimg.com/hFnFkhv3PUVcy-8axxZ6u9enwro=/0x0:5064x3376/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2026/K/I/FonczHT9mVpB75hsMFNQ/0d7a7203.jpg"
-                                alt="Caso Marielle"
-                                class="gallery-img w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <div
-                            class="aspect-square overflow-hidden rounded-lg bg-gray-200 cursor-zoom-in group shadow-sm">
-                            <img src="https://www.extradigital.com.br/wp-content/uploads/2026/02/eduardo-paes.jpg"
-                                alt="Eduardo Paes"
+                                alt="Suspeitos Copacabana" data-author="Reprodução"
                                 class="gallery-img w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                     </div>
@@ -526,16 +502,20 @@
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="fixed inset-0 bg-black/98 z-[999] hidden flex items-center justify-center p-4">
+    <div id="lightbox" class="fixed inset-0 bg-black/98 z-[999] hidden flex flex-col items-center justify-center p-4">
         <button id="close-lightbox" class="absolute top-6 right-6 text-white hover:text-brand-blue transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
-        <img id="lightbox-img" src="" alt="Zoom"
-            class="max-w-full max-h-[90vh] rounded shadow-2xl transition-transform duration-300">
+        <div class="relative max-w-full max-h-[90vh] flex flex-col items-center">
+            <img id="lightbox-img" src="" alt="Zoom"
+                class="max-w-full max-h-[80vh] rounded shadow-2xl transition-transform duration-300">
+            <p id="lightbox-author"
+                class="text-white/60 text-[10px] uppercase font-black tracking-widest mt-4 italic border-t border-white/10 pt-4 w-full text-center">
+            </p>
+        </div>
     </div>
 
     <script src="script.js"></script>
