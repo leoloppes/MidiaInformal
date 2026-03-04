@@ -498,6 +498,25 @@
                 Transparência e Verdade</p>
         </div>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/98 z-[999] hidden flex flex-col items-center justify-center p-4">
+        <button id="close-lightbox"
+            class="absolute top-6 right-6 text-white hover:text-brand-blue transition-colors outline-none focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <div class="relative max-w-full max-h-[90vh] flex flex-col items-center">
+            <img id="lightbox-img" src="" alt="Zoom"
+                class="max-w-full max-h-[80vh] rounded shadow-2xl transition-transform duration-300">
+            <p id="lightbox-author"
+                class="text-white/80 text-[11px] uppercase font-black tracking-[0.2em] mt-6 italic border-t border-white/10 pt-4 w-full text-center hidden">
+            </p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
