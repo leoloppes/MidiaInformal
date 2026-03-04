@@ -144,7 +144,14 @@ document.addEventListener('DOMContentLoaded', () => {
             img.addEventListener('click', () => {
                 lightboxImg.src = img.src;
                 if (lightboxAuthor) {
-                    lightboxAuthor.textContent = img.getAttribute('data-author') || 'Foto: Reprodução';
+                    const author = img.getAttribute('data-author');
+                    if (author) {
+                        lightboxAuthor.textContent = `Foto: ${author}`;
+                        lightboxAuthor.classList.remove('hidden');
+                    } else {
+                        lightboxAuthor.textContent = '';
+                        lightboxAuthor.classList.add('hidden');
+                    }
                 }
                 lightbox.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
