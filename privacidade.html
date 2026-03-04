@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - MÍDIA INFORMAL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#137fec',
+                        'brand-red': '#c4170c',
+                        'brand-orange': '#137fec',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-[#f8fafc] text-[#0f172a] font-sans antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-gray-100 border-b border-gray-200 text-xs py-1 text-gray-500">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <span id="current-date">Carregando data...</span>
+            <div class="flex gap-4">
+                <span id="weather-info">Carregando clima...</span>
+                <span id="dollar-info">Carregando dólar...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header (Glassmorphism) -->
+    <header class="glass-header sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div
+                    class="bg-slate-900 text-white px-3 py-1.5 rounded-lg font-black text-xl transition-transform group-hover:scale-105">
+                    MÍDIA</div>
+                <div class="text-[#0f172a] font-black text-xl tracking-tighter">INFORMAL</div>
+                <div class="w-2 h-2 rounded-full bg-brand-blue"></div>
+            </a>
+            <nav
+                class="hidden md:flex items-center gap-8 text-[11px] font-black tracking-[0.1em] text-slate-600 uppercase">
+                <a href="index.html" class="hover:text-brand-blue transition-colors">Home</a>
+                <a href="materias.html"
+                    class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent hover:border-brand-blue">Notícias</a>
+                <a href="index.html#fotos"
+                    class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent hover:border-brand-blue">Fotos</a>
+            </nav>
+            <a href="index.html"
+                class="bg-slate-100 hover:bg-slate-200 text-slate-600 px-4 py-2 rounded-lg text-[10px] font-black tracking-widest transition-colors uppercase">
+                Voltar
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16 max-w-4xl animate-fade-in">
+        <div class="space-y-12">
+            <div class="border-l-8 border-brand-blue pl-6">
+                <h1 class="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tighter leading-none">
+                    Política de<br><span class="text-brand-blue">Privacidade</span>
+                </h1>
+                <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mt-4">Última atualização: 04 de
+                    Março de 2026</p>
+            </div>
+
+            <div class="prose prose-slate max-w-none text-slate-700 leading-relaxed space-y-8 text-justify">
+                <section>
+                    <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-4">1. Introdução</h2>
+                    <p>O portal <strong>MÍDIA INFORMAL</strong> valoriza a privacidade de seus usuários e assume o
+                        compromisso de proteger os dados pessoais coletados durante a navegação. Esta Política de
+                        Privacidade descreve como tratamos as informações que recebemos através do nosso site.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-4">2. Coleta de
+                        Informações</h2>
+                    <p>Coletamos informações de duas formas:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Dados fornecidos voluntariamente:</strong> Quando você entra em contato conosco
+                            através do nosso formulário de "Fale Conosco", coletamos seu nome, e-mail e a mensagem
+                            enviada.</li>
+                        <li><strong>Dados de navegação automática:</strong> Através de cookies e tecnologias similares,
+                            coletamos dados técnicos anônimos sobre sua visita, como endereço IP (simplificado), tipo de
+                            navegador e páginas acessadas para melhoria da experiência do usuário.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-4">3. Uso de Cookies</h2>
+                    <p>Utilizamos cookies para personalizar conteúdo e analisar nosso tráfego. Você pode desativar o uso
+                        de cookies nas configurações do seu navegador, embora isso possa afetar a funcionalidade de
+                        certas partes do site.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-4">4. Finalidade do
+                        Tratamento</h2>
+                    <p>Os dados coletados são utilizados exclusivamente para:</p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Responder a dúvidas e solicitações enviadas pelos usuários;</li>
+                        <li>Monitorar e melhorar o desempenho e a segurança do site;</li>
+                        <li>Garantir o cumprimento de obrigações legais.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-4">5. Segurança dos Dados
+                    </h2>
+                    <p>Implementamos medidas técnicas de segurança para proteger seus dados contra acessos não
+                        autorizados e situações acidentais ou ilícitas de destruição, perda ou alteração. Não vendemos
+                        nem compartilhamos seus dados pessoais com terceiros para fins comerciais.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-4">6. Seus Direitos</h2>
+                    <p>De acordo com a Lei Geral de Proteção de Dados (LGPD), você tem o direito de confirmar a
+                        existência de tratamento, acessar seus dados, corrigir dados incompletos ou inexatos, e
+                        solicitar a exclusão de dados desnecessários.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-4">7. Contato</h2>
+                    <p>Para qualquer dúvida sobre esta Política de Privacidade ou sobre como seus dados são tratados,
+                        entre em contato conosco através do formulário disponível em nossa página inicial.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-20 pb-12 mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <div class="bg-slate-900 text-white px-3 py-1.5 rounded-lg font-black text-xl">MÍDIA</div>
+                <div class="text-slate-900 font-black text-xl tracking-tighter">INFORMAL</div>
+            </div>
+            <div
+                class="flex justify-center gap-8 mb-8 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                <a href="index.html" class="hover:text-brand-blue transition-colors">Home</a>
+                <a href="materias.html" class="hover:text-brand-blue transition-colors">Arquivo</a>
+                <a href="privacidade.html" class="text-brand-blue transition-colors">Privacidade</a>
+            </div>
+            <p class="text-slate-400 text-[10px] font-medium uppercase tracking-[0.25em]">© 2026 Mídia Informal •
+                Transparência e Verdade</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
