@@ -135,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 4. Gallery Lightbox Logic ---
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxAuthor = document.getElementById('lightbox-author');
     const closeLightbox = document.getElementById('close-lightbox');
     const galleryImages = document.querySelectorAll('.gallery-img');
 
@@ -142,6 +143,16 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryImages.forEach(img => {
             img.addEventListener('click', () => {
                 lightboxImg.src = img.src;
+                if (lightboxAuthor) {
+                    const author = img.getAttribute('data-author');
+                    if (author) {
+                        lightboxAuthor.textContent = `Foto: ${author}`;
+                        lightboxAuthor.classList.remove('hidden');
+                    } else {
+                        lightboxAuthor.textContent = '';
+                        lightboxAuthor.classList.add('hidden');
+                    }
+                }
                 lightbox.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             });

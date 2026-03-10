@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=" icon\ type=\image/png\ href=\img/favicon.png\>
+ <title>QUEM SOMOS - MÍDIA INFORMAL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#137fec',
+                        'brand-red': '#c4170c',
+                        'brand-orange': '#137fec',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-[#f8fafc] text-[#0f172a] font-sans antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-gray-100 border-b border-gray-200 text-xs py-1 text-gray-500">
+        <div class="container mx-auto px-4 flex justify-between items-center uppercase tracking-wider font-bold">
+            <span id="current-date">Segunda-feira, 09 de março de 2026</span>
+            <div class="flex gap-6">
+                <span>Rio de Janeiro 26°C</span>
+                <span>Dólar R$ 5,12</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header (Glassmorphism) -->
+    <header class="glass-header sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div
+                    class="bg-slate-900 text-white px-3 py-1.5 rounded-lg font-black text-xl transition-transform group-hover:scale-105">
+                    MÍDIA</div>
+                <div class="text-[#0f172a] font-black text-xl tracking-tighter">INFORMAL</div>
+                <div class="w-2 h-2 rounded-full bg-brand-blue"></div>
+            </a>
+            <nav
+                class="hidden md:flex items-center gap-8 text-[11px] font-black tracking-[0.1em] text-slate-600 uppercase">
+                <a href="index.html"
+                    class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent hover:border-brand-blue">Home</a>
+                <a href="materias.html"
+                    class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent hover:border-brand-blue uppercase">Notícias</a>
+                <a href="quem-somos.html" class="text-brand-blue border-b-2 border-brand-blue pb-1">Quem Somos</a>
+                <a href="index.html#fotos"
+                    class="hover:text-brand-blue transition-colors pb-1 border-b-2 border-transparent hover:border-brand-blue uppercase">Fotos</a>
+            </nav>
+            <a href="index.html"
+                class="bg-slate-100 hover:bg-slate-200 text-slate-600 px-4 py-2 rounded-lg text-[10px] font-black tracking-widest transition-colors uppercase">
+                Acessar Site
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-20 max-w-4xl animate-fade-in">
+        <div class="space-y-20 text-center md:text-left">
+            <!-- Hero Section -->
+            <section class="space-y-6">
+                <span
+                    class="inline-block px-4 py-1.5 rounded-full bg-brand-blue/10 text-brand-blue text-[10px] font-black uppercase tracking-widest">Nossa
+                    Missão</span>
+                <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight uppercase">
+                    Transparência e <span class="text-brand-blue italic">Verdade</span> acima de tudo.
+                </h1>
+                <p class="text-xl text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto md:mx-0">
+                    O Mídia Informal nasceu da necessidade de um jornalismo independente, ágil e comprometido
+                    exclusivamente com os fatos, sem amarras políticas ou editoriais.
+                </p>
+            </section>
+
+            <!-- Grid Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-10 text-left border-t border-slate-100">
+                <div class="space-y-4">
+                    <h3 class="text-slate-900 font-black text-xl uppercase tracking-tighter">Quem Somos</h3>
+                    <p class="text-slate-600 leading-relaxed font-medium">
+                        Somos uma plataforma de notícias focada no cenário político, policial e social do Rio de Janeiro
+                        e do Brasil. Nossa equipe é composta por profissionais que acreditam que a informação é a
+                        ferramenta mais poderosa para a transformação social.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-slate-900 font-black text-xl uppercase tracking-tighter">Por que "Informal"?</h3>
+                    <p class="text-slate-600 leading-relaxed font-medium">
+                        O nome "Mídia Informal" reflete nossa proximidade com o cotidiano. Queremos falar a língua do
+                        povo, sem rebuscamentos desnecessários, mas mantendo o rigor técnico e a seriedade exigida pelo
+                        jornalismo profissional.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Focus Section -->
+            <div class="bg-slate-900 text-white p-12 rounded-3xl space-y-8 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-blue/20 blur-[100px] rounded-full"></div>
+                <h2 class="text-3xl font-black uppercase tracking-tighter relative z-10">Nosso Compromisso</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 relative z-10">
+                    <div class="space-y-2">
+                        <div class="text-brand-blue font-black text-4xl leading-none italic">01.</div>
+                        <h4 class="font-bold uppercase text-xs tracking-widest text-slate-400">Independência</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">Não recebemos incentivos de grupos políticos.
+                            Nossa pauta é guiada pelo interesse público.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-brand-blue font-black text-4xl leading-none italic">02.</div>
+                        <h4 class="font-bold uppercase text-xs tracking-widest text-slate-400">Agilidade</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">A notícia acontece, nós reportamos. O
+                            compromisso com o "furo" jornalístico é parte do nosso DNA.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-brand-blue font-black text-4xl leading-none italic">03.</div>
+                        <h4 class="font-bold uppercase text-xs tracking-widest text-slate-400">Verdade</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">Checamos cada vírgula. Em tempos de
+                            desinformação, a credibilidade é nosso maior patrimônio.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-slate-400 text-[11px] font-black uppercase tracking-[0.3em] py-10">
+                Mídia Informal • Desde 2024 informando com coragem.
+            </p>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 pt-20 pb-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <div class="bg-slate-900 text-white px-3 py-1.5 rounded-lg font-black text-xl">MÍDIA</div>
+                <div class="text-slate-900 font-black text-xl tracking-tighter">INFORMAL</div>
+            </div>
+            <div
+                class="flex justify-center gap-8 mb-8 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                <a href="index.html" class="hover:text-brand-blue transition-colors uppercase">Home</a>
+                <a href="materias.html" class="hover:text-brand-blue transition-colors uppercase">Notícias</a>
+                <a href="quem-somos.html" class="text-brand-blue transition-colors uppercase">Quem Somos</a>
+                <a href="privacidade.html" class="hover:text-brand-blue transition-colors uppercase">Política de
+                    Privacidade</a>
+            </div>
+            <p class="text-slate-400 text-[10px] font-medium uppercase tracking-[0.25em]">© 2026 Mídia Informal •
+                Transparência e Verdade</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
