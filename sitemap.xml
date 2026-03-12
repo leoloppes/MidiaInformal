@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
+  <url>
+    <loc>https://midiainformal.vercel.app/</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://midiainformal.vercel.app/materias.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://midiainformal.vercel.app/quem-somos.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://midiainformal.vercel.app/privacidade.html</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Articles 2026/03 -->
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/alerj-bacellar-inquerito.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/delegado-investigacao-concluida.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/estupro-coletivo.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/governo-rio-exonera-aliados-bacellar.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/investigacao-propina-advogada-delegado.html</loc><lastmod>2026-03-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/menor-estupro-copacabana.html</loc><lastmod>2026-03-06</lastmod><priority>0.7</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/novo-lider-ira-ameaca-eua.html</loc><lastmod>2026-03-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/operacao-anomalia-ii-prisao-delegado.html</loc><lastmod>2026-03-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/pms-operacao-contencao-red-legacy.html</loc><lastmod>2026-03-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/prisao-delegado-pf-th-joias.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/prisao-vereador-salvino-oliveira.html</loc><lastmod>2026-03-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/rio-abrigo-amigo.html</loc><lastmod>2026-03-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/tensao-estreito-hormuz.html</loc><lastmod>2026-03-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/trump-ira.html</loc><lastmod>2026-03-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/03/ultimo-acusado-entrega.html</loc><lastmod>2026-03-06</lastmod><priority>0.7</priority></url>
+
+  <!-- Articles 2026/02 -->
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/banco-pleno.html</loc><lastmod>2026-02-18</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/carnaval-rj.html</loc><lastmod>2026-02-18</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/castro-tse.html</loc><lastmod>2026-02-23</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/condenacao-brazao-marielle.html</loc><lastmod>2026-02-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/coutinho-vasco.html</loc><lastmod>2026-02-18</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/epstein-policia.html</loc><lastmod>2026-02-18</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/mandelson-epstein.html</loc><lastmod>2026-02-23</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/monobloco-desfile.html</loc><lastmod>2026-02-22</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/mundo-pixar-rio.html</loc><lastmod>2026-02-24</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/paes-jane-reis.html</loc><lastmod>2026-02-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/pf-vazamento.html</loc><lastmod>2026-02-18</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/prisao-adilsinho.html</loc><lastmod>2026-02-26</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/secretaria-seguranca-paes.html</loc><lastmod>2026-02-24</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/tarifa-metro-rio-8-20.html</loc><lastmod>2026-02-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/viradouro-campea.html</loc><lastmod>2026-02-18</lastmod><priority>0.6</priority></url>
+  <url><loc>https://midiainformal.vercel.app/materias/2026/02/witzel-filiacao.html</loc><lastmod>2026-02-20</lastmod><priority>0.6</priority></url>
+</urlset>
