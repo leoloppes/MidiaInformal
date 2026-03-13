@@ -106,7 +106,7 @@ async function generateArchive() {
 
     const articleCards = articles.map(art => `
             <!-- ${art.title} -->
-            <a href="${art.link}" class="stitch-card group flex flex-col">
+            <a href="${art.link}" data-category="${art.category}" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="${art.image}" alt="${art.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
@@ -170,12 +170,25 @@ async function generateArchive() {
     </header>
 
     <main class="container mx-auto px-6 py-12 max-w-7xl animate-fade-in">
-        <div class="flex items-center gap-3 mb-12">
-            <span class="w-10 h-1 bg-brand-blue rounded-full"></span>
-            <h1 class="text-3xl font-black text-slate-900 uppercase">Arquivo de Notícias</h1>
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+            <div class="flex items-center gap-3">
+                <span class="w-10 h-1 bg-brand-blue rounded-full"></span>
+                <h1 class="text-3xl font-black text-slate-900 uppercase">Arquivo de Notícias</h1>
+            </div>
+
+            <!-- Filters -->
+            <div id="category-filters" class="flex flex-wrap gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
+                <button data-filter="all" class="filter-btn active px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Todas</button>
+                <button data-filter="Polícia" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Polícia</button>
+                <button data-filter="Justiça" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Justiça</button>
+                <button data-filter="Política" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Política</button>
+                <button data-filter="Rio" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Rio</button>
+                <button data-filter="Mundo" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Mundo</button>
+                <button data-filter="Geral" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Geral</button>
+            </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 ${articleCards}
         </div>
     </main>
