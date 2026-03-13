@@ -22,7 +22,7 @@ async function getArticles(dir) {
             const document = dom.window.document;
 
             const title = document.querySelector('h1')?.textContent?.trim() || 'Sem título';
-            const category = (document.querySelector('#article-category') || document.querySelector('.badge-category') || document.querySelector('nav .text-g1-orange'))?.textContent?.trim() || 'Geral';
+            const category = (document.querySelector('#article-category') || document.querySelector('.badge-category') || document.querySelector('nav span:last-child') || document.querySelector('nav .text-brand-blue'))?.textContent?.trim() || 'Geral';
             const image = document.querySelector('article figure img, #article-image')?.src || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80';
 
             const dateStr = document.querySelector('#article-date')?.textContent ||
@@ -184,6 +184,7 @@ async function generateArchive() {
                 <button data-filter="Política" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Política</button>
                 <button data-filter="Rio" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Rio</button>
                 <button data-filter="Mundo" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Mundo</button>
+                <button data-filter="Economia" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Economia</button>
                 <button data-filter="Geral" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Geral</button>
             </div>
         </div>
