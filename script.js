@@ -180,4 +180,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- 5. News Filtering Logic ---
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const newsItems = document.querySelectorAll('.news-item');
+
+    if (filterButtons.length > 0 && newsItems.length > 0) {
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+
+                // Update active button
+                filterButtons.forEach(b => b.classList.remove('active', 'border-brand-blue', 'text-brand-blue'));
+                btn.classList.add('active', 'border-brand-blue', 'text-brand-blue');
+
+                // Filter items
+                newsItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        item.classList.remove('hidden');
+                        item.classList.add('animate-fade-in');
+                    } else {
+                        item.classList.add('hidden');
+                        item.classList.remove('animate-fade-in');
+                    }
+                });
+            });
+        });
+    }
 });
