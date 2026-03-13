@@ -59,16 +59,29 @@
     </header>
 
     <main class="container mx-auto px-6 py-12 max-w-7xl animate-fade-in">
-        <div class="flex items-center gap-3 mb-12">
-            <span class="w-10 h-1 bg-brand-blue rounded-full"></span>
-            <h1 class="text-3xl font-black text-slate-900 uppercase">Arquivo de Notícias</h1>
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+            <div class="flex items-center gap-3">
+                <span class="w-10 h-1 bg-brand-blue rounded-full"></span>
+                <h1 class="text-3xl font-black text-slate-900 uppercase">Arquivo de Notícias</h1>
+            </div>
+
+            <!-- Filters -->
+            <div id="category-filters" class="flex flex-wrap gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
+                <button data-filter="all" class="filter-btn active px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Todas</button>
+                <button data-filter="Polícia" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Polícia</button>
+                <button data-filter="Justiça" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Justiça</button>
+                <button data-filter="Política" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Política</button>
+                <button data-filter="Rio" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Rio</button>
+                <button data-filter="Mundo" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Mundo</button>
+                <button data-filter="Geral" class="filter-btn px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all border-2 border-slate-200 text-slate-500 hover:border-brand-blue hover:text-brand-blue active:scale-95">Geral</button>
+            </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             <!-- POLÍCIA FEDERAL PRENDE DELEGADO E AGENTES POR EXTORSÃO CONTRA O COMANDO VERMELHO NO RIO -->
             <a href="materias/2026/03/operacao-anomalia-ii-prisao-delegado.html"
-                class="stitch-card group flex flex-col">
+                data-category="Polícia" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://s2-oglobo.glbimg.com/9NipRyqBVyeHNjOVuEG3ji4aStw=/0x0:854x480/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2026/d/E/ubR8dvRsWjZGeALHEBJA/pf-gif.gif"
                         alt="POLÍCIA FEDERAL PRENDE DELEGADO"
@@ -92,7 +105,7 @@
 
             <!-- ADVOGADA É INVESTIGADA POR PAGAMENTO DE R$ 150 MIL A DELEGADO E EX-SECRETÁRIO PARA ATRAPALHAR EXTRADIÇÃO DE TRAFICANTE -->
             <a href="materias/2026/03/investigacao-propina-advogada-delegado.html"
-                class="stitch-card group flex flex-col">
+                data-category="Justiça" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://undimebahia.com.br/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-15-at-15.01.21-2-800x445.jpeg"
                         alt="ADVOGADA É INVESTIGADA"
@@ -116,7 +129,8 @@
             </a>
 
             <!-- NOVO LÍDER DO IRÃ AMEAÇA ATACAR BASES DOS EUA E DEFENDE MANTER ESTREITO DE HORMUZ FECHADO -->
-            <a href="materias/2026/03/novo-lider-ira-ameaca-eua.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/03/novo-lider-ira-ameaca-eua.html" 
+                data-category="Mundo" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://tribunadonorte.com.br/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-09-at-05.56.49.jpeg"
                         alt="NOVO LÍDER DO IRÃ AMEAÇA ATACAR BASES DOS EUA E DEFENDE MANTER ESTREITO DE HORMUZ FECHADO"
@@ -140,7 +154,7 @@
 
             <!-- PMS TERIAM COMBINADO APREENSÃO FALSA COM TRAFICANTES PARA CUMPRIR METAS, APONTA INVESTIGAÇÃO -->
             <a href="materias/2026/03/pms-operacao-contencao-red-legacy.html"
-                class="stitch-card group flex flex-col">
+                data-category="Polícia" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://s2-g1.glbimg.com/0CdiZG0tzhc8Rk9D8f4NQYKHHPY=/0x0:642x497/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/y/2/7eE3DFRl26IV9jOMH8bw/11pms.jpg"
                         alt="PMS TERIAM COMBINADO APREENSÃO FALSA COM TRAFICANTES PARA CUMPRIR METAS, APONTA INVESTIGAÇÃO"
@@ -163,7 +177,8 @@
             </a>
 
             <!-- VEREADOR DO RIO, SALVINO OLIVEIRA É PRESO EM OPERAÇÃO QUE INVESTIGA NEGOCIAÇÃO COM TRAFICANTE DO COMANDO VERMELHO -->
-            <a href="materias/2026/03/prisao-vereador-salvino-oliveira.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/03/prisao-vereador-salvino-oliveira.html" 
+                data-category="Política" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://s2-oglobo.glbimg.com/p-SXJa-88vvToWQnibDiiCWM5hs=/0x0:1021x518/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2026/s/J/3rSAnnSgOG50ATUWaY5Q/vereador1.png"
                         alt="VEREADOR DO RIO, SALVINO OLIVEIRA É PRESO EM OPERAÇÃO QUE INVESTIGA NEGOCIAÇÃO COM TRAFICANTE DO COMANDO VERMELHO"
@@ -185,7 +200,8 @@
             </a>
 
             <!-- RIO INSTALA ABRIGOS COM ATENDIMENTO REMOTO PARA AUMENTAR A SEGURANÇA DE MULHERES EM PONTOS DE ÔNIBUS -->
-            <a href="materias/2026/03/rio-abrigo-amigo.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/03/rio-abrigo-amigo.html" 
+                data-category="Rio" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://temporealrj.com/wp-content/uploads/2026/03/monteiro.gab-Abrigo-Amigo-2.jpg-860x573.jpeg"
                         alt="RIO INSTALA ABRIGOS COM ATENDIMENTO REMOTO PARA AUMENTAR A SEGURANÇA DE MULHERES EM PONTOS DE ÔNIBUS"
@@ -209,7 +225,7 @@
 
             <!-- ADVOGADA É INVESTIGADA POR PAGAMENTO DE R$ 150 MIL A DELEGADO E EX-SECRETÁRIO PARA ATRAPALHAR EXTRADIÇÃO DE TRAFICANTE -->
             <a href="materias/2026/03/investigacao-propina-advogada-delegado.html"
-                class="stitch-card group flex flex-col">
+                data-category="Justiça" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://undimebahia.com.br/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-15-at-15.01.21-2-800x445.jpeg"
                         alt="ADVOGADA É INVESTIGADA"
@@ -233,7 +249,8 @@
             </a>
 
             <!-- O SILÊNCIO NA ALERJ E O TEMOR QUE RONDA DEPUTADOS APÓS AVANÇO DE INQUÉRITO CONTRA BACELLAR -->
-            <a href="materias/2026/03/alerj-bacellar-inquerito.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/03/alerj-bacellar-inquerito.html" 
+                data-category="Política" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://s2-oglobo.glbimg.com/zaoc2Jskf6zjWo0uZFjnWbieWc8=/0x0:4645x3093/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2025/a/N/WXDxrFTe2481sITvWAIw/113208424-ri-rio-de-janeiro-rj-04-12-2025-alerj-se-reune-mas-nao-discute-a-prisao-do-president.jpg"
                         alt="O SILÊNCIO NA ALERJ E O TEMOR QUE RONDA DEPUTADOS APÓS AVANÇO DE INQUÉRITO CONTRA BACELLAR"
@@ -256,7 +273,8 @@
 
             <!-- APÓS DIAS FORAGIDO, ÚLTIMO ACUSADO DE ESTUPRO COLETIVO EM COPACABANA SE ENTREGA NA 54ª DP EM BELFORD
                     ROXO -->
-            <a href="materias/2026/03/ultimo-acusado-entrega.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/03/ultimo-acusado-entrega.html"
+                data-category="Rio" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://scontent.fsdu40-1.fna.fbcdn.net/v/t39.30808-6/648225878_1602990728342759_1176471879922408916_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeFIOoPpG1eJXSkyQDzdAGxxfpJFD1l0519-kkUPWXTnX6eznDaTnlmtcaZkKxah5ARs8TVY7Wnm3LQqSdZcNHYp&_nc_ohc=q5kxUk_TZ50Q7kNvwECkS2v&_nc_oc=AdmHjT5KFfrql74p7Htu_EwYLxcjCGXkdYgPy2wEAtB-qeh5IaziMOetLD4zv2cV2lBwUiesvDmLR7sudiHFIYx_&_nc_zt=23&_nc_ht=scontent.fsdu40-1.fna&_nc_gid=Vs1O4fHj72O4tKswnSO4ow&_nc_ss=8&oh=00_AfxNyh0SySxXHOWmk0c5dOiNbLcNUk6kyo7hsqAqrggsiw&oe=69AE530B"
                         alt="APÓS DIAS FORAGIDO, ÚLTIMO ACUSADO DE ESTUPRO COLETIVO EM COPACABANA SE ENTREGA NA 54ª DP EM BELFORD
@@ -281,7 +299,8 @@
 
             <!-- DOIS ACUSADOS DE ESTUPRO COLETIVO SE ENTREGAM; JUSTIÇA TORNA RÉUS QUATRO INVESTIGADOS NO RIO DE
                     JANEIRO -->
-            <a href="materias/2026/03/estupro-coletivo.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/03/estupro-coletivo.html"
+                data-category="Rio" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://s2-oglobo.glbimg.com/kOvCDifqOmNuhabQEfAjq-KHXmg=/0x0:950x597/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2026/G/9/vz6NfARqqa8Kt65zDhOQ/05.jpeg"
                         alt="DOIS ACUSADOS DE ESTUPRO COLETIVO SE ENTREGAM; JUSTIÇA TORNA RÉUS QUATRO INVESTIGADOS NO RIO DE
@@ -305,7 +324,8 @@
             </a>
 
             <!-- TRUMP AFIRMA À CNN QUE "GRANDE ONDA" AINDA ESTÁ POR VIR NO CONFLITO COM O IRà-->
-            <a href="materias/2026/03/trump-ira.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/03/trump-ira.html"
+                data-category="Mundo" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://www.infomoney.com.br/wp-content/uploads/2026/01/2026-01-15T020911Z_910298227_RC2X0JAMVY2K_RTRMADP_3_USA-TRUMP.jpg?w=1925&quality=70&strip=all"
                         alt="TRUMP AFIRMA À CNN QUE " GRANDE ONDA" AINDA ESTÁ POR VIR NO CONFLITO COM O IRÃ"
@@ -327,7 +347,8 @@
             </a>
 
             <!-- OPERAÇÃO CONJUNTA DAS POLÍCIAS FEDERAL E CIVIL CAPTURAM CONTRAVENTOR LIGADO A HOMICÍDIOS -->
-            <a href="materias/2026/02/prisao-adilsinho.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/prisao-adilsinho.html"
+                data-category="Polícia" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://odia.ig.com.br/_midias/jpg/2026/02/26/_mg_5559-38192886.jpg"
                         alt="OPERAÇÃO CONJUNTA DAS POLÍCIAS FEDERAL E CIVIL CAPTURAM CONTRAVENTOR LIGADO A HOMICÍDIOS"
@@ -349,7 +370,8 @@
             </a>
 
             <!-- STF CONDENA IRMÃOS BRAZÃO, MAS JULGAMENTO REASCENDE DEBATE SOBRE FALHAS NO CASO MARIELLE -->
-            <a href="materias/2026/02/condenacao-brazao-marielle.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/condenacao-brazao-marielle.html"
+                data-category="Justiça" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://s2-marieclaire.glbimg.com/hFnFkhv3PUVcy-8axxZ6u9enwro=/0x0:5064x3376/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2026/K/I/FonczHT9mVpB75hsMFNQ/0d7a7203.jpg"
                         alt="STF CONDENA IRMÃOS BRAZÃO, MAS JULGAMENTO REASCENDE DEBATE SOBRE FALHAS NO CASO MARIELLE"
@@ -372,7 +394,8 @@
 
             <!-- TARIFA
                     DO METRÔ RIO SOBRE PARA R$ 8,20 E MANTÉM POSTO DE MAIS CARA DO PAÍS -->
-            <a href="materias/2026/02/tarifa-metro-rio-8-20.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/tarifa-metro-rio-8-20.html"
+                data-category="Geral" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://viatrolebus.com.br/wp-content/uploads/2018/11/metrorio-780x520.jpeg" alt="TARIFA
                     DO METRÔ RIO SOBRE PARA R$ 8,20 E MANTÉM POSTO DE MAIS CARA DO PAÍS"
@@ -396,7 +419,8 @@
 
             <!-- MUNDO
                     PIXAR RETORNA AO RIO DE JANEIRO COM CENÁRIOS INÉDITOS E PRÉ-VENDA EXCLUSIVA -->
-            <a href="materias/2026/02/mundo-pixar-rio.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/mundo-pixar-rio.html"
+                data-category="Geral" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://saopauloparacriancas.com.br/wp-content/uploads/2023/04/sp_criancas_passeio_mundo_pixar_rj_200-800x533.jpg"
                         alt="MUNDO
@@ -421,7 +445,8 @@
 
             <!-- EDUARDO PAES CRIA SECRETARIA ESPECIAL DE SEGURANÇA URBANA PARA COORDENAR FORÇA MUNICIPAL DO RIO DE
                     JANEIRO -->
-            <a href="materias/2026/02/secretaria-seguranca-paes.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/secretaria-seguranca-paes.html"
+                data-category="Geral" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://prefeitura.rio/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-18-at-11.56.04.jpeg"
                         alt="EDUARDO PAES CRIA SECRETARIA ESPECIAL DE SEGURANÇA URBANA PARA COORDENAR FORÇA MUNICIPAL DO RIO DE
@@ -446,7 +471,8 @@
             </a>
 
             <!-- EX-EMBAIXADOR PETER MANDELSON É DETIDO EM LONDRES POR LIGAÇÃO COM JEFFREY EPSTEIN -->
-            <a href="materias/2026/02/mandelson-epstein.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/mandelson-epstein.html"
+                data-category="Geral" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://cdn-images.rtp.pt/icm/noticias/images/a7/a78a0c271a5cd072f8059ce4ecf99689?w=860&q=90&rect=0,0,1499,822&auto=format"
                         alt="EX-EMBAIXADOR PETER MANDELSON É DETIDO EM LONDRES POR LIGAÇÃO COM JEFFREY EPSTEIN"
@@ -469,7 +495,8 @@
 
             <!-- O
                     MOVIMENTO DE CLÁUDIO CASTRO PARA ESCAPAR DE CASSAÇÃO NO TSE -->
-            <a href="materias/2026/02/castro-tse.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/castro-tse.html"
+                data-category="Geral" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://scontent.fsdu40-1.fna.fbcdn.net/v/t39.30808-6/641577694_1594329489208883_7543006824148063677_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_ohc=pIpmP7hCP9UQ7kNvwF1iG3j&_nc_oc=AdmsigXcqOAnr30oWUP5JPmKtdLm290SAHcmnI94YR_QgSbr4TGm_gGTxBQ4BwJwWc7ekSox2OwUJ6q5jUjQaP5g&_nc_zt=23&_nc_ht=scontent.fsdu40-1.fna&_nc_gid=ByR96cYV0BzMso_RHjLx6A&oh=00_AfvYsBzYxywwPVTBINQHRHsudhnzifXAG_m5duKAHqWRSA&oe=69A28045"
                         alt="O
@@ -493,7 +520,8 @@
             </a>
 
             <!-- DESFILE DO MONOBLOCO ENCERRA CIRCUITO DE MEGABLOCOS E HOMENAGEIA PRETA GIL E ARLINDO CRUZ -->
-            <a href="materias/2026/02/monobloco-desfile.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/monobloco-desfile.html"
+                data-category="Geral" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://s2-g1.glbimg.com/eaLFAVWFtDuHxLXQbHdLzcSkO2s=/0x0:1920x1080/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/J/c/fBjxSeSlePyY2oIQgLNg/gnews-monobloco2.jpeg"
                         alt="DESFILE DO MONOBLOCO ENCERRA CIRCUITO DE MEGABLOCOS E HOMENAGEIA PRETA GIL E ARLINDO CRUZ"
@@ -515,7 +543,8 @@
             </a>
 
             <!-- EDUARDO PAES OFICIALIZA JANE REIS COMO VICE E SELA ALIANÇA ENTRE PT E BASE BOLSONARISTA NO RJ -->
-            <a href="materias/2026/02/paes-jane-reis.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/paes-jane-reis.html"
+                data-category="Geral" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://www.infomoney.com.br/wp-content/uploads/2026/02/mdb-jane-reis-paes.jpeg?w=1024&quality=70&strip=all"
                         alt="EDUARDO PAES OFICIALIZA JANE REIS COMO VICE E SELA ALIANÇA ENTRE PT E BASE BOLSONARISTA NO RJ"
@@ -539,7 +568,8 @@
 
             <!-- WITZEL
                     ACERTA FILIAÇÃO AO DEMOCRACIA CRISTàE ANUNCIA PRÉ-CANDIDATURA AO GOVERNO DO RIO DE JANEIRO -->
-            <a href="materias/2026/02/witzel-filiacao.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/witzel-filiacao.html"
+                data-category="Geral" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="../../../img/ww.jpg" alt="WITZEL
                     ACERTA FILIAÇÃO AO DEMOCRACIA CRISTàE ANUNCIA PRÉ-CANDIDATURA AO GOVERNO DO RIO DE JANEIRO"
@@ -562,7 +592,8 @@
             </a>
 
             <!-- COUTINHO CONFIRMA ADEUS AO VASCO: "CANSADO MENTALMENTE" -->
-            <a href="materias/2026/02/coutinho-vasco.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/coutinho-vasco.html"
+                data-category="Geral" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://uploads.diariodopara.com.br/2026/02/vasco-coutinho-brasileirao-ceara-1320x880.jpg"
                         alt="COUTINHO CONFIRMA ADEUS AO VASCO: " CANSADO MENTALMENTE""
@@ -584,7 +615,8 @@
             </a>
 
             <!-- VIRADOURO É TETRACAMPEàDO CARNAVAL COM TRIBUTO HISTÓRICO AO MESTRE CIÇA -->
-            <a href="materias/2026/02/viradouro-campea.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/viradouro-campea.html"
+                data-category="Geral" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2026/02/mestre-cica-aspect-ratio-512-320.jpg"
                         alt="VIRADOURO É TETRACAMPEàDO CARNAVAL COM TRIBUTO HISTÓRICO AO MESTRE CIÇA"
@@ -606,7 +638,8 @@
             </a>
 
             <!-- POLÍCIA BRITÂNICA PEDE COLABORAÇÃO DE TESTEMUNHAS EM CASO EPSTEIN POR TRÁFICO DE MULHERES -->
-            <a href="materias/2026/02/epstein-policia.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/epstein-policia.html"
+                data-category="Geral" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://odia.ig.com.br/_midias/jpg/2026/02/11/1200x750/1_afp__20260209__96rl2gu__v1__highres__uspoliticsjusticeepstein-38081775.jpg"
                         alt="POLÍCIA BRITÂNICA PEDE COLABORAÇÃO DE TESTEMUNHAS EM CASO EPSTEIN POR TRÁFICO DE MULHERES"
@@ -629,7 +662,8 @@
 
             <!-- PF FAZ
                     BUSCAS PARA APURAR VAZAMENTO DE DADOS DA RECEITA DE MINISTROS DO STF E PARENTES -->
-            <a href="materias/2026/02/pf-vazamento.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/pf-vazamento.html"
+                data-category="Geral" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://ativopb.com.br/wp-content/uploads/2026/02/bhp_pensao-morte.jpg" alt="PF FAZ
                     BUSCAS PARA APURAR VAZAMENTO DE DADOS DA RECEITA DE MINISTROS DO STF E PARENTES"
@@ -653,7 +687,8 @@
 
             <!-- BANCO
                     PLENO TEM 160 MIL CREDORES COM R$ 4,9 BILHÃ•ES A RECEBER -->
-            <a href="materias/2026/02/banco-pleno.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/banco-pleno.html"
+                data-category="Geral" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="https://i.metroimg.com/6wVo56I8lKFzSCPAS85_fmjov-zcbvMq0bg0w5Vsrfs/w:900/q:85/f:webp/plain/https://images.metroimg.com/2026/02/banco-pleno-1.jpg"
                         alt="BANCO
@@ -678,7 +713,8 @@
 
             <!-- CARNAVAL NO RIO DE JANEIRO TERMINA COM MAIS DE 500 DETIDOS E 97 CELULARES RECUPERADOS PELA POLÍCIA
                     MILITAR -->
-            <a href="materias/2026/02/carnaval-rj.html" class="stitch-card group flex flex-col">
+            <a href="materias/2026/02/carnaval-rj.html"
+                data-category="Geral" class="news-item stitch-card group flex flex-col">
                 <div class="aspect-video overflow-hidden">
                     <img src="../../../img/police.jpg" alt="CARNAVAL NO RIO DE JANEIRO TERMINA COM MAIS DE 500 DETIDOS E 97 CELULARES RECUPERADOS PELA POLÍCIA
                     MILITAR"
