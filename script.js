@@ -136,6 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxAuthor = document.getElementById('lightbox-author');
+    const lightboxDescription = document.getElementById('lightbox-description');
+    const lightboxDescContainer = document.getElementById('lightbox-description-container');
     const closeLightbox = document.getElementById('close-lightbox');
     const galleryImages = document.querySelectorAll('.gallery-img');
 
@@ -143,16 +145,30 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryImages.forEach(img => {
             img.addEventListener('click', () => {
                 lightboxImg.src = img.src;
-                if (lightboxAuthor) {
-                    const author = img.getAttribute('data-author');
-                    if (author) {
-                        lightboxAuthor.textContent = `Foto: ${author}`;
-                        lightboxAuthor.classList.remove('hidden');
+                
+                const author = img.getAttribute('data-author');
+                const description = img.getAttribute('data-description');
+                
+                let hasContent = false;
+                
+                if (lightboxDescription && description) {
+                    lightboxDescription.textContent = description;
+                    hasContent = true;
+                }
+                
+                if (lightboxAuthor && author) {
+                    lightboxAuthor.textContent = `Foto: ${author}`;
+                    hasContent = true;
+                }
+                
+                if (lightboxDescContainer) {
+                    if (hasContent) {
+                        lightboxDescContainer.classList.remove('hidden');
                     } else {
-                        lightboxAuthor.textContent = '';
-                        lightboxAuthor.classList.add('hidden');
+                        lightboxDescContainer.classList.add('hidden');
                     }
                 }
+                
                 lightbox.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             });
