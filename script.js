@@ -287,21 +287,23 @@ document.addEventListener('DOMContentLoaded', () => {
         paginationContainer.appendChild(nextBtn);
     }
 
-    if (filterButtons.length > 0 && newsItems.length > 0) {
+    if (newsItems.length > 0) {
         // Initial load
         updateNewsDisplay();
 
-        filterButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                currentFilter = btn.getAttribute('data-filter');
-                currentPage = 1; // Reset to page 1 on filter change
+        if (filterButtons.length > 0) {
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    currentFilter = btn.getAttribute('data-filter');
+                    currentPage = 1; // Reset to page 1 on filter change
 
-                // Update active button UI
-                filterButtons.forEach(b => b.classList.remove('active', 'border-brand-blue', 'text-brand-blue'));
-                btn.classList.add('active', 'border-brand-blue', 'text-brand-blue');
+                    // Update active button UI
+                    filterButtons.forEach(b => b.classList.remove('active', 'border-brand-blue', 'text-brand-blue'));
+                    btn.classList.add('active', 'border-brand-blue', 'text-brand-blue');
 
-                updateNewsDisplay();
+                    updateNewsDisplay();
+                });
             });
-        });
+        }
     }
 });
