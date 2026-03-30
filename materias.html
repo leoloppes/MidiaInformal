@@ -856,9 +856,9 @@
             </a>
         </div>
 
-        <!-- Pagination Controls -->
-        <div id="pagination-controls" class="flex justify-center items-center gap-2 mt-12 mb-20 pb-10">
-            <!-- Buttons will be injected here by script.js -->
+        <!-- P-Controls -->
+        <div id="p-controls" class="flex justify-center items-center gap-4 mt-16 mb-24 pb-12">
+            <!-- Paginação Forçada -->
         </div>
     </main>
 
@@ -879,12 +879,17 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const newsItems = document.querySelectorAll('.news-item');
-            const paginationContainer = document.getElementById('pagination-controls');
+            const paginationContainer = document.getElementById('p-controls');
             let currentPage = 1;
             const itemsPerPage = 12;
 
+            console.log('Paginação Iniciada - Itens encontrados:', newsItems.length);
+
             function updateDisplay() {
-                const totalPages = Math.ceil(newsItems.length / itemsPerPage);
+                if (!paginationContainer) {
+                    console.error('ERRO: Container p-controls não encontrado!');
+                    return;
+                }
                 
                 // Hide all
                 newsItems.forEach(item => item.classList.add('hidden'));
