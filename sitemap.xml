@@ -3,13 +3,13 @@
   <!-- Paginas Principais -->
   <url>
     <loc>https://midiainformal.vercel.app/</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://midiainformal.vercel.app/materias.html</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -27,6 +27,41 @@
   </url>
 
   <!-- Materias Março 2026 -->
+  <url>
+    <loc>https://midiainformal.vercel.app/materias/2026/03/extorsao-aterro-flanelinhas.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://midiainformal.vercel.app/materias/2026/03/pgr-prisao-domiciliar-bolsonaro.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://midiainformal.vercel.app/materias/2026/03/juri-henry-borel-adiado-monique-solta.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://midiainformal.vercel.app/materias/2026/03/cavaliere-rio-rotativo-digital.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://midiainformal.vercel.app/materias/2026/03/cabral-bacellar-ajuda-pf.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://midiainformal.vercel.app/materias/2026/03/fraude-inss-maria-gorete.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://midiainformal.vercel.app/materias/2026/03/atentado-secretario-joao-pires.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://midiainformal.vercel.app/materias/2026/03/alerj-bacellar-inquerito.html</loc>
     <lastmod>2026-03-04</lastmod>
@@ -103,11 +138,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://midiainformal.vercel.app/materias/2026/03/raio-x-crime-expansao-cv.html</loc>
-    <lastmod>2026-03-16</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://midiainformal.vercel.app/materias/2026/03/bacellar-th-joias-obstrucao.html</loc>
     <lastmod>2026-03-16</lastmod>
     <priority>0.7</priority>
@@ -115,7 +145,7 @@
   <url>
     <loc>https://midiainformal.vercel.app/materias/2026/03/flavio-dino-aposentadoria-juizes.html</loc>
     <lastmod>2026-03-16</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://midiainformal.vercel.app/materias/2026/03/tse-cassacao-claudio-castro.html</loc>

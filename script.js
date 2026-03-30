@@ -136,6 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxAuthor = document.getElementById('lightbox-author');
+    const lightboxDescription = document.getElementById('lightbox-description');
+    const lightboxDescContainer = document.getElementById('lightbox-description-container');
     const closeLightbox = document.getElementById('close-lightbox');
     const galleryImages = document.querySelectorAll('.gallery-img');
 
@@ -143,16 +145,30 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryImages.forEach(img => {
             img.addEventListener('click', () => {
                 lightboxImg.src = img.src;
-                if (lightboxAuthor) {
-                    const author = img.getAttribute('data-author');
-                    if (author) {
-                        lightboxAuthor.textContent = `Foto: ${author}`;
-                        lightboxAuthor.classList.remove('hidden');
+                
+                const author = img.getAttribute('data-author');
+                const description = img.getAttribute('data-description');
+                
+                let hasContent = false;
+                
+                if (lightboxDescription && description) {
+                    lightboxDescription.textContent = description;
+                    hasContent = true;
+                }
+                
+                if (lightboxAuthor && author) {
+                    lightboxAuthor.textContent = `Foto: ${author}`;
+                    hasContent = true;
+                }
+                
+                if (lightboxDescContainer) {
+                    if (hasContent) {
+                        lightboxDescContainer.classList.remove('hidden');
                     } else {
-                        lightboxAuthor.textContent = '';
-                        lightboxAuthor.classList.add('hidden');
+                        lightboxDescContainer.classList.add('hidden');
                     }
                 }
+                
                 lightbox.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
             });
@@ -181,30 +197,110 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 5. News Filtering Logic ---
+    // --- 5. News Filtering and Pagination Logic ---
     const filterButtons = document.querySelectorAll('.filter-btn');
     const newsItems = document.querySelectorAll('.news-item');
+    const paginationContainer = document.getElementById('pagination-controls');
+
+    let currentFilter = 'all';
+    let currentPage = 1;
+    const itemsPerPage = 12;
+
+    function updateNewsDisplay() {
+        if (!newsItems.length) return;
+
+        // 1. Filter items
+        const filteredItems = Array.from(newsItems).filter(item => {
+            const category = item.getAttribute('data-category');
+            return currentFilter === 'all' || category === currentFilter;
+        });
+
+        const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+
+        // 2. Hide all items first
+        newsItems.forEach(item => {
+            item.classList.add('hidden');
+            item.classList.remove('animate-fade-in');
+        });
+
+        // 3. Show items for the current page
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const itemsToShow = filteredItems.slice(start, end);
+
+        if (itemsToShow.length > 0) {
+            itemsToShow.forEach(item => {
+                item.classList.remove('hidden');
+                item.classList.add('animate-fade-in');
+            });
+        }
+
+        // 4. Render pagination controls
+        renderPaginationControls(totalPages);
+    }
+
+    function renderPaginationControls(totalPages) {
+        if (!paginationContainer) return;
+        paginationContainer.innerHTML = '';
+
+        if (totalPages <= 1) return;
+
+        // Previous Button
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'pagination-btn pagination-nav-btn';
+        prevBtn.innerHTML = '← Anterior';
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.onclick = () => {
+            if (currentPage > 1) {
+                currentPage--;
+                updateNewsDisplay();
+                window.scrollTo({ top: 200, behavior: 'smooth' });
+            }
+        };
+        paginationContainer.appendChild(prevBtn);
+
+        // Page Numbers Logic (simplified for now, showing all pages)
+        for (let i = 1; i <= totalPages; i++) {
+            const pageBtn = document.createElement('button');
+            pageBtn.className = `pagination-btn ${i === currentPage ? 'active' : ''}`;
+            pageBtn.textContent = i;
+            pageBtn.onclick = () => {
+                currentPage = i;
+                updateNewsDisplay();
+                window.scrollTo({ top: 200, behavior: 'smooth' });
+            };
+            paginationContainer.appendChild(pageBtn);
+        }
+
+        // Next Button
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'pagination-btn pagination-nav-btn';
+        nextBtn.innerHTML = 'Próximo →';
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.onclick = () => {
+            if (currentPage < totalPages) {
+                currentPage++;
+                updateNewsDisplay();
+                window.scrollTo({ top: 200, behavior: 'smooth' });
+            }
+        };
+        paginationContainer.appendChild(nextBtn);
+    }
 
     if (filterButtons.length > 0 && newsItems.length > 0) {
+        // Initial load
+        updateNewsDisplay();
+
         filterButtons.forEach(btn => {
             btn.addEventListener('click', () => {
-                const filter = btn.getAttribute('data-filter');
+                currentFilter = btn.getAttribute('data-filter');
+                currentPage = 1; // Reset to page 1 on filter change
 
-                // Update active button
+                // Update active button UI
                 filterButtons.forEach(b => b.classList.remove('active', 'border-brand-blue', 'text-brand-blue'));
                 btn.classList.add('active', 'border-brand-blue', 'text-brand-blue');
 
-                // Filter items
-                newsItems.forEach(item => {
-                    const category = item.getAttribute('data-category');
-                    if (filter === 'all' || category === filter) {
-                        item.classList.remove('hidden');
-                        item.classList.add('animate-fade-in');
-                    } else {
-                        item.classList.add('hidden');
-                        item.classList.remove('animate-fade-in');
-                    }
-                });
+                updateNewsDisplay();
             });
         });
     }
