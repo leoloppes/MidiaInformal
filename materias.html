@@ -891,6 +891,8 @@
                     return;
                 }
                 
+                const totalPages = Math.ceil(newsItems.length / itemsPerPage);
+                
                 // Hide all
                 newsItems.forEach(item => item.classList.add('hidden'));
                 
