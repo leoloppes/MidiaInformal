@@ -206,36 +206,36 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPage = 1;
     const itemsPerPage = 12;
 
-    function updateNewsDisplay() {
-        if (!newsItems.length) return;
-
-        // 1. Filter items
-        const filteredItems = Array.from(newsItems).filter(item => {
+    function getFilteredItems() {
+        return Array.from(newsItems).filter(item => {
             const category = item.getAttribute('data-category');
             return currentFilter === 'all' || category === currentFilter;
         });
+    }
 
+    function updateNewsDisplay() {
+        if (!newsItems.length) return;
+
+        const filteredItems = getFilteredItems();
         const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
 
-        // 2. Hide all items first
+        // Clamp currentPage to valid range
+        if (currentPage > totalPages) currentPage = totalPages || 1;
+
+        // Hide ALL items first
         newsItems.forEach(item => {
-            item.classList.add('hidden');
+            item.style.display = 'none';
             item.classList.remove('animate-fade-in');
         });
 
-        // 3. Show items for the current page
+        // Show only the items for the current page
         const start = (currentPage - 1) * itemsPerPage;
         const end = start + itemsPerPage;
-        const itemsToShow = filteredItems.slice(start, end);
+        filteredItems.slice(start, end).forEach(item => {
+            item.style.display = '';
+            item.classList.add('animate-fade-in');
+        });
 
-        if (itemsToShow.length > 0) {
-            itemsToShow.forEach(item => {
-                item.classList.remove('hidden');
-                item.classList.add('animate-fade-in');
-            });
-        }
-
-        // 4. Render pagination controls
         renderPaginationControls(totalPages);
     }
 
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         paginationContainer.appendChild(prevBtn);
 
-        // Page Numbers Logic (simplified for now, showing all pages)
+        // Page number buttons
         for (let i = 1; i <= totalPages; i++) {
             const pageBtn = document.createElement('button');
             pageBtn.className = `pagination-btn ${i === currentPage ? 'active' : ''}`;
@@ -287,17 +287,19 @@ document.addEventListener('DOMContentLoaded', () => {
         paginationContainer.appendChild(nextBtn);
     }
 
-    if (filterButtons.length > 0 && newsItems.length > 0) {
+    if (newsItems.length > 0) {
         // Initial load
         updateNewsDisplay();
 
         filterButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 currentFilter = btn.getAttribute('data-filter');
-                currentPage = 1; // Reset to page 1 on filter change
+                currentPage = 1;
 
                 // Update active button UI
-                filterButtons.forEach(b => b.classList.remove('active', 'border-brand-blue', 'text-brand-blue'));
+                filterButtons.forEach(b => {
+                    b.classList.remove('active', 'border-brand-blue', 'text-brand-blue');
+                });
                 btn.classList.add('active', 'border-brand-blue', 'text-brand-blue');
 
                 updateNewsDisplay();
