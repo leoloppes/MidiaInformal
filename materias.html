@@ -873,8 +873,8 @@
         </div>
 
         <!-- P-Controls -->
-        <div id="p-controls" class="flex justify-center items-center gap-4 mt-16 mb-24 pb-12">
-            <!-- Paginação Forçada -->
+        <div id="pagination-controls" class="flex justify-center items-center gap-4 mt-16 mb-24 pb-12">
+            <!-- Paginação Automática via script.js -->
         </div>
     </main>
 
@@ -892,73 +892,7 @@
             <p class="text-slate-400 text-[10px] font-medium uppercase tracking-[0.25em]">© 2026 Mídia Informal • Transparência e Verdade</p>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const newsItems = document.querySelectorAll('.news-item');
-            const paginationContainer = document.getElementById('p-controls');
-            let currentPage = 1;
-            const itemsPerPage = 12;
-
-            console.log('Paginação Iniciada - Itens encontrados:', newsItems.length);
-
-            function updateDisplay() {
-                if (!paginationContainer) {
-                    console.error('ERRO: Container p-controls não encontrado!');
-                    return;
-                }
-                
-                const totalPages = Math.ceil(newsItems.length / itemsPerPage);
-                
-                // Hide all
-                newsItems.forEach(item => item.classList.add('hidden'));
-                
-                // Show current page
-                const start = (currentPage - 1) * itemsPerPage;
-                const end = start + itemsPerPage;
-                const itemsToShow = Array.from(newsItems).slice(start, end);
-                
-                itemsToShow.forEach(item => {
-                    item.classList.remove('hidden');
-                    item.classList.add('animate-fade-in');
-                });
-
-                // Render buttons
-                if (paginationContainer) {
-                    paginationContainer.innerHTML = '';
-                    if (totalPages <= 1) return;
-
-                    // Prev
-                    const prevBtn = document.createElement('button');
-                    prevBtn.className = 'pagination-btn pagination-nav-btn';
-                    prevBtn.innerHTML = '← Anterior';
-                    prevBtn.disabled = currentPage === 1;
-                    prevBtn.onclick = () => { if(currentPage > 1) { currentPage--; updateDisplay(); window.scrollTo({top: 0, behavior: 'smooth'}); } };
-                    paginationContainer.appendChild(prevBtn);
-
-                    // Pages
-                    for (let i = 1; i <= totalPages; i++) {
-                        const pageBtn = document.createElement('button');
-                        pageBtn.className = `pagination-btn ${i === currentPage ? 'active' : ''}`;
-                        pageBtn.textContent = i;
-                        pageBtn.onclick = () => { currentPage = i; updateDisplay(); window.scrollTo({top: 0, behavior: 'smooth'}); };
-                        paginationContainer.appendChild(pageBtn);
-                    }
-
-                    // Next
-                    const nextBtn = document.createElement('button');
-                    nextBtn.className = 'pagination-btn pagination-nav-btn';
-                    nextBtn.innerHTML = 'Próximo →';
-                    nextBtn.disabled = currentPage === totalPages;
-                    nextBtn.onclick = () => { if(currentPage < totalPages) { currentPage++; updateDisplay(); window.scrollTo({top: 0, behavior: 'smooth'}); } };
-                    paginationContainer.appendChild(nextBtn);
-                }
-            }
-
-            if (newsItems.length > 0) {
-                updateDisplay();
-            }
-        });
-    </script>
     <script src="script.js"></script>
 </body>
+</html>
 </html>
