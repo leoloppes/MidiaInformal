@@ -190,9 +190,12 @@ async function generateArchive() {
             </div>
         </div>
 
-        <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
 ${articleCards}
         </div>
+
+        <!-- Pagination Controls -->
+        <nav id="pagination-controls" class="flex items-center justify-center gap-2 flex-wrap mt-4 mb-20" aria-label="Paginação"></nav>
     </main>
 
     <footer class="bg-white border-t border-slate-200 pt-20 pb-12 mt-20">
