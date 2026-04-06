@@ -131,6 +131,59 @@ function initSite() {
 
         updateDisplay();
     }
+
+    // --- 5. Gallery Lightbox Logic ---
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxDesc = document.getElementById('lightbox-description');
+    const lightboxAuthor = document.getElementById('lightbox-author');
+    const lightboxDescContainer = document.getElementById('lightbox-description-container');
+    const closeLightbox = document.getElementById('close-lightbox');
+
+    if (galleryImages.length > 0 && lightbox) {
+        galleryImages.forEach(img => {
+            img.onclick = (e) => {
+                e.preventDefault();
+                const src = img.getAttribute('src');
+                const desc = img.getAttribute('data-description');
+                const author = img.getAttribute('data-author');
+
+                lightboxImg.src = src;
+                if (desc) {
+                    lightboxDesc.textContent = desc;
+                    lightboxDescContainer.classList.remove('hidden');
+                } else {
+                    lightboxDescContainer.classList.add('hidden');
+                }
+                if (author) {
+                    lightboxAuthor.textContent = `Foto: ${author}`;
+                }
+
+                lightbox.classList.add('active');
+                lightbox.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent scroll
+            };
+        });
+
+        const closeFunc = () => {
+            lightbox.classList.remove('active');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scroll
+        };
+
+        if (closeLightbox) closeLightbox.onclick = closeFunc;
+        lightbox.onclick = (e) => {
+            if (e.target === lightbox || e.target === lightbox.querySelector('.relative')) {
+                closeFunc();
+            }
+        };
+
+        // ESC key to close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeFunc();
+        });
+    }
 }
 
 // Inicia imediatamente ou quando o DOM estiver pronto
