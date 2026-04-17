@@ -3,13 +3,13 @@
   <!-- Paginas Principais -->
   <url>
     <loc>https://midiainformal.vercel.app/</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://midiainformal.vercel.app/materias.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -24,6 +24,23 @@
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+  </url>
+
+  <!-- Materias Abril 2026 -->
+  <url>
+    <loc>https://midiainformal.vercel.app/materias/2026/04/monique-medeiros-retorno-prisao-stf.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://midiainformal.vercel.app/materias/2026/04/douglas-ruas-eleito-presidente-alerj.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://midiainformal.vercel.app/materias/2026/04/faxina-palacio-guanabara-ricardo-couto-exoneracoes.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <priority>0.8</priority>
   </url>
 
   <!-- Materias Março 2026 -->
